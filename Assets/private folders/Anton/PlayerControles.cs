@@ -5,13 +5,15 @@ public class PlayerControles : MonoBehaviour
     [SerializeField]
     private Transform transform;
     
+    [SerializeField]
+    private float rotateAmount;
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            transform.rotation = new Quaternion(transform.rotation.x)
+            transform.Rotate(0, 0, rotateAmount);
         }
     }
 }
