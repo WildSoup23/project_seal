@@ -3,13 +3,16 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    // Refrences
     [SerializeField] private AudioMixer mixer;
     public static AudioManager instance;
 
+    // Keys for diffrent values
     public const string MASTER_KEY = "masterVolume";
     public const string MUSIC_KEY = "musicVolume";
     public const string SFX_KEY = "sfxVolume";
 
+    // Checks if there is an instance of audiomanger if not sets instances to this. Then sets to dontdestroyonload and if multiple destroy multiple instance.
     private void Awake()
     {
         if(instance == null)
