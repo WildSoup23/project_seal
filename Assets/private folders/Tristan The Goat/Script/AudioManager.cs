@@ -4,10 +4,16 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     // Refrences
+    [Header("Refrences")]
+    [Tooltip("An audio mixer that has multiple channels")]
     [SerializeField] private AudioMixer mixer;
+    [Tooltip("An public static instance of an AudioManager that can be used by anyone, is made sure of that there is only one.")]
     public static AudioManager instance;
 
+    [Space(10)]
+
     // Keys for diffrent values
+    [Header("Keys needed for the diffrent sliders and channels")]
     public const string MASTER_KEY = "masterVolume";
     public const string MUSIC_KEY = "musicVolume";
     public const string SFX_KEY = "sfxVolume";

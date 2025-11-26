@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flySpeed: 30
   speedDecrease: 1
+  activationRange: 5
   feather_burst_effect: {fileID: 0}
 --- !u!50 &600469849559156676
 Rigidbody2D:

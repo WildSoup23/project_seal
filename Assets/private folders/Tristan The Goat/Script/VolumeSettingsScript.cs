@@ -4,12 +4,16 @@ using UnityEngine.UI;
 public class VolumeSettingsScript : MonoBehaviour
 {
     // Refrencess
+    [Header("Refrences")]
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
 
+    [Space(10)]
+
     // The name for the mixer channel value names
+    [Header("The name for the mixer channel value names")]
     public const string MIXER_MASTER = "MasterVolume";
     public const string MIXER_MUSIC = "MusicVolume";
     public const string MIXER_SFX = "SFXVolume";

@@ -1,10 +1,14 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoaderManagerScript : MonoBehaviour
 {
     // Refrences
+    [Header("Refrences")]
+    [Tooltip("The gameobject of an settings panel")]
     [SerializeField] private GameObject settings_panel;
+    [Tooltip("The gameobject of an pause screen")]
     [SerializeField] private GameObject pause_screen;
 
     // Returns the name of the current loaded scene via a string.
