@@ -11,7 +11,8 @@ public class PlayerControles : MonoBehaviour
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
-    private bool allowedToSlam_ByVelocity; 
+    private bool allowedToSlam_ByVelocity;
+    private bool allowedToAccelerate;
     
     public float maxVelocity_X;
     public float speedMultiplier;
@@ -44,17 +45,42 @@ public class PlayerControles : MonoBehaviour
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
         }
         
-        Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity);
+        // Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity);
         
         if (allowedToSlam_ByKey)
         {
-            Debug.Log("OOO");
             gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+
+            if (allowedToAccelerate)
+            {
+                Debug.Log("accelerate");
+                gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
+            }        
         }
 
         else
         {
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Slope"))
+        {
+            Debug.Log("Entered");
+            Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+            
+            allowedToAccelerate = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Slope"))
+        {
+            Debug.Log("Exited");
+            allowedToAccelerate = false;
         }
     }
 }
