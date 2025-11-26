@@ -10,11 +10,16 @@ public class PlayerControles : MonoBehaviour
     [SerializeField]
     private float rotateAmount;
     
-    private bool allowedToRotate;
+    private bool allowedToSlam_ByKey;
+    private bool allowedToSlam_ByVelocity; 
+    
+    public float maxVelocity_X;
+    public float speedMultiplier;
 
     private void Awake()
     {
-        allowedToRotate = false;
+        allowedToSlam_ByKey = false;
+        allowedToSlam_ByVelocity = false;
     }
 
     // Update is called once per frame
@@ -22,31 +27,33 @@ public class PlayerControles : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            allowedToRotate = true;
+            allowedToSlam_ByKey = true;
         }
 
         else
         {
-            allowedToRotate = false;
+            allowedToSlam_ByKey = false;
         }
     }
 
     void FixedUpdate()
     {
+        if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x > maxVelocity_X)
+        {
+            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(maxVelocity_X,
+                gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+        }
+        
         Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity);
         
-        if (allowedToRotate & gameObject.transform.rotation.z > 0)
+        if (allowedToSlam_ByKey)
         {
-            gameObject.transform.Rotate(0, 0, rotateAmount);
+            Debug.Log("OOO");
             gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
         }
 
         else
         {
-            if ()
-            {
-                gameObject.transform.Rotate(0, 0, rotateAmount);
-            }
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     }
