@@ -10,6 +10,8 @@ public class SceneLoaderManagerScript : MonoBehaviour
     [SerializeField] private GameObject settings_panel;
     [Tooltip("The gameobject of an pause screen")]
     [SerializeField] private GameObject pause_screen;
+    [Tooltip("The animtor that controlls fade in and out")]
+    [SerializeField] private Animator anim;
 
     // Returns the name of the current loaded scene via a string.
     public string GetCurrentScene()
@@ -72,6 +74,14 @@ public class SceneLoaderManagerScript : MonoBehaviour
             pause_screen.SetActive(true);
             Time.timeScale = 0f;
         }
+    }
+
+    public void Test()
+    {
+        Time.timeScale = 1f;
+        pause_screen.SetActive(false);
+        anim.SetTrigger("fade_in");
+        Invoke("ReloadScene",0.9f);
     }
 
     private void Update()
