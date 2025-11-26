@@ -7,7 +7,6 @@ public class PlayerControles : MonoBehaviour
     
     [SerializeField]
     private GameObject gameObject;
-    [SerializeField]
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
@@ -39,6 +38,13 @@ public class PlayerControles : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
+        {
+            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(
+                gameObject.GetComponent<Rigidbody2D>().linearVelocity.x,
+                -35);
+        }
+        
         if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x > maxVelocity_X)
         {
             gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(maxVelocity_X,
@@ -54,6 +60,7 @@ public class PlayerControles : MonoBehaviour
             if (allowedToAccelerate)
             {
                 Debug.Log("accelerate");
+                Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
             }        
         }
@@ -69,7 +76,6 @@ public class PlayerControles : MonoBehaviour
         if (other.CompareTag("Slope"))
         {
             Debug.Log("Entered");
-            Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
             
             allowedToAccelerate = true;
         }
