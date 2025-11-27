@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    // Follows players X-position
+    
     [SerializeField] private Transform player;
     void Update()
     {

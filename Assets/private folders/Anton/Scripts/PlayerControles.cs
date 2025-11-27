@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerControles : MonoBehaviour
 {
+    // Controles player dive, acceleration, max speed
+    
     public float changedGravityScale;
     
     [SerializeField]
