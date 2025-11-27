@@ -134,7 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changedGravityScale: 8
   gameObject: {fileID: 5627214042205454512}
-  rotateAmount: -5
   maxVelocity_X: 15
   speedMultiplier: 1.6
 --- !u!58 &3692487354847407459
@@ -221,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a12d1ed956dd0439642bce9c30953d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 5627214042205454512}
+  coins: 0
 --- !u!1 &6578949400690135744
 GameObject:
   m_ObjectHideFlags: 0

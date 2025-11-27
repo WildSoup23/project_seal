@@ -79,6 +79,11 @@ public class PlayerControles : MonoBehaviour
             
             allowedToAccelerate = true;
         }
+        
+        if (other.CompareTag("End"))
+        {
+            
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
