@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,44 +12,44 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private float max_speed_upgrade;
     [SerializeField] private float speed_upgrade_cost;
     [SerializeField] private float speed_upgrade_cost_increase;
+    [SerializeField] private string speed_upgrade_txt;
     [Header("Acceleration")]
     [SerializeField] private float acceleration_upgrade;
     [SerializeField] private float max_acceleration_upgrade;
     [SerializeField] private float acceleration_upgrade_cost;
     [SerializeField] private float acceleration_upgrade_cost_increase;
+    [SerializeField] private string acceleration_upgrade_txt;
     [Header("Dive speed")]
     [SerializeField] private float dive_speed_upgrade;
     [SerializeField] private float max_dive_speed_upgrade;
     [SerializeField] private float dive_speed_upgrade_cost;
     [SerializeField] private float dive_speed_upgrade_cost_increase;
+    [SerializeField] private string dive_speed_upgrade_txt;
     [Header("Money gain")]
     [SerializeField] private float money_gain_upgrade;
     [SerializeField] private float max_money_gain_upgrade;
     [SerializeField] private float money_gain_upgrade_cost;
     [SerializeField] private float money_gain_upgrade_cost_increase;
+    [SerializeField] private string money_gain_upgrade_txt;
 
     [Header("Money")]
     [SerializeField] private float money;
 
     // Refrences
     [Header("Refrences")]
-    [SerializeField] private GameObject upgrade_panel;
-    [Header("Speed")]
+    [Header("Sliders")]
     [SerializeField] private Slider speed_slider;
-    [SerializeField] private Slider speed_slider2;
-    [SerializeField] private GameObject speed_panel;
-    [Header("Acceleration")]
     [SerializeField] private Slider acceleration_slider;
-    [SerializeField] private Slider acceleration_slider2;
-    [SerializeField] private GameObject acceleration_panel;
-    [Header("Dive speed")]
     [SerializeField] private Slider dive_speed_slider;
-    [SerializeField] private Slider dive_speed_slider2;
-    [SerializeField] private GameObject dive_speed_panel;
-    [Header("Money gain")]
     [SerializeField] private Slider money_slider;
-    [SerializeField] private Slider money_slider2;
-    [SerializeField] private GameObject money_gain_panel;
+
+    [Header("Upgrade panel")]
+    [SerializeField] private GameObject upgrade_panel;
+    [SerializeField] private Slider upgrade_slider;
+    [SerializeField] private TextMeshProUGUI top_txt;
+    [SerializeField] private TextMeshProUGUI upgrade_txt;
+    [SerializeField] private TextMeshProUGUI upgrade_cost_txt;
+    private int menu_identifier;
 
     [Header("Money")]
     [SerializeField] private TextMeshProUGUI money_txt;
@@ -61,28 +62,27 @@ public class Upgrade_Menu_Script : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ui_elements = transform.Find("UI elements").gameObject;
-        Debug.Log(ui_elements);
+
+        speed_slider.value = speed_upgrade / max_speed_upgrade;
+        acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
+        dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
+        money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed_slider.value = speed_upgrade / max_speed_upgrade;
-        speed_slider2.value = speed_slider.value;
-        acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
-        acceleration_slider2.value = acceleration_slider.value;
-        dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
-        dive_speed_slider2.value = dive_speed_slider.value;
-        money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
-        money_slider2.value = money_slider.value;
-
         money_txt.text = $"{money}";
     }
 
     public void OpenSpeedUpgrade()
     {
         upgrade_panel.SetActive(true);
-        speed_panel.SetActive(true);
+        menu_identifier = 1;
+        upgrade_slider.value = speed_upgrade / max_speed_upgrade;
+        upgrade_txt.text = speed_upgrade_txt;
+        top_txt.text = "Speed";
+        upgrade_cost_txt.text = $"${speed_upgrade_cost}";
     }
 
     public void UpgradeSpeed()
@@ -94,8 +94,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 speed_upgrade++;
                 money -= speed_upgrade_cost;
                 speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * speed_upgrade_cost_increase);
+                speed_slider.value = speed_upgrade / max_speed_upgrade;
+                upgrade_slider.value = speed_upgrade / max_speed_upgrade;
+                upgrade_cost_txt.text = $"${speed_upgrade_cost}";
 
-                if(player != null)
+                if (player != null)
                 {
 
                 }
@@ -106,7 +109,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
     public void OpenAccelerationUpgrade()
     {
         upgrade_panel.SetActive(true);
-        acceleration_panel.SetActive(true);
+        menu_identifier = 2;
+        upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
+        upgrade_txt.text = acceleration_upgrade_txt;
+        top_txt.text = "Acceleration";
+        upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
     }
 
     public void UpgradeAcceleration()
@@ -118,6 +125,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 acceleration_upgrade++;
                 money -= acceleration_upgrade_cost;
                 acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * acceleration_upgrade_cost_increase);
+                acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
+                upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
+                upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
 
                 if (player != null)
                 {
@@ -130,7 +140,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
     public void OpenDiveSpeedUpgrade()
     {
         upgrade_panel.SetActive(true);
-        dive_speed_panel.SetActive(true);
+        menu_identifier = 3;
+        upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
+        upgrade_txt.text = dive_speed_upgrade_txt;
+        top_txt.text = "Dive Speed";
+        upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
     }
 
     public void UpgradeDiveSpeed()
@@ -142,6 +156,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 dive_speed_upgrade++;
                 money -= dive_speed_upgrade_cost;
                 dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * dive_speed_upgrade_cost_increase);
+                dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
+                upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
+                upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
 
                 if (player != null)
                 {
@@ -153,7 +170,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
     public void OpenMoneyGainUpgrade()
     {
         upgrade_panel.SetActive(true);
-        money_gain_panel.SetActive(true);
+        menu_identifier = 4;
+        upgrade_slider.value = money_gain_upgrade / max_money_gain_upgrade;
+        upgrade_txt.text = money_gain_upgrade_txt;
+        top_txt.text = "Money Gain";
+        upgrade_cost_txt.text = $"${money_gain_upgrade_cost}";
     }
 
     public void UpgradeMoneyGain()
@@ -165,6 +186,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 money_gain_upgrade++;
                 money -= money_gain_upgrade_cost;
                 money_gain_upgrade_cost = Mathf.Round(money_gain_upgrade_cost * money_gain_upgrade_cost_increase);
+                money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
+                upgrade_slider.value = money_gain_upgrade / max_money_gain_upgrade;
+                upgrade_cost_txt.text = $"${money_gain_upgrade_cost}";
 
                 if (player != null)
                 {
@@ -174,13 +198,17 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
     }
 
+    public void MainUpgrade()
+    {
+        if (menu_identifier == 1) UpgradeSpeed();
+        else if (menu_identifier == 2) UpgradeAcceleration();
+        else if (menu_identifier == 3) UpgradeDiveSpeed();
+        else if(menu_identifier == 4) UpgradeMoneyGain();
+    }
+
     public void ClosePanel()
     {
         upgrade_panel.SetActive(false);
-        speed_panel.SetActive(false);
-        acceleration_panel.SetActive(false);
-        dive_speed_panel.SetActive(false);
-        money_gain_panel.SetActive (false);
     }
 
     public void Run()
