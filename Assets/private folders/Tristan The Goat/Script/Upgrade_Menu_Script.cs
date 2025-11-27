@@ -2,6 +2,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 public class Upgrade_Menu_Script : MonoBehaviour
 {
@@ -57,9 +60,47 @@ public class Upgrade_Menu_Script : MonoBehaviour
     private GameObject player;
     private GameObject ui_elements;
 
+    private const string path = @"c:\temp\test.txt";
+    
+    
     // Get the player
     void Start()
     {
+        money = float.Parse(File.ReadLines(path).First());
+        
+        if (File.Exists("c:/temp/test.txt"))
+        {
+            foreach (string line in File.ReadLines(path, Encoding.UTF8))
+            {
+                string parsed = line.Trim();
+                
+                if (parsed == File.ReadLines(path).First())
+                {
+                    continue;
+                }
+
+                if (speed_upgrade == 0)
+                {
+                    speed_upgrade = int.Parse(parsed);
+                }
+
+                else if (acceleration_upgrade == 0)
+                {
+                    acceleration_upgrade = int.Parse(parsed);
+                }
+                
+                else if (dive_speed_upgrade == 0)
+                {
+                    dive_speed_upgrade = int.Parse(parsed);
+                }
+                
+                else if (money_gain_upgrade == 0)
+                {
+                    money_gain_upgrade = int.Parse(parsed);
+                }
+            }
+        }
+        
         player = GameObject.FindGameObjectWithTag("Player");
         ui_elements = transform.Find("UI elements").gameObject;
 
@@ -68,8 +109,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
         money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         money_txt.text = $"{money}";
@@ -213,6 +253,19 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     public void Run()
     {
+        const string path = @"c:\temp\test.txt";
+        
+        File.Delete(path); // Ensures that we write to a blank file
+        
+        using (StreamWriter sw = File.AppendText(path))
+        {
+            sw.WriteLine(money);
+            sw.WriteLine(speed_upgrade);
+            sw.WriteLine(acceleration_upgrade);
+            sw.WriteLine(dive_speed_upgrade);
+            sw.WriteLine(money_gain_upgrade);
+        }
+        
         ui_elements.SetActive(false);
     }
 
