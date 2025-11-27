@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 public class SaveManager : MonoBehaviour
 {
@@ -35,12 +37,25 @@ public class SaveManager : MonoBehaviour
         }
 
         newAmount += oldAmount;
+
+        List<string> lines = new List<string>();
+        
+        foreach (string line in File.ReadLines(path, Encoding.UTF8))
+        {
+            string parsed = line.Trim();
+            if (parsed == File.ReadLines(path).First())
+            {
+                continue;
+            }
+
+            lines.Add(parsed);
+        }
         
         File.Delete(path); // Ensures that we write to a blank file
         
         using (StreamWriter sw = File.AppendText(path))
         {
-                sw.WriteLine(newAmount);
+            sw.WriteLine(newAmount);
         }
     }
 }

@@ -56,6 +56,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     [Header("Money")]
     [SerializeField] private TextMeshProUGUI money_txt;
+    
+    [Header("Saving")]
+    [SerializeField] private bool willSaveAndLoad;
 
     private GameObject player;
     private GameObject ui_elements;
@@ -66,40 +69,45 @@ public class Upgrade_Menu_Script : MonoBehaviour
     // Get the player
     void Start()
     {
-        money = float.Parse(File.ReadLines(path).First());
-        
-        if (File.Exists("c:/temp/test.txt"))
+        if (willSaveAndLoad)
         {
-            foreach (string line in File.ReadLines(path, Encoding.UTF8))
+            money = float.Parse(File.ReadLines(path).First());
+        
+            if (File.Exists("c:/temp/test.txt"))
             {
-                string parsed = line.Trim();
-                
-                if (parsed == File.ReadLines(path).First())
+                foreach (string line in File.ReadLines(path, Encoding.UTF8))
                 {
-                    continue;
-                }
+                    string parsed = line.Trim();
+                
+                    if (parsed == File.ReadLines(path).First())
+                    {
+                        continue;
+                    }
 
-                if (speed_upgrade == 0)
-                {
-                    speed_upgrade = int.Parse(parsed);
-                }
+                    if (speed_upgrade == 0)
+                    {
+                        speed_upgrade = int.Parse(parsed);
+                    }
 
-                else if (acceleration_upgrade == 0)
-                {
-                    acceleration_upgrade = int.Parse(parsed);
-                }
+                    else if (acceleration_upgrade == 0)
+                    {
+                        acceleration_upgrade = int.Parse(parsed);
+                    }
                 
-                else if (dive_speed_upgrade == 0)
-                {
-                    dive_speed_upgrade = int.Parse(parsed);
-                }
+                    else if (dive_speed_upgrade == 0)
+                    {
+                        dive_speed_upgrade = int.Parse(parsed);
+                    }
                 
-                else if (money_gain_upgrade == 0)
-                {
-                    money_gain_upgrade = int.Parse(parsed);
+                    else if (money_gain_upgrade == 0)
+                    {
+                        money_gain_upgrade = int.Parse(parsed);
+                    }
                 }
             }
         }
+        
+        
         
         player = GameObject.FindGameObjectWithTag("Player");
         ui_elements = transform.Find("UI elements").gameObject;
@@ -254,16 +262,19 @@ public class Upgrade_Menu_Script : MonoBehaviour
     public void Run()
     {
         const string path = @"c:\temp\test.txt";
-        
-        File.Delete(path); // Ensures that we write to a blank file
-        
-        using (StreamWriter sw = File.AppendText(path))
+
+        if (willSaveAndLoad)
         {
-            sw.WriteLine(money);
-            sw.WriteLine(speed_upgrade);
-            sw.WriteLine(acceleration_upgrade);
-            sw.WriteLine(dive_speed_upgrade);
-            sw.WriteLine(money_gain_upgrade);
+            File.Delete(path); // Ensures that we write to a blank file
+        
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine(money);
+                sw.WriteLine(speed_upgrade);
+                sw.WriteLine(acceleration_upgrade);
+                sw.WriteLine(dive_speed_upgrade);
+                sw.WriteLine(money_gain_upgrade);
+            }   
         }
         
         ui_elements.SetActive(false);
