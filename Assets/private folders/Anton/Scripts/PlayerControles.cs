@@ -1,5 +1,9 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 public class PlayerControles : MonoBehaviour
 {
@@ -17,9 +21,53 @@ public class PlayerControles : MonoBehaviour
     public float maxVelocity_X;
     public float speedMultiplier;
 
+    [SerializeField] private bool UpgradesActive;
+    
+    private const string path = @"c:\temp\test.txt";
+
+    [SerializeField] private CoinsCollected coins;
+
     private void Awake()
     {
         allowedToSlam_ByKey = false;
+    }
+
+    private void Start()
+    {
+        if (UpgradesActive)
+        {
+            int playerAttribute = 0;
+            foreach (string line in File.ReadLines(path, Encoding.UTF8))
+            {
+                string parsed = line.Trim();
+                if (parsed == File.ReadLines(path).First())
+                {
+                    continue;
+                }
+
+                if (playerAttribute == 0)
+                {
+                    maxVelocity_X += float.Parse(parsed);
+                }
+                
+                else if (playerAttribute == 1)
+                {
+                    speedMultiplier *= float.Parse(parsed);
+                }
+                
+                else if (playerAttribute == 2)
+                {
+                    changedGravityScale *= float.Parse(parsed);
+                }
+                
+                else if (playerAttribute == 3)
+                {
+                    coins.coinMultiplier *= float.Parse(parsed);
+                }
+
+                playerAttribute++;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -78,11 +126,6 @@ public class PlayerControles : MonoBehaviour
             Debug.Log("Entered");
             
             allowedToAccelerate = true;
-        }
-        
-        if (other.CompareTag("End"))
-        {
-            
         }
     }
 

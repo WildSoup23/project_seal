@@ -11208,10 +11208,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3321331421616279079, guid: 7171c005bd410544cb2f5a581d9d2c00, type: 3}
+      propertyPath: coins
+      value: 
+      objectReference: {fileID: 1335648513}
+    - target: {fileID: 3321331421616279079, guid: 7171c005bd410544cb2f5a581d9d2c00, type: 3}
+      propertyPath: UpgradesActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4559504394156673448, guid: 7171c005bd410544cb2f5a581d9d2c00, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 64496735}
+    - target: {fileID: 4559504394156673448, guid: 7171c005bd410544cb2f5a581d9d2c00, type: 3}
+      propertyPath: coinMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5627214042205454512, guid: 7171c005bd410544cb2f5a581d9d2c00, type: 3}
       propertyPath: m_Name
       value: Player

@@ -7,11 +7,12 @@ public class CoinsCollected : MonoBehaviour
     
     [SerializeField] private GameObject player;
 
+    public float coinMultiplier;
     private int startPosition_X;
     private int newPosition_X;
 
     
-    public int coins;
+    public float coins;
 
     public void Start()
     {
@@ -22,6 +23,6 @@ public class CoinsCollected : MonoBehaviour
     void Update()
     {
         newPosition_X = (int)player.transform.position.x - startPosition_X;
-        coins = newPosition_X;
+        coins = newPosition_X * coinMultiplier;
     }
 }

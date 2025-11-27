@@ -17,23 +17,17 @@ public class SaveManager : MonoBehaviour
     public void SaveCoins(CoinsCollected coins)
     {
         int oldAmount = 0;
-        int newAmount = coins.coins;
+        float newAmount = coins.coins;
         
         if (File.Exists("c:/temp/test.txt"))
         {
             foreach (string line in File.ReadLines(path, Encoding.UTF8))
             {
                 string parsed = line.Trim();
-                
-                /*
-                if (parsed.Length <= 0)
-                {
-                    continue;
-                }
-                */
-
                 oldAmount = int.Parse(parsed);
+                break;
             }
+            
         }
 
         newAmount += oldAmount;
@@ -56,6 +50,11 @@ public class SaveManager : MonoBehaviour
         using (StreamWriter sw = File.AppendText(path))
         {
             sw.WriteLine(newAmount);
+
+            foreach (string line in lines)
+            {
+                sw.WriteLine(line);
+            }
         }
     }
 }
