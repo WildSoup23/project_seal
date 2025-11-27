@@ -12,7 +12,6 @@ public class PlayerControles : MonoBehaviour
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
-    private bool allowedToSlam_ByVelocity;
     private bool allowedToAccelerate;
     
     public float maxVelocity_X;
@@ -21,7 +20,6 @@ public class PlayerControles : MonoBehaviour
     private void Awake()
     {
         allowedToSlam_ByKey = false;
-        allowedToSlam_ByVelocity = false;
     }
 
     // Update is called once per frame
