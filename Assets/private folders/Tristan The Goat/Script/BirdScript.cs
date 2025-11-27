@@ -33,15 +33,6 @@ public class BirdScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponentInChildren<Animator>();
-        if(player != null)
-        {
-            Debug.Log($"Found {player.name} as player object");
-        }
-        if (anim != null)
-        {
-            Debug.Log($"Found {anim} as animator");
-        }
-
     }
 
     // Update is called once per fixed frame
@@ -57,7 +48,7 @@ public class BirdScript : MonoBehaviour
             rb.linearVelocityX = flySpeed * -1 * Time.fixedDeltaTime;
         }
         // If not than reduce the speed of the bird untill it doesent move.
-        else if(range > activationRange && rb.linearVelocityX >0) 
+        else if(range > activationRange && Mathf.Sqrt(Mathf.Pow(rb.linearVelocityX,2)) >0) 
         {
             rb.linearVelocityX = Mathf.Clamp(rb.linearVelocityX - (flySpeed * Time.fixedDeltaTime),0,10000);
         }
@@ -68,7 +59,6 @@ public class BirdScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log($"bird hit player");
             if(feather_burst_effect != null)
             {
                 feather_burst_effect.Play();
