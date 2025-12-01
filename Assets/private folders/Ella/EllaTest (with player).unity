@@ -6435,7 +6435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl2Slope5 (1)
+      value: Lvl3Slope1
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Creator
@@ -20409,7 +20409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl2Slope2 (1)
+      value: Lvl3Slope3
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Creator
@@ -51445,7 +51445,7 @@ GameObject:
   - component: {fileID: 1440026192}
   - component: {fileID: 1440026193}
   m_Layer: 0
-  m_Name: Narwal_0
+  m_Name: Narwhal_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54817,7 +54817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl3Slope2
+      value: Lvl3Slope4
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_ColliderSegment.Array.size
@@ -57769,7 +57769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl3Slope1
+      value: Lvl3Slope6
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_ColliderSegment.Array.size
@@ -62347,7 +62347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl2Slope7 (1)
+      value: Lvl3Slope2
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Creator
@@ -71636,7 +71636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2302182993705576189, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Name
-      value: Lvl2Slope5 (1)
+      value: Lvl3Slope5
       objectReference: {fileID: 0}
     - target: {fileID: 2811195998158269421, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
       propertyPath: m_Creator
