@@ -1,6 +1,8 @@
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Linq;
 
 public class SceneLoaderManagerScript : MonoBehaviour
 {
@@ -36,11 +38,18 @@ public class SceneLoaderManagerScript : MonoBehaviour
     public void NewGame()
     {
         Time.timeScale = 1f;
+
+        // TODO: ta bort (test) sen
+        // Tillägg av Anton ---------------------------------------------- :)
+        LoadScene("(test) Cutscenes");
     }
     // Loads a scene based on how far the player has progress in the game.
     public void ContinueGameOnLoad()
     {
         Time.timeScale = 1f;
+        
+        // Tillägg av Anton ---------------------------------------------- :)
+        LoadScene(File.ReadLines(@"c:\temp\test.txt").Last());
     }
     // Quits the game and closes the application
     public void Quit()

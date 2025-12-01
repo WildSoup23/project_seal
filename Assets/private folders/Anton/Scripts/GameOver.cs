@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SaveCoins?.Invoke();
+            Win_Lose_Script.instance.OnTriggerLose();
         }
     }
 }

@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/private folders/Tristan The Goat/Scenes/StartMenu.unity
     guid: 8534e8f300b6d0243819f537c54798d1
+  - enabled: 1
+    path: Assets/private folders/Anton/Test Main/(test) Cutscenes.unity
+    guid: 0c28f05606ec8384e8fd01bd809e1295
+  - enabled: 1
+    path: Assets/private folders/Anton/Test Main/(test) EllaTest (with player).unity
+    guid: 399e9cd4023781a48bf6424424332129
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
