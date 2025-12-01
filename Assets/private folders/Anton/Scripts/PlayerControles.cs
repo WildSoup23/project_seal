@@ -107,8 +107,6 @@ public class PlayerControles : MonoBehaviour
 
             if (allowedToAccelerate)
             {
-                Debug.Log("accelerate");
-                Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
             }        
         }
@@ -123,8 +121,6 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
-            Debug.Log("Entered");
-            
             allowedToAccelerate = true;
         }
     }
@@ -133,7 +129,6 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
-            Debug.Log("Exited");
             allowedToAccelerate = false;
         }
     }
