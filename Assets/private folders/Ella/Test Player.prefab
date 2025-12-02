@@ -223,6 +223,8 @@ MonoBehaviour:
   gameObject: {fileID: 4540487172977829378}
   maxVelocity_X: 15
   speedMultiplier: 1.6
+  UpgradesActive: 1
+  coins: {fileID: 0}
 --- !u!58 &4526579716363343884
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -307,3 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a12d1ed956dd0439642bce9c30953d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  coinMultiplier: 0
+  coins: 0
