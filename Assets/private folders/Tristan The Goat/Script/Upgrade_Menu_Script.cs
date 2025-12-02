@@ -284,7 +284,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }   
         }
-        
+        player.GetComponent<Rigidbody2D>().simulated = true;
         ui_elements.SetActive(false);
         
     }

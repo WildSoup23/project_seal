@@ -551,6 +551,8 @@ MonoBehaviour:
   textToChange: {fileID: 2990471359717406688}
   continue_btn: {fileID: 1325700111761535899}
   retrty_btn: {fileID: 2005532395647725245}
+  money_gained_txt: {fileID: 0}
+  total_money_txt: {fileID: 0}
 --- !u!114 &8229626147591892819 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884363792834896304, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
@@ -1008,6 +1010,22 @@ PrefabInstance:
     - target: {fileID: 7281528151541855843, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: max_speed_upgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: max_dive_speed_upgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: max_money_gain_upgrade
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: max_acceleration_upgrade
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7852934487066363523, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchorMax.y

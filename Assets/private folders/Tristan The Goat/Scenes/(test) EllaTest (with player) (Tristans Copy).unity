@@ -1714,6 +1714,10 @@ PrefabInstance:
       propertyPath: coinMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7522850489718137883, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.28
@@ -52093,7 +52097,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 10}
+  m_Size: {x: 1, y: 30}
   m_EdgeRadius: 0
 --- !u!4 &1634993883
 Transform:
@@ -52104,7 +52108,7 @@ Transform:
   m_GameObject: {fileID: 1634993880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 243.5, y: 4.9, z: -9.003329}
+  m_LocalPosition: {x: 243.5, y: 12.48, z: -9.003329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
