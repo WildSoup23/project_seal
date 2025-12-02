@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/private folders/Tristan The Goat/Scenes/StartMenu.unity
     guid: 8534e8f300b6d0243819f537c54798d1
+  - enabled: 1
+    path: Assets/private folders/Anton/Test Main/(test) StartMenu.unity
+    guid: 3c01f8719d091bd43a29e914fc743695
   - enabled: 1
     path: Assets/private folders/Anton/Test Main/(test) Cutscenes.unity
     guid: 0c28f05606ec8384e8fd01bd809e1295
