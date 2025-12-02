@@ -3675,22 +3675,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_upgrade: 0
-  max_speed_upgrade: 20
+  max_speed_upgrade: 5
   speed_upgrade_cost: 5
   speed_upgrade_cost_increase: 1.2
   speed_upgrade_txt: speed and stuff
   acceleration_upgrade: 0
-  max_acceleration_upgrade: 20
+  max_acceleration_upgrade: 5
   acceleration_upgrade_cost: 5
   acceleration_upgrade_cost_increase: 1.2
   acceleration_upgrade_txt: go fast vroom
   dive_speed_upgrade: 0
-  max_dive_speed_upgrade: 20
+  max_dive_speed_upgrade: 5
   dive_speed_upgrade_cost: 5
   dive_speed_upgrade_cost_increase: 1.2
   dive_speed_upgrade_txt: swan dive bich
   money_gain_upgrade: 0
-  max_money_gain_upgrade: 20
+  max_money_gain_upgrade: 5
   money_gain_upgrade_cost: 5
   money_gain_upgrade_cost_increase: 1.5
   money_gain_upgrade_txt: stonk
@@ -3705,6 +3705,8 @@ MonoBehaviour:
   upgrade_txt: {fileID: 8050818685361549283}
   upgrade_cost_txt: {fileID: 8498401903229019169}
   money_txt: {fileID: 6699566763500516668}
+  willSaveAndLoad: 0
+  ui_elements: {fileID: 0}
 --- !u!1 &7306651441496014913
 GameObject:
   m_ObjectHideFlags: 0

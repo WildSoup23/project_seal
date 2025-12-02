@@ -52,7 +52,7 @@ public class PlayerControles : MonoBehaviour
                 
                 else if (playerAttribute == 1)
                 {
-                    speedMultiplier += float.Parse(parsed);
+                    speedMultiplier += float.Parse(parsed) / 10;
                 }
                 
                 else if (playerAttribute == 2)

@@ -62,7 +62,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [Header("Saving")]
     [SerializeField] private bool willSaveAndLoad;
 
-    private GameObject player;
+    [SerializeField] private GameObject player;
     [SerializeField] private GameObject ui_elements; // Ändrad av Anton :)
 
 
@@ -116,7 +116,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         
         
         
-        player = GameObject.FindGameObjectWithTag("Player");
+        // player = GameObject.FindGameObjectWithTag("Player");
         // ui_elements = transform.Find("UI elements").gameObject;
 
         speed_slider.value = speed_upgrade / max_speed_upgrade;
@@ -177,7 +177,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (money >= acceleration_upgrade_cost)
             {
-                acceleration_upgrade += 0.1f;
+                acceleration_upgrade++;
                 money -= acceleration_upgrade_cost;
                 acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * acceleration_upgrade_cost_increase);
                 acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;

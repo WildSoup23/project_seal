@@ -1688,7 +1688,7 @@ PrefabInstance:
       objectReference: {fileID: 2021758226}
     - target: {fileID: 2130775255162503382, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: maxVelocity_X
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2130775255162503382, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: UpgradesActive
@@ -1706,6 +1706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Test
       objectReference: {fileID: 0}
+    - target: {fileID: 4540487172977829378, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5329250058130288315, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: player
       value: 
@@ -1713,6 +1717,10 @@ PrefabInstance:
     - target: {fileID: 5329250058130288315, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: coinMultiplier
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
+      propertyPath: m_Simulated
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: m_Constraints
@@ -53669,6 +53677,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2021758225}
+    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: ui_elements
       value: 
       objectReference: {fileID: 1791045784}
@@ -53691,6 +53703,10 @@ PrefabInstance:
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: acceleration_upgrade
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: max_acceleration_upgrade
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1326243758563035349, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_IsActive

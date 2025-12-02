@@ -1011,22 +1011,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -79
       objectReference: {fileID: 0}
-    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
-      propertyPath: max_speed_upgrade
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
-      propertyPath: max_dive_speed_upgrade
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
-      propertyPath: max_money_gain_upgrade
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
-      propertyPath: max_acceleration_upgrade
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7852934487066363523, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
