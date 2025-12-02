@@ -42,11 +42,11 @@ public class SceneLoaderManagerScript : MonoBehaviour
         
         using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
         {
-            sw.WriteLine("0");
-            sw.WriteLine("0");
-            sw.WriteLine("1");
-            sw.WriteLine("8");
-            sw.WriteLine("1");
+            sw.WriteLine("0"); // Samlade Pengar
+            sw.WriteLine("1"); // Diving
+            sw.WriteLine("1"); // Max Speed
+            sw.WriteLine("1"); // Acceleration
+            sw.WriteLine("1"); // Pengar
             sw.WriteLine("(test) EllaTest (with player)");
         } 
         

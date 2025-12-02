@@ -52,12 +52,12 @@ public class PlayerControles : MonoBehaviour
                 
                 else if (playerAttribute == 1)
                 {
-                    speedMultiplier *= float.Parse(parsed);
+                    speedMultiplier += float.Parse(parsed);
                 }
                 
                 else if (playerAttribute == 2)
                 {
-                    changedGravityScale *= float.Parse(parsed);
+                    changedGravityScale += float.Parse(parsed);
                 }
                 
                 else if (playerAttribute == 3)

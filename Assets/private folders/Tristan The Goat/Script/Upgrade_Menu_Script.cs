@@ -177,7 +177,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (money >= acceleration_upgrade_cost)
             {
-                acceleration_upgrade++;
+                acceleration_upgrade += 0.1f;
                 money -= acceleration_upgrade_cost;
                 acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * acceleration_upgrade_cost_increase);
                 acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
@@ -284,7 +284,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }   
         }
-        
+        player.GetComponent<Rigidbody2D>().simulated = true;
         ui_elements.SetActive(false);
         
     }
