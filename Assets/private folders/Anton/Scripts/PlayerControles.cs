@@ -38,10 +38,7 @@ public class PlayerControles : MonoBehaviour
             int playerAttribute = 0;
             foreach (string line in File.ReadLines(path, Encoding.UTF8))
             {
-                
-                
                 string parsed = line.Trim();
-                Debug.Log(parsed);
                 
                 if (parsed == File.ReadLines(path).First())
                 {
@@ -66,6 +63,7 @@ public class PlayerControles : MonoBehaviour
                 else if (playerAttribute == 3)
                 {
                     // problem
+                    Debug.Log(float.Parse(parsed));
                     coins.coinMultiplier *= float.Parse(parsed);
                     break;
                 }

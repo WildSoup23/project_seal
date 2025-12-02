@@ -1688,7 +1688,7 @@ PrefabInstance:
       objectReference: {fileID: 2021758226}
     - target: {fileID: 2130775255162503382, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: maxVelocity_X
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2130775255162503382, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: UpgradesActive
@@ -53674,7 +53674,7 @@ PrefabInstance:
       objectReference: {fileID: 1791045784}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: speed_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: willSaveAndLoad
@@ -53682,15 +53682,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: dive_speed_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: money_gain_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: acceleration_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1326243758563035349, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_IsActive

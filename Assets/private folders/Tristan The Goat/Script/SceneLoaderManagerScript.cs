@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
@@ -43,7 +42,12 @@ public class SceneLoaderManagerScript : MonoBehaviour
         
         using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
         {
-            
+            sw.WriteLine("0");
+            sw.WriteLine("0");
+            sw.WriteLine("1");
+            sw.WriteLine("8");
+            sw.WriteLine("1");
+            sw.WriteLine("(test) EllaTest (with player)");
         } 
         
         // TODO: ta bort (test) sen

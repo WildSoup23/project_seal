@@ -89,23 +89,24 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
                     // TODO: Ge varje upgradering sitt start värde
                     
-                    if (speed_upgrade == 0)
+                    if (speed_upgrade == -1)
                     {
                         speed_upgrade = (float) Convert.ToDouble(parsed);
                     }
 
-                    else if (acceleration_upgrade == 1)
+                    else if (acceleration_upgrade == 0)
                     {
                         // Problem
+                        Debug.Log((float) Convert.ToDouble(parsed));
                         acceleration_upgrade = (float) Convert.ToDouble(parsed);
                     }
                 
-                    else if (dive_speed_upgrade == 1)
+                    else if (dive_speed_upgrade == 0)
                     {
                         dive_speed_upgrade = (float) Convert.ToDouble(parsed);
                     }
                 
-                    else if (money_gain_upgrade == 1)
+                    else if (money_gain_upgrade == 0)
                     {
                         money_gain_upgrade = (float) Convert.ToDouble(parsed);
                     }
