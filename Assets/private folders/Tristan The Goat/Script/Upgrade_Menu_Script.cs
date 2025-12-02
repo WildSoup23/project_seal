@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -64,6 +65,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     private GameObject player;
     [SerializeField] private GameObject ui_elements; // Ändrad av Anton :)
 
+
     private const string path = @"c:\temp\test.txt";
     
     
@@ -87,24 +89,25 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
                     // TODO: Ge varje upgradering sitt start värde
                     
-                    if (speed_upgrade == 1)
+                    if (speed_upgrade == 0)
                     {
-                        speed_upgrade = int.Parse(parsed);
+                        speed_upgrade = (float) Convert.ToDouble(parsed);
                     }
 
                     else if (acceleration_upgrade == 1)
                     {
-                        acceleration_upgrade = int.Parse(parsed);
+                        // Problem
+                        acceleration_upgrade = (float) Convert.ToDouble(parsed);
                     }
                 
                     else if (dive_speed_upgrade == 1)
                     {
-                        dive_speed_upgrade = int.Parse(parsed);
+                        dive_speed_upgrade = (float) Convert.ToDouble(parsed);
                     }
                 
                     else if (money_gain_upgrade == 1)
                     {
-                        money_gain_upgrade = int.Parse(parsed);
+                        money_gain_upgrade = (float) Convert.ToDouble(parsed);
                     }
                 }
             }
@@ -282,6 +285,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
         
         ui_elements.SetActive(false);
+        
     }
 
     public void AddMoney(int amount)

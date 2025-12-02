@@ -39,6 +39,13 @@ public class SceneLoaderManagerScript : MonoBehaviour
     {
         Time.timeScale = 1f;
 
+        File.Delete(@"c:\temp\test.txt"); // Ensures that we write to a blank file
+        
+        using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
+        {
+            
+        } 
+        
         // TODO: ta bort (test) sen
         // Tillägg av Anton ---------------------------------------------- :)
         LoadScene("(test) Cutscenes");

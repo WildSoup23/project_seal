@@ -52,7 +52,7 @@ public class SaveManager : MonoBehaviour
                 
                 if (parsed == File.ReadLines(path).Last())
                 {
-                    continue;
+                    break;
                 }
 
                 lines.Add(parsed);

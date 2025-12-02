@@ -11,8 +11,7 @@ public class PlayerControles : MonoBehaviour
     
     public float changedGravityScale;
     
-    [SerializeField]
-    private GameObject gameObject;
+    [SerializeField] private GameObject gameObject;
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
@@ -39,7 +38,11 @@ public class PlayerControles : MonoBehaviour
             int playerAttribute = 0;
             foreach (string line in File.ReadLines(path, Encoding.UTF8))
             {
+                
+                
                 string parsed = line.Trim();
+                Debug.Log(parsed);
+                
                 if (parsed == File.ReadLines(path).First())
                 {
                     continue;
@@ -62,9 +65,11 @@ public class PlayerControles : MonoBehaviour
                 
                 else if (playerAttribute == 3)
                 {
+                    // problem
                     coins.coinMultiplier *= float.Parse(parsed);
+                    break;
                 }
-
+                
                 playerAttribute++;
             }
         }
