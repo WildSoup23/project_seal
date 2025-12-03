@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Bird
-  - Slope
-  - Start
-  - End
-<<<<<<< Updated upstream
-  - Narwal
-=======
-  - NextScene
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
