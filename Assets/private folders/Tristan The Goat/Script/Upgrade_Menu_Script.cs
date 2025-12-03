@@ -13,25 +13,28 @@ public class Upgrade_Menu_Script : MonoBehaviour
     // Variables
     [Header("Variables")]
     [Header("Speed")]
-    [SerializeField] private float speed_upgrade;
+    public float speed_upgrade;
     [SerializeField] private float max_speed_upgrade;
     [SerializeField] private float speed_upgrade_cost;
     [SerializeField] private float speed_upgrade_cost_increase;
     [SerializeField] private string speed_upgrade_txt;
+    
     [Header("Acceleration")]
-    [SerializeField] private float acceleration_upgrade;
+    public float acceleration_upgrade;
     [SerializeField] private float max_acceleration_upgrade;
     [SerializeField] private float acceleration_upgrade_cost;
     [SerializeField] private float acceleration_upgrade_cost_increase;
     [SerializeField] private string acceleration_upgrade_txt;
+    
     [Header("Dive speed")]
-    [SerializeField] private float dive_speed_upgrade;
+    public float dive_speed_upgrade;
     [SerializeField] private float max_dive_speed_upgrade;
     [SerializeField] private float dive_speed_upgrade_cost;
     [SerializeField] private float dive_speed_upgrade_cost_increase;
     [SerializeField] private string dive_speed_upgrade_txt;
+    
     [Header("Money gain")]
-    [SerializeField] private float money_gain_upgrade;
+    public float money_gain_upgrade;
     [SerializeField] private float max_money_gain_upgrade;
     [SerializeField] private float money_gain_upgrade_cost;
     [SerializeField] private float money_gain_upgrade_cost_increase;
@@ -76,6 +79,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (File.Exists("c:/temp/test.txt"))
             {
+                int playerAttribute = -1;
+                
                 money = float.Parse(File.ReadLines(path).First());
                 
                 foreach (string line in File.ReadLines(path, Encoding.UTF8))
@@ -84,32 +89,32 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 
                     if (parsed == File.ReadLines(path).First())
                     {
-                        continue;
-                    }
-
-                    // TODO: Ge varje upgradering sitt start värde
                     
-                    if (speed_upgrade == -1)
-                    {
-                        speed_upgrade = (float) Convert.ToDouble(parsed);
                     }
 
-                    else if (acceleration_upgrade == 0)
+                    else if (playerAttribute == 0)
                     {
-                        // Problem
-                        Debug.Log((float) Convert.ToDouble(parsed));
-                        acceleration_upgrade = (float) Convert.ToDouble(parsed);
+                        speed_upgrade = float.Parse(parsed);
                     }
                 
-                    else if (dive_speed_upgrade == 0)
+                    else if (playerAttribute == 1)
                     {
-                        dive_speed_upgrade = (float) Convert.ToDouble(parsed);
+                        acceleration_upgrade = float.Parse(parsed) / 10;
                     }
                 
-                    else if (money_gain_upgrade == 0)
+                    else if (playerAttribute == 2)
                     {
-                        money_gain_upgrade = (float) Convert.ToDouble(parsed);
+                        dive_speed_upgrade = float.Parse(parsed);
                     }
+                
+                    else if (playerAttribute == 3)
+                    {
+                        // problem
+                        money_gain_upgrade = float.Parse(parsed);
+                        break;
+                    }
+                
+                    playerAttribute++;
                 }
             }
         }

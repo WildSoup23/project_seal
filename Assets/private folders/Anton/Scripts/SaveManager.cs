@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class SaveManager : MonoBehaviour
 {
     private const string path = @"c:\temp\test.txt";
+    public List<string> lines;
+
+    [SerializeField] private Upgrade_Menu_Script upgrades;
 
     [SerializeField] private bool willSave;
     
@@ -25,8 +28,10 @@ public class SaveManager : MonoBehaviour
             int oldAmount = 0;
             float newAmount = coins.coins;
         
+            lines = new List<string>();
         
-        
+            
+            // Gets the old money amount
             if (File.Exists("c:/temp/test.txt"))
             {
                 foreach (string line in File.ReadLines(path, Encoding.UTF8))
@@ -37,38 +42,18 @@ public class SaveManager : MonoBehaviour
                 }
             
             }
-
             newAmount += oldAmount;
+            
 
-            List<string> lines = new List<string>();
-        
-            foreach (string line in File.ReadLines(path, Encoding.UTF8))
-            {
-                string parsed = line.Trim();
-                if (parsed == File.ReadLines(path).First())
-                {
-                    continue;
-                }
-                
-                if (parsed == File.ReadLines(path).Last())
-                {
-                    break;
-                }
-
-                lines.Add(parsed);
-            }
-        
             File.Delete(path); // Ensures that we write to a blank file
-        
+            
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(newAmount);
-
-                foreach (string line in lines)
-                {
-                    sw.WriteLine(line);
-                }
-
+                sw.WriteLine(upgrades.speed_upgrade);
+                sw.WriteLine(upgrades.acceleration_upgrade);
+                sw.WriteLine(upgrades.dive_speed_upgrade);
+                sw.WriteLine(upgrades.money_gain_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }  
         }

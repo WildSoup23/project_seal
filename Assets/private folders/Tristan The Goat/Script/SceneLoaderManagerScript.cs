@@ -47,7 +47,7 @@ public class SceneLoaderManagerScript : MonoBehaviour
             sw.WriteLine("0"); // Acceleration
             sw.WriteLine("0"); // Diving Speed
             sw.WriteLine("1"); // Pengar
-            sw.WriteLine("(test) EllaTest (with player)");
+            sw.WriteLine("(test) Level 0");
         } 
         
         // TODO: ta bort (test) sen

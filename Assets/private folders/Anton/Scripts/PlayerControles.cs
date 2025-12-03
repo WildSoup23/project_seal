@@ -35,41 +35,7 @@ public class PlayerControles : MonoBehaviour
     {
         if (UpgradesActive)
         {
-            int playerAttribute = 0;
-            foreach (string line in File.ReadLines(path, Encoding.UTF8))
-            {
-                string parsed = line.Trim();
-                
-                if (parsed == File.ReadLines(path).First())
-                {
-                    continue;
-                }
-
-                if (playerAttribute == 0)
-                {
-                    maxVelocity_X += float.Parse(parsed);
-                }
-                
-                else if (playerAttribute == 1)
-                {
-                    speedMultiplier += float.Parse(parsed) / 10;
-                }
-                
-                else if (playerAttribute == 2)
-                {
-                    changedGravityScale += float.Parse(parsed);
-                }
-                
-                else if (playerAttribute == 3)
-                {
-                    // problem
-                    Debug.Log(float.Parse(parsed));
-                    coins.coinMultiplier *= float.Parse(parsed);
-                    break;
-                }
-                
-                playerAttribute++;
-            }
+            ApplyUpgrades();
         }
     }
 
@@ -133,6 +99,45 @@ public class PlayerControles : MonoBehaviour
         if (other.CompareTag("Slope"))
         {
             allowedToAccelerate = false;
+        }
+    }
+
+    public void ApplyUpgrades()
+    {
+        int playerAttribute = -1;
+        foreach (string line in File.ReadLines(path, Encoding.UTF8))
+        {
+            string parsed = line.Trim();
+                
+            if (parsed == File.ReadLines(path).First())
+            {
+                    
+            }
+
+            else if (playerAttribute == 0)
+            {
+                maxVelocity_X += float.Parse(parsed);
+            }
+                
+            else if (playerAttribute == 1)
+            {
+                speedMultiplier += float.Parse(parsed) / 10;
+            }
+                
+            else if (playerAttribute == 2)
+            {
+                changedGravityScale += float.Parse(parsed);
+            }
+                
+            else if (playerAttribute == 3)
+            {
+                // problem
+                Debug.Log(float.Parse(parsed));
+                coins.coinMultiplier *= float.Parse(parsed);
+                break;
+            }
+                
+            playerAttribute++;
         }
     }
 }
