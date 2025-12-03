@@ -8,7 +8,11 @@ TagManager:
   - Slope
   - Start
   - End
+<<<<<<< Updated upstream
   - Narwal
+=======
+  - NextScene
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
