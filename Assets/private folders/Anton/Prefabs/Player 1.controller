@@ -234,7 +234,7 @@ AnimatorStateMachine:
     m_Position: {x: 230, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4123630072980169236}
-    m_Position: {x: 270, y: 170, z: 0}
+    m_Position: {x: 280, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8607308026844480972}
     m_Position: {x: 600, y: 80, z: 0}
@@ -337,7 +337,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: Player 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Curve%

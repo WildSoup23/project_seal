@@ -8,6 +8,8 @@ using System.Text;
 public class PlayerControles : MonoBehaviour
 {
     // Controles player dive, acceleration, max speed
+
+    [SerializeField] private AudioSource audioSource;
     
     public float changedGravityScale;
     
@@ -90,6 +92,7 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
+            audioSource.Play();
             allowedToAccelerate = true;
         }
     }
