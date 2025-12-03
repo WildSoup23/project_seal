@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class SaveManager : MonoBehaviour
 {
     private const string path = @"c:\temp\test.txt";
-    public List<string> lines;
 
     [SerializeField] private Upgrade_Menu_Script upgrades;
 
@@ -27,8 +26,6 @@ public class SaveManager : MonoBehaviour
         {
             int oldAmount = 0;
             float newAmount = coins.coins;
-        
-            lines = new List<string>();
         
             
             // Gets the old money amount
