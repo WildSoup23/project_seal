@@ -124,7 +124,8 @@ public class PlayerControles : MonoBehaviour
                 
             else if (playerAttribute == 1)
             {
-                speedMultiplier += float.Parse(parsed) / 10;
+                float upgr = float.Parse(parsed);
+                speedMultiplier += upgr / 10;
             }
                 
             else if (playerAttribute == 2)
@@ -135,7 +136,6 @@ public class PlayerControles : MonoBehaviour
             else if (playerAttribute == 3)
             {
                 // problem
-                Debug.Log(float.Parse(parsed));
                 coins.coinMultiplier *= float.Parse(parsed);
                 break;
             }

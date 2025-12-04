@@ -99,7 +99,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 
                     else if (playerAttribute == 1)
                     {
-                        acceleration_upgrade = float.Parse(parsed) / 10;
+                        acceleration_upgrade = float.Parse(parsed);
                     }
                 
                     else if (playerAttribute == 2)
