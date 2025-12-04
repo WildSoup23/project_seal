@@ -5,9 +5,23 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public string nextSceneName;
+    public static NextLevel instance;
+    
     
     void Start()
     {
+        
+        if(instance == null)
+        {
+            instance = this;
+
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
         DontDestroyOnLoad(this);
         
         if (SceneManager.GetActiveScene().name == "(test) Level 0")

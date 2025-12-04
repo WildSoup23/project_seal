@@ -327,6 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e9577382f5c6408e0160599ae3c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addedAmount: 0
+  newAmount: 0
   upgrades: {fileID: 0}
   willSave: 1
 --- !u!82 &9121556280255010533

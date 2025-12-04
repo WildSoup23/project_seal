@@ -95,22 +95,28 @@ public class Upgrade_Menu_Script : MonoBehaviour
                     else if (playerAttribute == 0)
                     {
                         speed_upgrade = float.Parse(parsed);
+                        speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * Mathf.Pow(2, speed_upgrade));
+                        
                     }
                 
                     else if (playerAttribute == 1)
                     {
                         acceleration_upgrade = float.Parse(parsed);
+                        acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * Mathf.Pow(2, acceleration_upgrade));
                     }
                 
                     else if (playerAttribute == 2)
                     {
                         dive_speed_upgrade = float.Parse(parsed);
+                        dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * Mathf.Pow(2, dive_speed_upgrade));
+                        
                     }
                 
                     else if (playerAttribute == 3)
                     {
                         // problem
                         money_gain_upgrade = float.Parse(parsed);
+                        money_gain_upgrade_cost = Mathf.Round(money_gain_upgrade_cost * Mathf.Pow(2, money_gain_upgrade - 1));
                         break;
                     }
                 
@@ -144,7 +150,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         top_txt.text = "Speed";
         upgrade_cost_txt.text = $"${speed_upgrade_cost}";
     }
-
+    
     public void UpgradeSpeed()
     {
         if(speed_upgrade < max_speed_upgrade)

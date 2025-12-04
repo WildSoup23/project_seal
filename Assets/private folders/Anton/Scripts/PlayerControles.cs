@@ -70,6 +70,12 @@ public class PlayerControles : MonoBehaviour
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
         }
         
+        else if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x < -maxVelocity_X)
+        {
+            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-maxVelocity_X,
+                gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+        }
+        
         // Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity);
         
         if (allowedToSlam_ByKey)

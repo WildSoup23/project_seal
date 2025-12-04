@@ -20114,7 +20114,7 @@ MonoBehaviour:
   SaveCoins:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 89734722}
         m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
         m_MethodName: SaveCoins
         m_Mode: 2
@@ -20208,97 +20208,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: money
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2021758225}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: ui_elements
-      value: 
-      objectReference: {fileID: 1791045784}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: speed_upgrade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: willSaveAndLoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: speed_upgrade_txt
-      value: King Skeal III is an incredible king. He is strong, he is sturdy, he
-        is respected and he is handsome. No other can compete with him. His greatest
-        ability is his ever-increasing top speed.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: dive_speed_upgrade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: money_gain_upgrade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: speed_upgrade_cost
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: acceleration_upgrade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: dive_speed_upgrade_txt
-      value: King Skeal III rules the land and the sky alike. However, he is strongly
-        attached to the ground and its pretty snow. If he could, he would always
-        return to the ground faster.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: money_gain_upgrade_txt
-      value: "The most important thing in a functioning kingdom is its economy. Hence,
-        every time King Skeal III goes outside he is to receive appreciation taxation.
-        He\u2019s getting low on cash, should he increase the taxation?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: dive_speed_upgrade_cost
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: money_gain_upgrade_cost
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: acceleration_upgrade_txt
-      value: Apart from those pesky Penguins, the King has nothing to complain about.
-        He is the greatest seal around, and his acceleration is only increasing.
-        He is truly on a roll!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: max_acceleration_upgrade
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: acceleration_upgrade_cost
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: speed_upgrade_cost_increase
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: dive_speed_upgrade_cost_increase
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: money_gain_upgrade_cost_increase
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: acceleration_upgrade_cost_increase
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1326243758563035349, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -20459,6 +20371,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4117066294370589252, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: continue_btn
+      value: 
+      objectReference: {fileID: 341279553}
     - target: {fileID: 4765569013706476214, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -20619,16 +20535,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4117066294370589252, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5912361373325470778, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       insertIndex: -1
       addedObject: {fileID: 341279554}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6909442274558043847, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1668043779}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
 --- !u!224 &1668043772 stripped
 RectTransform:
@@ -20646,68 +20560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81423d88a7fe9134aa67d3683729cfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1668043774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2005532395647725245, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1668043775 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2990471359717406688, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1668043776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8229626147591892819, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1668043777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5690985164297897150, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1668043778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6909442274558043847, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1668043779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668043778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1644935af109a134198222d66cf520ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  win_lose_panel: {fileID: 1668043777}
-  images:
-  - {fileID: -8527568592950175283, guid: 8c3d613ae6fb544418eda434b3ee492f, type: 3}
-  - {fileID: -8527568592950175283, guid: 8c3d613ae6fb544418eda434b3ee492f, type: 3}
-  texts:
-  - Game Over
-  - Level Clear
-  imageToChange: {fileID: 1668043776}
-  textToChange: {fileID: 1668043775}
-  continue_btn: {fileID: 341279553}
-  retrty_btn: {fileID: 1668043774}
-  money_gained_txt: {fileID: 0}
-  total_money_txt: {fileID: 0}
 --- !u!1001 &1686132216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22285,11 +22137,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 612767080345089293, guid: 4006759fe5609a042aba004ab7df8750, type: 3}
   m_PrefabInstance: {fileID: 1686132216}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1791045784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 816360916098543612, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-  m_PrefabInstance: {fileID: 1668043771}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1831498331
 PrefabInstance:

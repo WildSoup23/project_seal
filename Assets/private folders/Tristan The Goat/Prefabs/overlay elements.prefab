@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6483888833531055081}
+    - target: {fileID: 1190910918512679977, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: (test) StartMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 1415530989827053490, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -491,6 +495,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8971084650910476324, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6497595667532868138}
+    - targetCorrespondingSourceObject: {fileID: 8971084650910476324, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4117066294370589252}
   m_SourcePrefab: {fileID: 100100000, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
 --- !u!224 &1909298295705236121 stripped
 RectTransform:
@@ -505,6 +512,28 @@ GameObject:
 --- !u!114 &2990471359717406688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 728665090819913987, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
+  m_PrefabInstance: {fileID: 2566195068736311011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3279512926466868874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1017777713244473449, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
+  m_PrefabInstance: {fileID: 2566195068736311011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3472807228911571828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1417814849484610967, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
   m_PrefabInstance: {fileID: 2566195068736311011}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -551,8 +580,33 @@ MonoBehaviour:
   textToChange: {fileID: 2990471359717406688}
   continue_btn: {fileID: 1325700111761535899}
   retrty_btn: {fileID: 2005532395647725245}
-  money_gained_txt: {fileID: 0}
-  total_money_txt: {fileID: 0}
+  money_gained_txt: {fileID: 3279512926466868874}
+  total_money_txt: {fileID: 3472807228911571828}
+--- !u!114 &4117066294370589252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6909442274558043847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1644935af109a134198222d66cf520ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  win_lose_panel: {fileID: 5690985164297897150}
+  images:
+  - {fileID: -8527568592950175283, guid: 8c3d613ae6fb544418eda434b3ee492f, type: 3}
+  - {fileID: -8527568592950175283, guid: 8c3d613ae6fb544418eda434b3ee492f, type: 3}
+  texts:
+  - Game Over
+  - Level Clear
+  imageToChange: {fileID: 8229626147591892819}
+  textToChange: {fileID: 2990471359717406688}
+  continue_btn: {fileID: 0}
+  retrty_btn: {fileID: 2005532395647725245}
+  money_gained_txt: {fileID: 3279512926466868874}
+  total_money_txt: {fileID: 3472807228911571828}
 --- !u!114 &8229626147591892819 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884363792834896304, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
@@ -790,6 +844,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 4634753672977277434}
+    - target: {fileID: 6259472725412314296, guid: 005fe6e5d1387184e9a7e5342bf3b05a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: (test) StartMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1011,6 +1069,74 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -79
       objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: money
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: ui_elements
+      value: 
+      objectReference: {fileID: 816360916098543612}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: willSaveAndLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: speed_upgrade_txt
+      value: King Skeal III is an incredible king. He is strong, he is sturdy, he
+        is respected and he is handsome. No other can compete with him. His greatest
+        ability is his ever-increasing top speed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: speed_upgrade_cost
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: dive_speed_upgrade_txt
+      value: King Skeal III rules the land and the sky alike. However, he is strongly
+        attached to the ground and its pretty snow. If he could, he would always
+        return to the ground faster.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: money_gain_upgrade_txt
+      value: "The most important thing in a functioning kingdom is its economy. Hence,
+        every time King Skeal III goes outside he is to receive appreciation taxation.
+        He\u2019s getting low on cash, should he increase the taxation?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: dive_speed_upgrade_cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: money_gain_upgrade_cost
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: acceleration_upgrade_txt
+      value: Apart from those pesky Penguins, the King has nothing to complain about.
+        He is the greatest seal around, and his acceleration is only increasing.
+        He is truly on a roll!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: acceleration_upgrade_cost
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: speed_upgrade_cost_increase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: dive_speed_upgrade_cost_increase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: money_gain_upgrade_cost_increase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: acceleration_upgrade_cost_increase
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7852934487066363523, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1036,6 +1162,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+--- !u!1 &816360916098543612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9017961089777173502, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+  m_PrefabInstance: {fileID: 8535007635930770434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7082309702374857958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1457788728532365540, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}

@@ -48,7 +48,8 @@ public class Win_Lose_Script : MonoBehaviour
     private void DisplayMoney()
     {
         // Display money shit here
-        money_gained_txt.text = $"Whatever put here";
-        total_money_txt.text = $"Whatever put here";
+        SaveManager playerMoney = GameObject.FindGameObjectWithTag("Player").GetComponent<SaveManager>();
+        money_gained_txt.text = "You earned: " + playerMoney.addedAmount;
+        total_money_txt.text = "Total amount: " + playerMoney.newAmount;
     }
 }
