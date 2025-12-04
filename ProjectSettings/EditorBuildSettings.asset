@@ -14,8 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/private folders/Anton/Test Main/(test) Cutscenes.unity
     guid: 0c28f05606ec8384e8fd01bd809e1295
-  - enabled: 1
-    path: Assets/private folders/Anton/Test Main/(test) Level 0.unity
+  - enabled: 0
+    path: Assets/private folders/Anton/Test Main/(test) EllaTest (with player).unity
     guid: 399e9cd4023781a48bf6424424332129
   - enabled: 1
     path: Assets/private folders/Anton/Test Main/(test) Level 1.unity

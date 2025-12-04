@@ -35,11 +35,21 @@ public class New_Camera_Script : MonoBehaviour
         }
 
         // The cameras zoom and y pos based on player y pos.
-        cm.orthographicSize = Mathf.Clamp(transform.position.y + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), 6, 9999);
-        cm.transform.position = Vector3.Lerp(
-            new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
-            new Vector3(cm.transform.position.x, Mathf.Clamp(cm.orthographicSize + cameraYOffset, 2,9999), cm.transform.position.z),
-            followSpeed* 2);
-
+        if (cm.orthographic)
+        {
+            cm.orthographicSize = Mathf.Clamp(transform.position.y + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), 6, 9999);
+            cm.transform.position = Vector3.Lerp(
+                new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
+                new Vector3(cm.transform.position.x, Mathf.Clamp(cm.orthographicSize + cameraYOffset, 2, 9999), cm.transform.position.z),
+                followSpeed * 2);
+        }
+        else
+        {
+            cm.fieldOfView = Mathf.Clamp(70 + transform.position.y * 2 + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), 70, 9999);
+            cm.transform.position = Vector3.Lerp(
+                new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
+                new Vector3(cm.transform.position.x, Mathf.Clamp(cm.fieldOfView / 9 + cameraYOffset, 2, 9999), cm.transform.position.z),
+                followSpeed * 2);
+        } 
     }
 }
