@@ -14,7 +14,6 @@ public class PlayerControles : MonoBehaviour
     public float changedGravityScale;
     
     [SerializeField] private GameObject gameObject;
-    [SerializeField] private GameObject accObject;
     
     private float rotateAmount;
     
@@ -84,19 +83,20 @@ public class PlayerControles : MonoBehaviour
         
         if (allowedToSlam_ByKey)
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+            if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y <= 0)
+            {
+              gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+            }
 
             // Here is the acceleration
-            if (allowedToAccelerate && gameObject.GetComponent<Rigidbody2D>().linearVelocity.y <= 0)
+            if (allowedToAccelerate)
             {
-                accObject.SetActive(true);
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
             }        
         }
 
         else
         {
-            accObject.SetActive(false);
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     }
@@ -118,7 +118,6 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
-            accObject.SetActive(false);
             allowedToAccelerate = false;
         }
     }
