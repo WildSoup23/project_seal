@@ -14,6 +14,7 @@ public class PlayerControles : MonoBehaviour
     public float changedGravityScale;
     
     [SerializeField] private GameObject gameObject;
+    
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
@@ -57,6 +58,7 @@ public class PlayerControles : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Max velocity downwards
         if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
         {
             gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(
@@ -64,6 +66,7 @@ public class PlayerControles : MonoBehaviour
                 -35);
         }
         
+        // Max velocity forwards
         if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x > maxVelocity_X)
         {
             gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(maxVelocity_X,
@@ -80,8 +83,12 @@ public class PlayerControles : MonoBehaviour
         
         if (allowedToSlam_ByKey)
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+            if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y <= 0)
+            {
+              gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+            }
 
+            // Here is the acceleration
             if (allowedToAccelerate)
             {
                 gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
@@ -101,6 +108,10 @@ public class PlayerControles : MonoBehaviour
             audioSource.Play();
             allowedToAccelerate = true;
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
     }
 
     private void OnTriggerExit2D(Collider2D other)
