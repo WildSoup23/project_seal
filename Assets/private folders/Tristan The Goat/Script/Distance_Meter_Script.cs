@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Net;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,6 +52,7 @@ public class Distance_Meter_Script : MonoBehaviour
             Vector3 newpos2 = new Vector3(0-(width/2), 0, 0);
             startPoint.GetComponent<RectTransform>().localPosition = newpos2;
             startPoint.transform.SetSiblingIndex(handle_rect.transform.GetSiblingIndex());
+            startPoint.name = "startPoint_icon";
             icons.Add(startPoint);
 
             // End icon
@@ -57,6 +60,7 @@ public class Distance_Meter_Script : MonoBehaviour
             Vector3 newpos3 = new Vector3(width/2, 0, 0);
             endPoint.GetComponent<RectTransform>().localPosition = newpos3;
             endPoint.transform.SetSiblingIndex(handle_rect.transform.GetSiblingIndex());
+            endPoint.name = "endPoint_icon";
             icons.Add(endPoint);
 
         }
@@ -71,5 +75,38 @@ public class Distance_Meter_Script : MonoBehaviour
         
         slider.value = player.position.x/distance;
         handle_rect.localEulerAngles = new Vector3(0, 0, slider.value * -360);
+
+        UpdateIcons();
+    }
+
+    private void UpdateIcons()
+    {
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Slope");
+        width = slider.gameObject.GetComponent<RectTransform>().rect.width;
+        int index = 0;
+
+
+        foreach (var icon in icons)
+        {
+            if(icon.name == "startPoint_icon")
+            {
+                Vector3 newpos2 = new Vector3(0 - (width / 2), 0, 0);
+                icon.GetComponent<RectTransform>().localPosition = newpos2;
+            }
+            else if(icon.name == "endPoint_icon")
+            {
+                Vector3 newpos3 = new Vector3(width / 2, 0, 0);
+                icon.GetComponent<RectTransform>().localPosition = newpos3;
+            }
+            else
+            {
+                
+                Vector3 newpos = new Vector3(0, 0, 0);
+                newpos.x = (((objectsWithTag[index].transform.position.x /
+                    (end.position.x - start.position.x)) * width - (width / 2)) + width / 10);
+                icon.GetComponent<RectTransform>().localPosition = newpos;
+            }
+            index++;
+        }
     }
 }
