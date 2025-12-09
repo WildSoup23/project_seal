@@ -34,6 +34,7 @@ public class Win_Lose_Script : MonoBehaviour
         Rigidbody2D player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         player.linearVelocity = new Vector2(0, 0);
         player.simulated = false;
+        Cursor.visible = true;
         DisplayMoney();
     }
 
@@ -43,7 +44,7 @@ public class Win_Lose_Script : MonoBehaviour
         imageToChange.sprite = images[1];
         textToChange.text = texts[1];
         continue_btn.SetActive(true);
-
+        Cursor.visible = true;
         DisplayMoney();
     }
 

@@ -88,11 +88,13 @@ public class SceneLoaderManagerScript : MonoBehaviour
             pause_screen.SetActive(false);
             settings_panel.SetActive(false);
             Time.timeScale = 1f;
+            Cursor.visible = false;
         }
         else
         {
             pause_screen.SetActive(true);
             Time.timeScale = 0f;
+            Cursor.visible = true;
         }
     }
 

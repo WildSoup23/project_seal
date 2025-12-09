@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Upgrade_Menu_Script : MonoBehaviour
 {
@@ -345,6 +346,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
         player.GetComponent<Rigidbody2D>().simulated = true;
         ui_elements.SetActive(false);
+        Cursor.visible = false;
         
     }
 
