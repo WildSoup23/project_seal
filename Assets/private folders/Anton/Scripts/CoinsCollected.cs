@@ -23,6 +23,7 @@ public class CoinsCollected : MonoBehaviour
     void Update()
     {
         newPosition_X = (int)player.transform.position.x - startPosition_X;
-        coins = newPosition_X * coinMultiplier;
+        coins = newPosition_X * 0.3333f;
+        coins = (int)coins;
     }
 }

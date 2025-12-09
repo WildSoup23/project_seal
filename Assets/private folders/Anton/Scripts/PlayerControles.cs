@@ -29,6 +29,8 @@ public class PlayerControles : MonoBehaviour
 
     [SerializeField] private CoinsCollected coins;
 
+    private bool allowedToDown = true;
+
     private void Awake()
     {
         allowedToSlam_ByKey = false;
@@ -58,6 +60,7 @@ public class PlayerControles : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         // Max velocity downwards
         if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
         {
@@ -83,11 +86,14 @@ public class PlayerControles : MonoBehaviour
         
         if (allowedToSlam_ByKey)
         {
-            if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y <= 0)
+            Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+            
+            if (allowedToDown)
             {
               gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
+                
             }
-
+            
             // Here is the acceleration
             if (allowedToAccelerate)
             {
@@ -112,6 +118,15 @@ public class PlayerControles : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (other.CompareTag("Slope") && gameObject.GetComponent<Rigidbody2D>().linearVelocityY > 0)
+        {
+            allowedToDown = false;
+        }
+
+        else
+        {
+            allowedToDown = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -119,6 +134,7 @@ public class PlayerControles : MonoBehaviour
         if (other.CompareTag("Slope"))
         {
             allowedToAccelerate = false;
+            allowedToDown = true;
         }
     }
 
