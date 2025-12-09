@@ -3450,6 +3450,7 @@ GameObject:
   - component: {fileID: 8173421922358923187}
   - component: {fileID: 5274946424012369821}
   - component: {fileID: 4293111693811664640}
+  - component: {fileID: 5093914830850786439}
   m_Layer: 5
   m_Name: Settings panel
   m_TagString: Untagged
@@ -3515,6 +3516,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5093914830850786439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793081934750122465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c64545684a8e554ab4e7992359e4902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 503259eabe4e16847b5bfa553b0ed415, type: 2}
+  masterSlider: {fileID: 1471356531620687514}
+  musicSlider: {fileID: 665271094329898289}
+  sfxSlider: {fileID: 8585254485732654635}
 --- !u!1 &8802255419851573734
 GameObject:
   m_ObjectHideFlags: 0

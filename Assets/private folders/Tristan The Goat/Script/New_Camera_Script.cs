@@ -10,6 +10,8 @@ public class New_Camera_Script : MonoBehaviour
     [Tooltip("Camera y pos offset")]
     [SerializeField] private float cameraYOffset;
     [SerializeField] private float cameraYMin;
+    [SerializeField] private float camZoomMax = 120;
+    [SerializeField] private float camZoomMin = 60;
 
     // Refrences
     private Camera cm;
@@ -38,7 +40,7 @@ public class New_Camera_Script : MonoBehaviour
         // The cameras zoom and y pos based on player y pos.
         if (cm.orthographic)
         {
-            cm.orthographicSize = Mathf.Clamp(transform.position.y + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), 6, 9999);
+            cm.orthographicSize = Mathf.Clamp(transform.position.y + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), camZoomMin/10, camZoomMax/10);
             cm.transform.position = Vector3.Lerp(
                 new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
                 new Vector3(cm.transform.position.x, Mathf.Clamp(cm.orthographicSize + cameraYOffset, cameraYMin, 9999), cm.transform.position.z),
@@ -46,7 +48,7 @@ public class New_Camera_Script : MonoBehaviour
         }
         else
         {
-            cm.fieldOfView = Mathf.Clamp(70 + transform.position.y * 2 + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), 70, 9999);
+            cm.fieldOfView = Mathf.Clamp(70 + transform.position.y * 2 + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), camZoomMin, camZoomMax);
             cm.transform.position = Vector3.Lerp(
                 new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
                 new Vector3(cm.transform.position.x, Mathf.Clamp(cm.fieldOfView / 9 + cameraYOffset, cameraYMin, 9999), cm.transform.position.z),
