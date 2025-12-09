@@ -18,6 +18,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private float speed_upgrade_cost;
     [SerializeField] private float speed_upgrade_cost_increase;
     [SerializeField] private string speed_upgrade_txt;
+    [SerializeField] private TextMeshProUGUI speed_upgrade_text;
     
     [Header("Acceleration")]
     public float acceleration_upgrade;
@@ -25,14 +26,16 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private float acceleration_upgrade_cost;
     [SerializeField] private float acceleration_upgrade_cost_increase;
     [SerializeField] private string acceleration_upgrade_txt;
-    
+    [SerializeField] private TextMeshProUGUI acceleration_upgrade_text;
+
     [Header("Dive speed")]
     public float dive_speed_upgrade;
     [SerializeField] private float max_dive_speed_upgrade;
     [SerializeField] private float dive_speed_upgrade_cost;
     [SerializeField] private float dive_speed_upgrade_cost_increase;
     [SerializeField] private string dive_speed_upgrade_txt;
-    
+    [SerializeField] private TextMeshProUGUI dive_speed_upgrade_text;
+
     [Header("Money gain")]
     public float money_gain_upgrade;
     [SerializeField] private float max_money_gain_upgrade;
@@ -139,6 +142,33 @@ public class Upgrade_Menu_Script : MonoBehaviour
     void Update()
     {
         money_txt.text = $"{money}";
+        if (speed_upgrade >= max_speed_upgrade)
+        {
+            speed_upgrade_text.text = "MAX";
+        }
+        else
+        {
+            speed_upgrade_text.text = $"Max Speed: {speed_upgrade_cost}";
+        }
+
+        if (acceleration_upgrade >= max_acceleration_upgrade)
+        {
+            acceleration_upgrade_text.text = "MAX";
+        }
+        else
+        {
+            acceleration_upgrade_text.text = $"Accelration: {acceleration_upgrade_cost}";
+        }
+
+        if (dive_speed_upgrade >= max_dive_speed_upgrade)
+        {
+            dive_speed_upgrade_text.text = "MAX";
+        }
+        else
+        {
+            dive_speed_upgrade_text.text = $"Dive speed: {dive_speed_upgrade_cost}";
+        }
+
     }
 
     public void OpenSpeedUpgrade()
@@ -149,6 +179,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = speed_upgrade_txt;
         top_txt.text = "Speed";
         upgrade_cost_txt.text = $"${speed_upgrade_cost}";
+
+        if(speed_upgrade >= max_speed_upgrade)
+        {
+            upgrade_cost_txt.text = "MAX";
+        }
     }
     
     public void UpgradeSpeed()
@@ -164,12 +199,13 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 upgrade_slider.value = speed_upgrade / max_speed_upgrade;
                 upgrade_cost_txt.text = $"${speed_upgrade_cost}";
 
-                if (player != null)
+                if (speed_upgrade >= max_speed_upgrade)
                 {
-
+                    upgrade_cost_txt.text = "MAX";
                 }
             }
         }
+        
     }
 
     public void OpenAccelerationUpgrade()
@@ -180,6 +216,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = acceleration_upgrade_txt;
         top_txt.text = "Acceleration";
         upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
+
+        if (acceleration_upgrade >= max_acceleration_upgrade)
+        {
+            upgrade_cost_txt.text = "MAX";
+        }
     }
 
     public void UpgradeAcceleration()
@@ -195,12 +236,14 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
 
-                if (player != null)
+                if (acceleration_upgrade >= max_acceleration_upgrade)
                 {
-
+                    upgrade_cost_txt.text = "MAX";
                 }
             }
         }
+
+        
     }
 
     public void OpenDiveSpeedUpgrade()
@@ -211,6 +254,11 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = dive_speed_upgrade_txt;
         top_txt.text = "Dive Speed";
         upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
+
+        if (dive_speed_upgrade >= max_dive_speed_upgrade)
+        {
+            upgrade_cost_txt.text = "MAX";
+        }
     }
 
     public void UpgradeDiveSpeed()
@@ -226,9 +274,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
 
-                if (player != null)
+                if (dive_speed_upgrade >= max_dive_speed_upgrade)
                 {
-
+                    upgrade_cost_txt.text = "MAX";
                 }
             }
         }
