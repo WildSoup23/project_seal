@@ -141,7 +141,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     
     void Update()
     {
-        money_txt.text = $"{money}";
+        money_txt.text = $"${money}";
         if (speed_upgrade >= max_speed_upgrade)
         {
             speed_upgrade_text.text = "MAX";
