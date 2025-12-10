@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e3cf48f3b56044999b52e9896401ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startUpgradeMenu: 0
+  willStart: 0
 --- !u!4 &5558280
 Transform:
   m_ObjectHideFlags: 0

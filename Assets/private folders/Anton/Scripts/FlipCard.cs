@@ -5,15 +5,18 @@ public class FlipCard : MonoBehaviour
 {
     [SerializeField] private Transform card;
     public bool allowedToFlip = false;
+    [SerializeField] private GameObject nextButton;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        card = this.gameObject.GetComponent<Transform>();
-    }
 
     private void Update()
     {
+        if ((card.gameObject.activeSelf && card.rotation.y >= 1))
+        {
+            nextButton.SetActive(true);
+        }
+        
         if (allowedToFlip)
         {
             Flip();
@@ -25,7 +28,6 @@ public class FlipCard : MonoBehaviour
             if (card.rotation.y < 1)
             {
                 card.Rotate(0, 1, 0);
-                Debug.Log(card.rotation.y);
             }
 
             else

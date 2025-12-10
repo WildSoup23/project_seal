@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 31052832}
   - component: {fileID: 31052831}
-  - component: {fileID: 31052833}
   m_Layer: 0
   m_Name: Postcard
   m_TagString: Untagged
@@ -201,27 +200,13 @@ Transform:
   m_GameObject: {fileID: 31052830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.065501094, y: 0.16457774, z: 7.711128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21952416, y: 0.21952416, z: 0.21952416}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 324658411}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1835448179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &31052833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31052830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6595805c5145bbb4aa57372399ae400e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 31052832}
-  allowedToFlip: 0
 --- !u!1 &43209109
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -429,7 +414,7 @@ Canvas:
   m_GameObject: {fileID: 212234207}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2009235158}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -565,7 +550,7 @@ GameObject:
   - component: {fileID: 560421764}
   - component: {fileID: 560421763}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Tap to flip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 377}
+  m_AnchoredPosition: {x: 0, y: 171}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560421763
@@ -970,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1640746190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -980,7 +965,7 @@ RectTransform:
   m_GameObject: {fileID: 1640746189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8948406, y: 1.8948406, z: 1.8948406}
+  m_LocalScale: {x: 1.1579939, y: 1.1579939, z: 1.1579939}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 611281819}
@@ -988,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -346}
+  m_AnchoredPosition: {x: 0, y: -184}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640746191
@@ -1035,7 +1020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640746194}
+      - m_Target: {fileID: 1671918235}
         m_TargetAssemblyTypeName: GetNextScene, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 1
@@ -1182,7 +1167,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 31052833}
+      - m_Target: {fileID: 1835448180}
         m_TargetAssemblyTypeName: FlipCard, Assembly-CSharp
         m_MethodName: Allowed
         m_Mode: 1
@@ -1232,6 +1217,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647464767}
   m_CullTransparentMesh: 1
+--- !u!1 &1671918234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671918236}
+  - component: {fileID: 1671918235}
+  m_Layer: 0
+  m_Name: GetNextScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671918235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671918234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5508ba91048d23b4a9f80c5c81e0c6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 31052830}
+  cardText: {fileID: 560421761}
+  sceneName: 
+--- !u!4 &1671918236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671918234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 317.19916, y: 114.49836, z: -25.410017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1835448178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835448179}
+  - component: {fileID: 1835448180}
+  m_Layer: 0
+  m_Name: Cardholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835448179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835448178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.065501094, y: 0.16457774, z: 7.711128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 31052832}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835448180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835448178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6595805c5145bbb4aa57372399ae400e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 31052832}
+  allowedToFlip: 0
+  nextButton: {fileID: 1640746189}
 --- !u!1 &1980316983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,5 +1558,6 @@ SceneRoots:
   - {fileID: 2009235159}
   - {fileID: 874478242}
   - {fileID: 1276514640}
-  - {fileID: 31052832}
+  - {fileID: 1835448179}
   - {fileID: 212234211}
+  - {fileID: 1671918236}
