@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GetNextScene : MonoBehaviour
 {
     public GameObject card;
+    public GameObject cardText;
     private GameObject nextScene;
     public string sceneName;
     
@@ -21,6 +22,7 @@ public class GetNextScene : MonoBehaviour
         if (sceneName == "(test) Level 1")
         {
             card.SetActive(true);
+            cardText.SetActive(true);
         }
     }
 

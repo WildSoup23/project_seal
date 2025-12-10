@@ -116,6 +116,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                         
                     }
                 
+                    // TODO: Change into defense upgrade
                     else if (playerAttribute == 3)
                     {
                         // problem

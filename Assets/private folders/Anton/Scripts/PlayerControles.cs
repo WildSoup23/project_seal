@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.Linq;
 using System.Text;
+using UnityEngine.Events;
 
 public class PlayerControles : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class PlayerControles : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     
     public float changedGravityScale;
-    
-    [SerializeField] private GameObject gameObject;
+
+    [SerializeField] private UnityEvent SaveCoins;
+    [SerializeField] private GameObject player;
     
     private float rotateAmount;
     
     private bool allowedToSlam_ByKey;
     private bool allowedToAccelerate;
+    private bool playerIsStuck = false;
     
     public float maxVelocity_X;
     public float speedMultiplier;
@@ -28,8 +31,6 @@ public class PlayerControles : MonoBehaviour
     private const string path = @"c:\temp\test.txt";
 
     [SerializeField] private CoinsCollected coins;
-
-    private bool allowedToDown = true;
 
     private void Awake()
     {
@@ -47,6 +48,12 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.GetComponent<Rigidbody2D>().linearVelocity == new Vector2(0,0) && playerIsStuck)
+        {
+            SaveCoins?.Invoke();
+            Win_Lose_Script.instance.OnTriggerLose();
+        }
+        
         if (Input.GetKey(KeyCode.Space))
         {
             allowedToSlam_ByKey = true;
@@ -62,48 +69,43 @@ public class PlayerControles : MonoBehaviour
     {
         
         // Max velocity downwards
-        if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
+        if (player.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
         {
-            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(
-                gameObject.GetComponent<Rigidbody2D>().linearVelocity.x,
+            player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(
+                player.GetComponent<Rigidbody2D>().linearVelocity.x,
                 -35);
         }
         
         // Max velocity forwards
-        if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x > maxVelocity_X)
+        if (player.GetComponent<Rigidbody2D>().linearVelocity.x > maxVelocity_X)
         {
-            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(maxVelocity_X,
-                gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+            player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(maxVelocity_X,
+                player.GetComponent<Rigidbody2D>().linearVelocity.y);
         }
         
-        else if (gameObject.GetComponent<Rigidbody2D>().linearVelocity.x < -maxVelocity_X)
+        else if (player.GetComponent<Rigidbody2D>().linearVelocity.x < -maxVelocity_X)
         {
-            gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-maxVelocity_X,
-                gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
+            player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-maxVelocity_X,
+                player.GetComponent<Rigidbody2D>().linearVelocity.y);
         }
         
-        // Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity);
+        // Debug.Log(player.GetComponent<Rigidbody2D>().linearVelocity);
         
         if (allowedToSlam_ByKey)
         {
-            Debug.Log(gameObject.GetComponent<Rigidbody2D>().linearVelocity.y);
-            
-            if (allowedToDown)
-            {
-              gameObject.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
-                
-            }
+        
+            player.GetComponent<Rigidbody2D>().gravityScale = changedGravityScale;
             
             // Here is the acceleration
             if (allowedToAccelerate)
             {
-                gameObject.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
+                player.GetComponent<Rigidbody2D>().linearVelocity *= new Vector2(speedMultiplier, 1);
             }        
         }
 
         else
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            player.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     }
 
@@ -118,14 +120,9 @@ public class PlayerControles : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Slope") && gameObject.GetComponent<Rigidbody2D>().linearVelocityY > 0)
+        if (other.CompareTag("Slope") && player.GetComponent<Rigidbody2D>().linearVelocity == new Vector2(0,0))
         {
-            allowedToDown = false;
-        }
-
-        else
-        {
-            allowedToDown = true;
+            playerIsStuck = true;
         }
     }
 
@@ -134,7 +131,6 @@ public class PlayerControles : MonoBehaviour
         if (other.CompareTag("Slope"))
         {
             allowedToAccelerate = false;
-            allowedToDown = true;
         }
     }
 

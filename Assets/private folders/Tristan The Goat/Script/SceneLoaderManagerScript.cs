@@ -46,7 +46,7 @@ public class SceneLoaderManagerScript : MonoBehaviour
             sw.WriteLine("0"); // Max Speed
             sw.WriteLine("0"); // Acceleration
             sw.WriteLine("0"); // Diving Speed
-            sw.WriteLine("1"); // Pengar
+            sw.WriteLine("0"); // Defense
             sw.WriteLine("(test) Level 0");
         } 
         

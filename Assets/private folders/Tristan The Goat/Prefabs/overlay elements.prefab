@@ -1671,6 +1671,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 661586882619163770, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_text
+      value: 'Forward
+
+        Acceleration'
+      objectReference: {fileID: 0}
     - target: {fileID: 1457788728532365540, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1750,6 +1756,18 @@ PrefabInstance:
     - target: {fileID: 1457788728532365540, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174686403021914044, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_text
+      value: 'Diving
+
+        speed'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563485470562267723, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_text
+      value: '(WIP)
+
+        Defense'
       objectReference: {fileID: 0}
     - target: {fileID: 2793463067562652591, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1878,6 +1896,12 @@ PrefabInstance:
     - target: {fileID: 7281528151541855843, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366440078526573960, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_text
+      value: 'Forward
+
+        Speed'
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: money
