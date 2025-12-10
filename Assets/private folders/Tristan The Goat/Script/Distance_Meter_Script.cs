@@ -40,7 +40,7 @@ public class Distance_Meter_Script : MonoBehaviour
                 GameObject newItem = Instantiate(isbergIcon, transform);
                 Vector3 newpos = new Vector3(0, 0, 0);
                 newpos.x = (((obj.transform.position.x /
-                    (end.position.x - start.position.x)) * width - (width / 2)) + width/10);
+                    (end.position.x - start.position.x)) * width - (width / 2)));
                 newItem.GetComponent<RectTransform>().localPosition = newpos;
                 newItem.transform.SetSiblingIndex(handle_rect.transform.GetSiblingIndex());
                 icons.Add(newItem);
@@ -101,7 +101,7 @@ public class Distance_Meter_Script : MonoBehaviour
                 
                 Vector3 newpos = new Vector3(0, 0, 0);
                 newpos.x = (((objectsWithTag[index].transform.position.x /
-                    (end.position.x - start.position.x)) * width - (width / 2)) + width / 10);
+                    (end.position.x - start.position.x)) * width - (width / 2)));
                 icon.GetComponent<RectTransform>().localPosition = newpos;
             }
             index++;
