@@ -37,12 +37,12 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private string dive_speed_upgrade_txt;
     [SerializeField] private TextMeshProUGUI dive_speed_upgrade_text;
 
-    [Header("Money gain")]
-    public float money_gain_upgrade;
-    [SerializeField] private float max_money_gain_upgrade;
-    [SerializeField] private float money_gain_upgrade_cost;
-    [SerializeField] private float money_gain_upgrade_cost_increase;
-    [SerializeField] private string money_gain_upgrade_txt;
+    [Header("Defense")]
+    public float defense_upgrade;
+    [SerializeField] private float max_defense_upgrade;
+    [SerializeField] private float defense_upgrade_cost;
+    [SerializeField] private float defense_upgrade_cost_increase;
+    [SerializeField] private string defense_upgrade_txt;
 
     [Header("Money")]
     [SerializeField] private float money;
@@ -133,8 +133,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
                     else if (playerAttribute == 3)
                     {
                         // problem
-                        money_gain_upgrade = float.Parse(parsed);
-                        money_gain_upgrade_cost = Mathf.Round(money_gain_upgrade_cost * Mathf.Pow(2, money_gain_upgrade - 1));
+                        defense_upgrade = float.Parse(parsed);
+                        defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * Mathf.Pow(2, defense_upgrade - 1));
                         break;
                     }
                 
@@ -151,7 +151,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         speed_slider.value = speed_upgrade / max_speed_upgrade;
         acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
         dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
-        money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
+        money_slider.value = defense_upgrade / max_defense_upgrade;
     }
     
     void Update()
@@ -300,24 +300,24 @@ public class Upgrade_Menu_Script : MonoBehaviour
     {
         upgrade_panel.SetActive(true);
         menu_identifier = 4;
-        upgrade_slider.value = money_gain_upgrade / max_money_gain_upgrade;
-        upgrade_txt.text = money_gain_upgrade_txt;
+        upgrade_slider.value = defense_upgrade / max_defense_upgrade;
+        upgrade_txt.text = defense_upgrade_txt;
         top_txt.text = "Money Gain";
-        upgrade_cost_txt.text = $"${money_gain_upgrade_cost}";
+        upgrade_cost_txt.text = $"${defense_upgrade_cost}";
     }
 
     public void UpgradeMoneyGain()
     {
-        if (money_gain_upgrade < max_money_gain_upgrade)
+        if (defense_upgrade < max_defense_upgrade)
         {
-            if (money >= money_gain_upgrade_cost)
+            if (money >= defense_upgrade_cost)
             {
-                money_gain_upgrade++;
-                money -= money_gain_upgrade_cost;
-                money_gain_upgrade_cost = Mathf.Round(money_gain_upgrade_cost * money_gain_upgrade_cost_increase);
-                money_slider.value = money_gain_upgrade / max_money_gain_upgrade;
-                upgrade_slider.value = money_gain_upgrade / max_money_gain_upgrade;
-                upgrade_cost_txt.text = $"${money_gain_upgrade_cost}";
+                defense_upgrade++;
+                money -= defense_upgrade_cost;
+                defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * defense_upgrade_cost_increase);
+                money_slider.value = defense_upgrade / max_defense_upgrade;
+                upgrade_slider.value = defense_upgrade / max_defense_upgrade;
+                upgrade_cost_txt.text = $"${defense_upgrade_cost}";
 
                 if (player != null)
                 {
@@ -354,7 +354,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 sw.WriteLine(speed_upgrade);
                 sw.WriteLine(acceleration_upgrade);
                 sw.WriteLine(dive_speed_upgrade);
-                sw.WriteLine(money_gain_upgrade);
+                sw.WriteLine(defense_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }   
         }

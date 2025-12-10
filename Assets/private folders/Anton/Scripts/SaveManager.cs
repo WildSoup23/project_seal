@@ -55,7 +55,7 @@ public class SaveManager : MonoBehaviour
                 sw.WriteLine(upgrades.speed_upgrade);
                 sw.WriteLine(upgrades.acceleration_upgrade);
                 sw.WriteLine(upgrades.dive_speed_upgrade);
-                sw.WriteLine(upgrades.money_gain_upgrade);
+                sw.WriteLine(upgrades.defense_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }  
         }

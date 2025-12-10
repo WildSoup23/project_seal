@@ -945,7 +945,6 @@ GameObject:
   - component: {fileID: 1640746193}
   - component: {fileID: 1640746192}
   - component: {fileID: 1640746191}
-  - component: {fileID: 1640746194}
   m_Layer: 5
   m_Name: Next Level
   m_TagString: Untagged
@@ -1067,27 +1066,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640746189}
   m_CullTransparentMesh: 1
---- !u!114 &1640746194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640746189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5508ba91048d23b4a9f80c5c81e0c6a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 31052830}
-  cardText: {fileID: 0}
-  FlipText: {fileID: 0}
-  sceneName: 
-  photocard_0: {fileID: 0}
-  photocard_1: {fileID: 0}
-  photocard_2: {fileID: 0}
-  photocard_3: {fileID: 0}
-  photocard_4: {fileID: 0}
 --- !u!1 &1647464767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,11 +1231,12 @@ MonoBehaviour:
   cardText: {fileID: 43209111}
   FlipText: {fileID: 560421761}
   sceneName: 
+  button: {fileID: 1640746189}
   photocard_0: {fileID: 2902320139363310276, guid: ff4da3369f8b2d242a91a4ff47892b12, type: 3}
   photocard_1: {fileID: -8233033981745231016, guid: b8242a9442a5a674989b25337541b45f, type: 3}
   photocard_2: {fileID: -8290402826401100626, guid: 33cd75078940bdf49b7b92c32bfc7fea, type: 3}
-  photocard_3: {fileID: -8982238523440487106, guid: 48309fb98ab024c45a0d27a916faba0e, type: 3}
-  photocard_4: {fileID: 0}
+  photocard_3: {fileID: 4438967130366105315, guid: 2e6eeac51d2fe4a42acfafd75155d177, type: 3}
+  photocard_4: {fileID: -8982238523440487106, guid: 48309fb98ab024c45a0d27a916faba0e, type: 3}
 --- !u!4 &1671918236
 Transform:
   m_ObjectHideFlags: 0

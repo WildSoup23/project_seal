@@ -27,6 +27,7 @@ public class Win_Lose_Script : MonoBehaviour
 
     public void OnTriggerLose()
     {
+        Debug.Log("bruh");
         win_lose_panel.SetActive(true);
         imageToChange.sprite = images[0];
         textToChange.text = texts[0];

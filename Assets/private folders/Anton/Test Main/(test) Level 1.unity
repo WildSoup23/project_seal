@@ -11902,6 +11902,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 89734721}
     - target: {fileID: 2428095305433988177, guid: ef1eac1d7bea8334ea55ef8c014e1b82, type: 3}
+      propertyPath: SaveCoins.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveCoins
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428095305433988177, guid: ef1eac1d7bea8334ea55ef8c014e1b82, type: 3}
       propertyPath: SaveCoins.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2021758226}
@@ -36547,7 +36551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 816360916098543612, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: money
