@@ -10,7 +10,6 @@ TagManager:
   - End
   - Narwal
   - NextScene
-  - StartUpgr
   layers:
   - Default
   - TransparentFX
@@ -45,8 +44,19 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: sun
+    uniqueID: 255495163
+    locked: 0
+  - name: background
+    uniqueID: 4144715769
+    locked: 0
+  - name: icebergs
+    uniqueID: 1780877065
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   m_RenderingLayers:
   - Default
+  - sun
+  - icebergs
