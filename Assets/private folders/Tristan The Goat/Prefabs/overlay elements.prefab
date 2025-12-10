@@ -2186,21 +2186,20 @@ PrefabInstance:
       objectReference: {fileID: 816360916098543612}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: speed_upgrade
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
-      propertyPath: willSaveAndLoad
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: willSaveAndLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: speed_upgrade_txt
-      value: King Skeal III is an incredible king. He is strong, he is sturdy, he
-        is respected and he is handsome. No other can compete with him. His greatest
-        ability is his ever-increasing top speed.
+      value: The ever-increasing top speed of Skeal III was what made the young Seal
+        stand out.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: dive_speed_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: money_gain_upgrade
@@ -2215,14 +2214,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1173374626837856650}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: defense_upgrade_txt
+      value: King Skeal III is still a growing Seal. For each passing day his enemies
+        slow him down less.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: dive_speed_upgrade_txt
-      value: King Skeal III rules the land and the sky alike. However, he is strongly
-        attached to the ground and its pretty snow. If he could, he would always
-        return to the ground faster.
+      value: Skeal III ruled land and sky. However, whenever he flew, he always wished
+        to return to the ground faster.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: money_gain_upgrade_txt
@@ -2244,9 +2247,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_txt
-      value: Apart from those pesky Penguins, the King has nothing to complain about.
-        He is the greatest seal around, and his acceleration is only increasing.
-        He is truly on a roll!
+      value: The secret to an increased acceleration is one of the blessings Skeal
+        III learnt as a king.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_cost

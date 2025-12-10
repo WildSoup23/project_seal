@@ -11,6 +11,7 @@ public class PlayerControles : MonoBehaviour
     // Controles player dive, acceleration, max speed
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource windAudioSource;
     
     public float changedGravityScale;
 
@@ -18,6 +19,7 @@ public class PlayerControles : MonoBehaviour
     [SerializeField] private GameObject player;
     
     private float rotateAmount;
+    [SerializeField] private float timer;
     
     private bool allowedToSlam_ByKey;
     private bool allowedToAccelerate;
@@ -35,6 +37,7 @@ public class PlayerControles : MonoBehaviour
     private void Awake()
     {
         allowedToSlam_ByKey = false;
+        timer = 0;
     }
 
     private void Start()
@@ -48,6 +51,24 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (player.GetComponent<Rigidbody2D>().linearVelocity.y < 0)
+        {
+            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x - 
+                                         player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
+        }
+
+        else
+        {
+            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x + 
+                                         player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
+        }
+        
+        if (windAudioSource.pitch < 0.4)
+        {
+            windAudioSource.pitch = 0.4f;
+        }
+        
         if (player.GetComponent<Rigidbody2D>().linearVelocity == new Vector2(0,0) && playerIsStuck)
         {
             SaveCoins?.Invoke();
@@ -67,6 +88,10 @@ public class PlayerControles : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
         
         // Max velocity downwards
         if (player.GetComponent<Rigidbody2D>().linearVelocity.y < -35)
@@ -113,7 +138,11 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
-            audioSource.Play();
+            if (timer <= 0)
+            {
+                audioSource.Play();
+                timer = 1.16f;
+            }
             allowedToAccelerate = true;
         }
     }

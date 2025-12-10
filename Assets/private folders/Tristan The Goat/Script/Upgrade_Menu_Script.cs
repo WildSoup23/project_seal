@@ -163,7 +163,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
         else
         {
-            speed_upgrade_text.text = $"Max Speed: {speed_upgrade_cost}";
+            speed_upgrade_text.text = $"Fastest Seal Alive: {speed_upgrade_cost}";
         }
 
         if (acceleration_upgrade >= max_acceleration_upgrade)
@@ -172,7 +172,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
         else
         {
-            acceleration_upgrade_text.text = $"Accelration: {acceleration_upgrade_cost}";
+            acceleration_upgrade_text.text = $"On A Roll: {acceleration_upgrade_cost}";
         }
 
         if (dive_speed_upgrade >= max_dive_speed_upgrade)
@@ -181,7 +181,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         }
         else
         {
-            dive_speed_upgrade_text.text = $"Dive speed: {dive_speed_upgrade_cost}";
+            dive_speed_upgrade_text.text = $"Pinniped Plunge: {dive_speed_upgrade_cost}";
         }
 
     }
@@ -192,7 +192,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         menu_identifier = 1;
         upgrade_slider.value = speed_upgrade / max_speed_upgrade;
         upgrade_txt.text = speed_upgrade_txt;
-        top_txt.text = "Speed";
+        top_txt.text = "Fastest Seal Alive";
         upgrade_cost_txt.text = $"${speed_upgrade_cost}";
 
         if(speed_upgrade >= max_speed_upgrade)
