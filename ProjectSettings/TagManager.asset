@@ -9,6 +9,8 @@ TagManager:
   - Start
   - End
   - Narwal
+  - NextScene
+  - StartUpgr
   layers:
   - Default
   - TransparentFX

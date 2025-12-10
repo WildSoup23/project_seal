@@ -76,9 +76,22 @@ public class Upgrade_Menu_Script : MonoBehaviour
     private const string path = @"c:\temp\test.txt";
     
     
+    
     // Get the player
     void Start()
     {
+        StartUpgradeMenu willStart = GameObject.FindGameObjectWithTag("StartUpgr").GetComponent<StartUpgradeMenu>();
+        if (willStart.willStart)
+        {
+            ui_elements.SetActive(true);
+            willStart.willStart = false;
+        }
+        
+        if (ui_elements.activeSelf)
+        {
+            player.GetComponent<Rigidbody2D>().simulated = false;
+        }
+        
         if (willSaveAndLoad)
         {
             if (File.Exists("c:/temp/test.txt"))
