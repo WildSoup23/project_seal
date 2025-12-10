@@ -1,9 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class FlipCard : MonoBehaviour
 {
     [SerializeField] private Transform card;
+    public TextMeshProUGUI cardText;
     public bool allowedToFlip = false;
     [SerializeField] private GameObject nextButton;
     
@@ -28,6 +30,11 @@ public class FlipCard : MonoBehaviour
             if (card.rotation.y < 1)
             {
                 card.Rotate(0, 1, 0);
+
+                if (card.rotation.y > 0.5)
+                {
+                    cardText.color += new Color(-0.0111f, -0.0111f, -0.0111f);
+                }
             }
 
             else

@@ -3461,14 +3461,6 @@ PrefabInstance:
       propertyPath: coinMultiplier
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6529467332465904637, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: upgrades
       value: 
