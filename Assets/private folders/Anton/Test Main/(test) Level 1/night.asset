@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Main Camera Profile
+  m_Name: night
   m_EditorClassIdentifier: 
   components:
   - {fileID: 2039244028788938282}
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Value: 79
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1.0592738, g: 0.6411319, b: 0.5546197, a: 1}
+    m_Value: {r: 1.4142137, g: 1.4142137, b: 1.4142137, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
