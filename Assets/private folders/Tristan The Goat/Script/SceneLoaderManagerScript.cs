@@ -39,7 +39,7 @@ public class SceneLoaderManagerScript : MonoBehaviour
         Time.timeScale = 1f;
 
         File.Delete(@"c:\temp\test.txt"); // Ensures that we write to a blank file
-        
+        File.Delete(@"c:\temp\tutorial_test.txt");
         using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
         {
             sw.WriteLine("0"); // Samlade Pengar
@@ -49,6 +49,11 @@ public class SceneLoaderManagerScript : MonoBehaviour
             sw.WriteLine("0"); // Defense
             sw.WriteLine("(test) Level 0");
         } 
+        using(StreamWriter sw = File.AppendText(@"c:\temp\tutorial_test.txt"))
+        {
+            sw.WriteLine(false); // har gjort tutorial
+        }
+
         
         // TODO: ta bort (test) sen
         // Tillägg av Anton ---------------------------------------------- :)
