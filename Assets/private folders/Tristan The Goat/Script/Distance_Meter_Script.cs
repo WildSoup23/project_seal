@@ -98,10 +98,9 @@ public class Distance_Meter_Script : MonoBehaviour
             }
             else
             {
-                
+ 
                 Vector3 newpos = new Vector3(0, 0, 0);
-                newpos.x = (((objectsWithTag[index].transform.position.x /
-                    (end.position.x - start.position.x)) * width - (width / 2)));
+                newpos.x = ((objectsWithTag[index].transform.position.x / (end.position.x - start.position.x)) * width) - (width / 2) +35;
                 icon.GetComponent<RectTransform>().localPosition = newpos;
             }
             index++;

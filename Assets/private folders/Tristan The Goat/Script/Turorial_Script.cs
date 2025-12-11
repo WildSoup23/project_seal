@@ -20,11 +20,16 @@ public class Turorial_Script : MonoBehaviour
         }
         
         panel = transform.Find("the panel").gameObject;
+        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         if (hasPlayed)
         {
             panel.SetActive(false);
         }
-        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        else
+        {
+            rb.simulated = false;
+        }
+            
     }
 
     void Update()

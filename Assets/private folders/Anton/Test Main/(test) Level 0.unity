@@ -3435,7 +3435,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 417047373986377581, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 675757651067920279, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: m_IsActive
@@ -3471,7 +3471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379450690093211308, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: m_Simulated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6529467332465904637, guid: 1ccff5c997fcae84d90cea2a1ae1e014, type: 3}
       propertyPath: upgrades
@@ -20318,6 +20318,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2021758225}
+    - target: {fileID: 2383008272234104723, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5558279}
     - target: {fileID: 5095536354594387118, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9370544
