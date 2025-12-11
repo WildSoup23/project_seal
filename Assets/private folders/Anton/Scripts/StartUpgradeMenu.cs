@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartUpgradeMenu : MonoBehaviour
 {
@@ -23,5 +24,6 @@ public class StartUpgradeMenu : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         willStart = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
