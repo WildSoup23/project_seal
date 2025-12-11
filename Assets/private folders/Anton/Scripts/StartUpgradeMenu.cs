@@ -19,7 +19,7 @@ public class StartUpgradeMenu : MonoBehaviour
         }
     }
     
-    void Start()
+    void UpgradeMenuWillStart()
     {
         DontDestroyOnLoad(gameObject);
         willStart = false;
