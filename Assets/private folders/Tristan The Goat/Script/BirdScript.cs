@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class BirdScript : MonoBehaviour
+public class BirdScript : Enemy
 {
     // Variables
     [Header("Variables")]
@@ -11,14 +11,7 @@ public class BirdScript : MonoBehaviour
     [SerializeField] private float flySpeed;
     [Tooltip("The range at wich the player needs to be in for the bird to move.")]
     [SerializeField] private float activationRange;
-    [Tooltip("A value that decreases the players speed when colliding with the bird, higher values mean greater speed lose.")]
-    [SerializeField] private float speedDecrease;
-    public float SPEED_DECREASE
-    {
-        get {return speedDecrease;}
-    }
-    [Space(10)]
-
+    
     // Refrences
     [Header("Refrences")]
     [Tooltip("If a particle system if refrenced, gets played on collision with player.")]

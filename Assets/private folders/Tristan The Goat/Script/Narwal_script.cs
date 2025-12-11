@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Narwal_script : MonoBehaviour
+public class Narwal_script : Enemy
 {
     // Variables
     [SerializeField] private float launchSpeed;
