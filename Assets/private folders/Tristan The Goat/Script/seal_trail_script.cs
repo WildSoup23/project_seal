@@ -34,7 +34,7 @@ public class seal_trail_script : MonoBehaviour
 
         gradient.alphaKeys = new GradientAlphaKey[]
         {
-            new GradientAlphaKey(alpha/200, 0f)
+            new GradientAlphaKey(alpha/100, 0f)
         };
         trailRenderer.colorGradient = gradient;
     }

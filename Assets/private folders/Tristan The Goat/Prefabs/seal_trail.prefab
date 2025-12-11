@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf377f7fc5e1018408d10ec42a227bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trail_width: 1
-  trail_color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 0}
+  trail_width: 0.25
+  trail_color: {r: 0.5, g: 0.5, b: 0.5, a: 0}

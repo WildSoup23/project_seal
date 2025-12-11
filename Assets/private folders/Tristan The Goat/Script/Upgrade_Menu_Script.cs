@@ -61,6 +61,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private TextMeshProUGUI top_txt;
     [SerializeField] private TextMeshProUGUI upgrade_txt;
     [SerializeField] private TextMeshProUGUI upgrade_cost_txt;
+    [SerializeField] private TextMeshProUGUI upgrade_value_txt;
     private int menu_identifier;
 
     [Header("Money")]
@@ -70,6 +71,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private bool willSaveAndLoad;
 
     [SerializeField] private GameObject player;
+    private PlayerControles pc;
     [SerializeField] private GameObject ui_elements; // Ändrad av Anton :)
 
 
@@ -80,6 +82,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
     // Get the player
     void Start()
     {
+        pc = player.GetComponent<PlayerControles>();
+
         StartUpgradeMenu willStart = GameObject.FindGameObjectWithTag("StartUpgr").GetComponent<StartUpgradeMenu>();
         if (willStart.willStart)
         {
@@ -194,6 +198,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = speed_upgrade_txt;
         top_txt.text = "Fastest Seal Alive";
         upgrade_cost_txt.text = $"${speed_upgrade_cost}";
+        upgrade_value_txt.text = $"Top speed: {pc.maxVelocity_X * 4}skm/h";
 
         if(speed_upgrade >= max_speed_upgrade)
         {
@@ -213,6 +218,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 speed_slider.value = speed_upgrade / max_speed_upgrade;
                 upgrade_slider.value = speed_upgrade / max_speed_upgrade;
                 upgrade_cost_txt.text = $"${speed_upgrade_cost}";
+                upgrade_value_txt.text = $"Top speed: {pc.maxVelocity_X * 4}skm/h";
 
                 if (speed_upgrade >= max_speed_upgrade)
                 {
@@ -231,6 +237,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = acceleration_upgrade_txt;
         top_txt.text = "Acceleration";
         upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
+        upgrade_value_txt.text = $"Acceleration: {pc.speedMultiplier * 6}st/s^2";
 
         if (acceleration_upgrade >= max_acceleration_upgrade)
         {
@@ -250,6 +257,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
+                upgrade_value_txt.text = $"Acceleration: {pc.speedMultiplier * 6}st/s^2";
 
                 if (acceleration_upgrade >= max_acceleration_upgrade)
                 {
@@ -269,6 +277,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = dive_speed_upgrade_txt;
         top_txt.text = "Dive Speed";
         upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
+        upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
 
         if (dive_speed_upgrade >= max_dive_speed_upgrade)
         {
@@ -288,6 +297,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
+                upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
 
                 if (dive_speed_upgrade >= max_dive_speed_upgrade)
                 {

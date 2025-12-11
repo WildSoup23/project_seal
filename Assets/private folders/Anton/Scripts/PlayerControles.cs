@@ -13,6 +13,7 @@ public class PlayerControles : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource windAudioSource;
     
+    // Dive speed
     public float changedGravityScale;
 
     [SerializeField] private UnityEvent SaveCoins;
@@ -25,7 +26,9 @@ public class PlayerControles : MonoBehaviour
     private bool allowedToAccelerate;
     private bool playerIsStuck = false;
     
+    // Max speed
     public float maxVelocity_X;
+    // Acceleration
     public float speedMultiplier;
 
     [SerializeField] private bool UpgradesActive;
