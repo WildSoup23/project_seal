@@ -193,8 +193,7 @@ public class PlayerControles : MonoBehaviour
                 
             else if (playerAttribute == 3)
             {
-                // problem
-                coins.coinMultiplier *= float.Parse(parsed);
+                // coins.coinMultiplier *= float.Parse(parsed);
                 break;
             }
                 
