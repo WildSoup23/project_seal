@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 7742f7503e45d5042898009bce384209
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2346935856166401146
+    second: Test_Penguin_0
+  - first:
+      213: -752659010807241526
+    second: Test_Penguin_1
+  - first:
+      213: 2335973976186069745
+    second: Test_Penguin_2
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Test_Penguin_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 69
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74fc610abdf19020800000000000000
+      internalID: 2346935856166401146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 24
+        width: 5
+        height: 7
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac466df0e940e85f0800000000000000
+      internalID: -752659010807241526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 16
+        width: 8
+        height: 17
+      alignment: 9
+      pivot: {x: 0.1875, y: 0.85294116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2a02f64fb0b6020800000000000000
+      internalID: 2335973976186069745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 16
+        width: 5
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67f26587e7f94447b8b732ad5d67a8a
+      internalID: 66305978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 23
+        width: 16
+        height: 21
+      alignment: 9
+      pivot: {x: 0.9375, y: 0.1904762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d070ae9efcd57f340944c99dc3ae5f11
+      internalID: -1787008998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 76
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8ab69ea1cbb22409419a407ff32868
+      internalID: -2110560786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 76
+        width: 25
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6862861f123b01c4e96e1be1ee0e36e1
+      internalID: -1492044681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 72
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.60714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d229c2dafdc5b554f9795d0c85492a0f
+      internalID: -1161442731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 69
+        width: 25
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8947368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c53906b747feef4590140c8a1edd74d
+      internalID: 862244410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 28
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.40000004, y: 0.15789473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72426ff37fa1254686de9b784d2e9db
+      internalID: -548050055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_10
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 23
+        width: 14
+        height: 9
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34c6f8fd65e6454f821095836ea6994
+      internalID: 729155855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 7
+        width: 13
+        height: 13
+      alignment: 9
+      pivot: {x: 0.34615386, y: 0.88461536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0687e2828d94dc249aa17c7e24b526d6
+      internalID: 1479205759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test_Penguin_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 12
+        height: 20
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577c94762bfbc87429dc0ef31b931f1f
+      internalID: -947331520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 617b9b17d3df61b4ba2796ee92632e4c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Test_Penguin_0: 2346935856166401146
+      Test_Penguin_1: -752659010807241526
+      Test_Penguin_10: 729155855
+      Test_Penguin_11: 1479205759
+      Test_Penguin_12: -947331520
+      Test_Penguin_2: 2335973976186069745
+      Test_Penguin_3: 66305978
+      Test_Penguin_4: -1787008998
+      Test_Penguin_5: -2110560786
+      Test_Penguin_6: -1492044681
+      Test_Penguin_7: -1161442731
+      Test_Penguin_8: 862244410
+      Test_Penguin_9: -548050055
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
