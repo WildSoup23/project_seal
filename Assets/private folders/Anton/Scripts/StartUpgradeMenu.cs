@@ -6,7 +6,7 @@ public class StartUpgradeMenu : MonoBehaviour
     public static StartUpgradeMenu instance;
     public bool willStart;
 
-    private void Awake()
+    private void Start()
     {
         if(instance == null)
         {
@@ -23,7 +23,7 @@ public class StartUpgradeMenu : MonoBehaviour
     public void UpgradeMenuWillStart()
     {
         DontDestroyOnLoad(gameObject);
-        willStart = false;
+        willStart = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

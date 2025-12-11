@@ -480,9 +480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: StartUpgradeMenu, Assembly-CSharp
-        m_MethodName: UpgradeMenuWillStart
+      - m_Target: {fileID: 4117066294370589252}
+        m_TargetAssemblyTypeName: Win_Lose_Script, Assembly-CSharp
+        m_MethodName: ShopButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2666,8 +2666,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: speed_upgrade_txt
-      value: The ever-increasing top speed of Skeal III was what made the young Seal
-        stand out.
+      value: The current Seal record is 120 skelometer(skm)/h. Of course, Skeal III
+        can <b>get faster</b> than that.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: upgrade_value_txt
@@ -2691,8 +2691,8 @@ PrefabInstance:
       objectReference: {fileID: 1173374626837856650}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: defense_upgrade_txt
-      value: King Skeal III is still a growing Seal. For each passing day his enemies
-        slow him down less.
+      value: King Skeal III is still a growing Seal. For each passing day his <b>enemies
+        slow him down less</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade
@@ -2701,7 +2701,7 @@ PrefabInstance:
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: dive_speed_upgrade_txt
       value: Skeal III ruled land and sky. However, whenever he flew, he always wished
-        to return to the ground faster.
+        to <b>return to the ground faster</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: money_gain_upgrade_txt
@@ -2723,8 +2723,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_txt
-      value: The secret to an increased acceleration is one of the blessings Skeal
-        III learnt as a king.
+      value: A <b>higher acceleration</b> than 7.2 sketer(st)/s^2 is unprecedented.
+        But Skeal III has shown time after time that he is capable of wonders
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_cost

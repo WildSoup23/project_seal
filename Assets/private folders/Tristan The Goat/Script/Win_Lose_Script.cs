@@ -56,4 +56,9 @@ public class Win_Lose_Script : MonoBehaviour
         money_gained_txt.text = "You earned: " + playerMoney.addedAmount;
         total_money_txt.text = "Total amount: " + playerMoney.newAmount;
     }
+
+    public void ShopButton()
+    {
+        StartUpgradeMenu.instance.UpgradeMenuWillStart();
+    }
 }

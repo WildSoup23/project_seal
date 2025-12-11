@@ -73,18 +73,20 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private GameObject player;
     private PlayerControles pc;
     [SerializeField] private GameObject ui_elements; // Ändrad av Anton :)
+    [SerializeField] private StartUpgradeMenu willStart;
 
 
     private const string path = @"c:\temp\test.txt";
     
-    
-    
+
     // Get the player
     void Start()
     {
         pc = player.GetComponent<PlayerControles>();
-
-        StartUpgradeMenu willStart = GameObject.FindGameObjectWithTag("StartUpgr").GetComponent<StartUpgradeMenu>();
+        
+        willStart = StartUpgradeMenu.instance;
+        Debug.Log(willStart.willStart);
+        
         if (willStart.willStart)
         {
             ui_elements.SetActive(true);
@@ -160,6 +162,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     
     void Update()
     {
+        willStart = StartUpgradeMenu.instance;
         money_txt.text = $"${money}";
         if (speed_upgrade >= max_speed_upgrade)
         {

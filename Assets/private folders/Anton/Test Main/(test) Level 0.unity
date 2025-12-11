@@ -20387,10 +20387,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2021758225}
-    - target: {fileID: 2383008272234104723, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5558279}
     - target: {fileID: 5095536354594387118, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9370544

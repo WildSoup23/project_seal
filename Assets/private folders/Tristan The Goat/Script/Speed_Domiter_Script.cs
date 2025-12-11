@@ -16,7 +16,6 @@ public class Speed_Domiter_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player_rb.linearVelocity.sqrMagnitude);
         float angle = player_rb.linearVelocity.sqrMagnitude / 5;
         Quaternion targetRotation = Quaternion.AngleAxis(120-angle, Vector3.forward);
 
