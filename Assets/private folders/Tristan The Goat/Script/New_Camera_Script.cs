@@ -48,7 +48,7 @@ public class New_Camera_Script : MonoBehaviour
         }
         else
         {
-            cm.fieldOfView = Mathf.Clamp(70 + transform.position.y * 2 + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), camZoomMin, camZoomMax);
+            cm.fieldOfView = Mathf.Clamp(70 + Mathf.Sqrt(Mathf.Pow(transform.position.y, 2)) * 2 + Mathf.Sqrt(Mathf.Pow(cameraYOffset, 2)), camZoomMin, camZoomMax);
             cm.transform.position = Vector3.Lerp(
                 new Vector3(cm.transform.position.x, cm.transform.position.y, cm.transform.position.z),
                 new Vector3(cm.transform.position.x, Mathf.Clamp(cm.fieldOfView / 9 + cameraYOffset, cameraYMin, 9999), cm.transform.position.z),
