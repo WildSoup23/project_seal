@@ -41,5 +41,22 @@ public class press_space_to_try_again_script : MonoBehaviour
             Cursor.visible=false;
         }
 
+        if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                pause.GetComponent<SceneLoaderManagerScript>().ReloadScene();
+            }
+        }
+
+        if (upgrade_menu.GetComponent<Upgrade_Menu_Script>().ui_elements.activeInHierarchy
+            && !upgrade_menu.GetComponent<Upgrade_Menu_Script>().upgrade_panel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                upgrade_menu.GetComponent<Upgrade_Menu_Script>().Run();
+            }
+        }
+
     }
 }

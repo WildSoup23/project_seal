@@ -56,7 +56,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private Slider money_slider;
 
     [Header("Upgrade panel")]
-    [SerializeField] private GameObject upgrade_panel;
+    [SerializeField] public GameObject upgrade_panel;
     [SerializeField] private Slider upgrade_slider;
     [SerializeField] private TextMeshProUGUI top_txt;
     [SerializeField] private TextMeshProUGUI upgrade_txt;
