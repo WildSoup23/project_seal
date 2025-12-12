@@ -41,7 +41,8 @@ public class press_space_to_try_again_script : MonoBehaviour
             Cursor.visible=false;
         }
 
-        if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy)
+        if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+            && !win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

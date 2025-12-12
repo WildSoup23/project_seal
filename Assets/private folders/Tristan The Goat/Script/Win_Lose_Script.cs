@@ -12,7 +12,7 @@ public class Win_Lose_Script : MonoBehaviour
     [SerializeField] private List<string> texts = new List<string>();
     [SerializeField] private Image imageToChange;
     [SerializeField] private TextMeshProUGUI textToChange;
-    [SerializeField] private GameObject continue_btn;
+    [SerializeField] public GameObject continue_btn;
     [SerializeField] private GameObject retrty_btn;
 
     [SerializeField] private TextMeshProUGUI money_gained_txt;
