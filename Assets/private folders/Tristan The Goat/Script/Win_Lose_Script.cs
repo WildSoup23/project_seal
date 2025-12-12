@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Win_Lose_Script : MonoBehaviour
 {
     // Refrences 
-    [SerializeField] private GameObject win_lose_panel;
+    [SerializeField] public GameObject win_lose_panel;
     [SerializeField] private List<Sprite> images = new List<Sprite>();
     [SerializeField] private List<string> texts = new List<string>();
     [SerializeField] private Image imageToChange;

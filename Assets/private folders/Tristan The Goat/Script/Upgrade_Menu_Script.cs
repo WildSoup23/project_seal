@@ -72,7 +72,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     [SerializeField] private GameObject player;
     private PlayerControles pc;
-    [SerializeField] private GameObject ui_elements; // Ändrad av Anton :)
+    [SerializeField] public GameObject ui_elements; // Ändrad av Anton :)
     [SerializeField] private StartUpgradeMenu willStart;
 
 

@@ -10,7 +10,7 @@ public class SceneLoaderManagerScript : MonoBehaviour
     [Tooltip("The gameobject of an settings panel")]
     [SerializeField] private GameObject settings_panel;
     [Tooltip("The gameobject of an pause screen")]
-    [SerializeField] private GameObject pause_screen;
+    [SerializeField] public GameObject pause_screen;
     [Tooltip("The animtor that controlls fade in and out")]
     [SerializeField] private Animator anim;
 
