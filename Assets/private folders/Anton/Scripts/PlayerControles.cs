@@ -148,6 +148,15 @@ public class PlayerControles : MonoBehaviour
             }
             allowedToAccelerate = true;
         }
+
+        if (other.gameObject.CompareTag("speedReducer"))
+        {
+            float speedReduction = other.GetComponent<Enemy>().SPEED_DECREASE;
+
+            GetComponent<Rigidbody2D>().linearVelocity =
+                GetComponent<Rigidbody2D>().linearVelocity * Mathf.Clamp01(speedReduction);
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -203,4 +212,6 @@ public class PlayerControles : MonoBehaviour
             playerAttribute++;
         }
     }
+
+       
 }

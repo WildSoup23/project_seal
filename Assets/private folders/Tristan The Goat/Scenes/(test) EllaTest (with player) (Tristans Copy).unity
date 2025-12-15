@@ -8521,8 +8521,8 @@ PrefabInstance:
       value: Bird entity
       objectReference: {fileID: 0}
     - target: {fileID: 6084384583148000528, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
-      propertyPath: m_TagString
-      value: speedReducer
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14346,13 +14346,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 276106398882119732, guid: 6c5be60cef132164795bc1f933f2ff8f, type: 3}
+      propertyPath: speedDecrease
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3371770044252906928, guid: 6c5be60cef132164795bc1f933f2ff8f, type: 3}
       propertyPath: m_Name
       value: launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 3371770044252906928, guid: 6c5be60cef132164795bc1f933f2ff8f, type: 3}
-      propertyPath: m_TagString
-      value: speedReducer
       objectReference: {fileID: 0}
     - target: {fileID: 4803340818664625401, guid: 6c5be60cef132164795bc1f933f2ff8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14508,25 +14508,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: narwal launcher
       objectReference: {fileID: 0}
-    - target: {fileID: 3993677408315720347, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
-      propertyPath: resoultion
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3993677408315720347, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
-      propertyPath: launchAngle
-      value: 116.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3993677408315720347, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
-      propertyPath: launchSpeed
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3993677408315720347, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
-      propertyPath: speedDecrease
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235431402934157578, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
-      propertyPath: m_TagString
-      value: speedReducer
+    - target: {fileID: 3392330475678878931, guid: 530fb958d347c7d43b6b46b1507d1bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

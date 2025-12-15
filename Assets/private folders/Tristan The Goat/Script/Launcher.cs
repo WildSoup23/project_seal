@@ -17,7 +17,10 @@ public class Launcher : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(rb.linearVelocityX,rb.linearVelocityY * -1);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * -1);
+        } 
     }
 }
