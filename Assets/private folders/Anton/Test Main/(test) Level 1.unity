@@ -36600,15 +36600,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8722677155970697575, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8827145350238344683, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_Name
       value: overlay elements
       objectReference: {fileID: 0}
+    - target: {fileID: 8827145350238344683, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8874815363636433000, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

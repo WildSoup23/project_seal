@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FeatherMaterial'
+  m_Name: SnowMaterial
   m_Shader: {fileID: 4800000, guid: 8516d7a69675844a7a0b7095af7c46af, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 7b5653929bca2884ba722f06510eeca4, type: 3}
+        m_Texture: {fileID: 2800000, guid: daac133a5a5264840981f7d8427fb46d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:

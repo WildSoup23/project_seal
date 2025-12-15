@@ -59,5 +59,14 @@ public class press_space_to_try_again_script : MonoBehaviour
             }
         }
 
+        if(win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+            && win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                pause.GetComponent<SceneLoaderManagerScript>().LoadScene("(test) Cutscenes");
+            }
+        }
+
     }
 }
