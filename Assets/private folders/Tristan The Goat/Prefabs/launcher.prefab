@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 276106398882119732}
   m_Layer: 0
   m_Name: launcher
-  m_TagString: Untagged
+  m_TagString: speedReducer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3371770044252906928}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 69.16278, y: -3.318634, z: 0}
   m_LocalScale: {x: 15, y: 7.5, z: 15}
   m_ConstrainProportionsScale: 1

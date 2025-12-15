@@ -222,10 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6f317a62e6c0a4f87e0b5ac6473e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDecrease: 0
-  launchSpeed: 20
-  launchAngle: 100
-  resoultion: 40
+  speedDecrease: 0.7
+  launchSpeed: 22
+  launchAngle: 116.8
+  resoultion: 80
 --- !u!61 &7744952498048388885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 2778100809224938864}
   m_Layer: 0
   m_Name: narwal enemy
-  m_TagString: Narwal
+  m_TagString: speedReducer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

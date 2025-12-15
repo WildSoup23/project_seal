@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 600469849559156676}
   m_Layer: 0
   m_Name: Bird entity
-  m_TagString: Bird
+  m_TagString: speedReducer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

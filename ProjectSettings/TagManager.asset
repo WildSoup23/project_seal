@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Bird
   - Slope
   - Start
   - End
-  - Narwal
   - NextScene
+  - speedReducer
   layers:
   - Default
   - TransparentFX
