@@ -44,4 +44,12 @@ public class NextLevel : MonoBehaviour
             nextSceneName = "(test) Level 4";
         }
     }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "(test) Start Menu")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

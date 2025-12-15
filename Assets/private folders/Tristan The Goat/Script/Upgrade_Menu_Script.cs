@@ -85,7 +85,6 @@ public class Upgrade_Menu_Script : MonoBehaviour
         pc = player.GetComponent<PlayerControles>();
         
         willStart = StartUpgradeMenu.instance;
-        Debug.Log(willStart.willStart);
         
         if (willStart.willStart)
         {

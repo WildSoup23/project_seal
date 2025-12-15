@@ -7,21 +7,43 @@ public class FlipCard : MonoBehaviour
     [SerializeField] private Transform card;
     public TextMeshProUGUI cardText;
     public bool allowedToFlip = false;
+    public bool allowedToFlipAgain = false;
+    public bool flipFirst = true;
     [SerializeField] private GameObject nextButton;
-    
+    private float timer = 3f;
+
+    private Quaternion startRotaion;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private void Update()
+    private void Start()
+    {
+        startRotaion = card.rotation;
+    }
+
+    private void FixedUpdate()
     {
         if ((card.gameObject.activeSelf && card.rotation.y >= 1))
         {
-            nextButton.SetActive(true);
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+
+                if (timer <= 0)
+                {
+                    nextButton.SetActive(true);
+                }
+            }
         }
         
         if (allowedToFlip)
         {
             Flip();
+        }
+
+        if (allowedToFlipAgain)
+        {
+            FlipAgain();
         }
     }
 
@@ -29,22 +51,63 @@ public class FlipCard : MonoBehaviour
     {
             if (card.rotation.y < 1)
             {
-                card.Rotate(0, 1, 0);
+                card.Rotate(0, 2, 0);
 
-                if (card.rotation.y > 0.5)
+                if (card.rotation.y > 0.75f)
                 {
-                    cardText.color += new Color(-0.0111f, -0.0111f, -0.0111f);
+                    cardText.color += new Color(-0.0222f, -0.0222f, -0.0222f);
+                }
+                
+                if (card.rotation.y > 0.75f)
+                {
+                    cardText.color += new Color(0, 0, 0, 1);
                 }
             }
 
             else
             {
+                cardText.color = new Color(0, 0, 0);
                 allowedToFlip = false;
             }
+    }
+    
+    public void FlipAgain()
+    {
+        if (card.rotation.y > 0)
+        {
+            card.Rotate(0, 2, 0);
+
+            if (card.rotation.y < 0.75f)
+            {
+                cardText.color += new Color(0.0222f, 0.0222f, 0.0222f);
+            }
+                
+            if (card.rotation.y < 0.75f)
+            {
+                cardText.color += new Color(0, 0, 0, -1);
+            }
+        }
+
+        else
+        {
+            cardText.color = new Color(1, 1, 1);
+            card.rotation = startRotaion;
+            allowedToFlipAgain = false;
+        }
     }
 
     public void Allowed()
     {
-        allowedToFlip = true;
+        if (flipFirst)
+        {
+            allowedToFlip = true;
+            flipFirst = false;
+        }
+
+        else
+        {
+            allowedToFlipAgain = true;
+            flipFirst = true;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,20 @@ public class StartUpgradeMenu : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "(test) Cutscenes")
+        {
+            Destroy(gameObject);
+        }
+        
+        if (SceneManager.GetActiveScene().name == "(test) Start Menu")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void UpgradeMenuWillStart()
     {
         DontDestroyOnLoad(gameObject);

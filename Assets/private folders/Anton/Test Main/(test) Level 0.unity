@@ -119,51 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &5558278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5558280}
-  - component: {fileID: 5558279}
-  m_Layer: 0
-  m_Name: StartUpgradeMenu?
-  m_TagString: StartUpgr
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &5558279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5558278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e3cf48f3b56044999b52e9896401ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  willStart: 0
---- !u!4 &5558280
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5558278}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5050383, y: 1.0175843, z: -0.1415565}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &24891134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20391,6 +20346,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2021758225}
+    - target: {fileID: 1249198610361452462, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
+      propertyPath: willStart
+      value: 
+      objectReference: {fileID: 64215111875422434}
     - target: {fileID: 1404946608773061217, guid: 6ea906c22b2b6294cb129b5d3abee938, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -24361,6 +24320,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &64215111875422433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5050383
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0175843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1415565
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241566757260241188, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957299848251352072, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+      propertyPath: m_Name
+      value: StartUpgradeMenu?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+--- !u!114 &64215111875422434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 514960761417225245, guid: 7c23735261558954e92a9b509d2a39e1, type: 3}
+  m_PrefabInstance: {fileID: 64215111875422433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e3cf48f3b56044999b52e9896401ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -24375,6 +24402,6 @@ SceneRoots:
   - {fileID: 1918363213}
   - {fileID: 2035354574}
   - {fileID: 938563899}
-  - {fileID: 5558280}
+  - {fileID: 64215111875422433}
   - {fileID: 2059647605}
   - {fileID: 1796786647}
