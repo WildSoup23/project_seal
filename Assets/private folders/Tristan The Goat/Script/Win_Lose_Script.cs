@@ -14,6 +14,8 @@ public class Win_Lose_Script : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textToChange;
     [SerializeField] public GameObject continue_btn;
     [SerializeField] private GameObject retrty_btn;
+    [SerializeField] private GameObject upgrade_btn;
+    [SerializeField] private GameObject menu_btn;
 
     [SerializeField] private TextMeshProUGUI money_gained_txt;
     [SerializeField] private TextMeshProUGUI total_money_txt;
@@ -32,6 +34,9 @@ public class Win_Lose_Script : MonoBehaviour
         imageToChange.sprite = images[0];
         textToChange.text = texts[0];
         retrty_btn.SetActive(true);
+        continue_btn.SetActive(false);
+        menu_btn.SetActive(true);
+        upgrade_btn.SetActive(true);
         Rigidbody2D player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         player.linearVelocity = new Vector2(0, 0);
         player.simulated = false;
@@ -45,6 +50,9 @@ public class Win_Lose_Script : MonoBehaviour
         imageToChange.sprite = images[1];
         textToChange.text = texts[1];
         continue_btn.SetActive(true);
+        retrty_btn.SetActive(false);
+        menu_btn.SetActive(false);
+        upgrade_btn.SetActive(false);
         Cursor.visible = true;
         DisplayMoney();
     }
