@@ -47,7 +47,7 @@ public class NextLevel : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "(test) Start Menu")
+        if (SceneManager.GetActiveScene().name == "(test) StartMenu")
         {
             Destroy(gameObject);
         }

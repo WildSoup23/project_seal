@@ -28,7 +28,7 @@ public class StartUpgradeMenu : MonoBehaviour
             Destroy(gameObject);
         }
         
-        if (SceneManager.GetActiveScene().name == "(test) Start Menu")
+        if (SceneManager.GetActiveScene().name == "(test) StartMenu")
         {
             Destroy(gameObject);
         }
