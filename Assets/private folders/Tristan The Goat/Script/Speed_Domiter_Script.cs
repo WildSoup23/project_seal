@@ -19,7 +19,7 @@ public class Speed_Domiter_Script : MonoBehaviour
     void Update()
     {
         float angle = player_rb.linearVelocity.sqrMagnitude / 5;
-        Quaternion targetRotation = Quaternion.AngleAxis(45-angle, Vector3.forward);
+        Quaternion targetRotation = Quaternion.AngleAxis(((-45)+angle)/player_rb.gravityScale , Vector3.forward);
 
         _rectTransform.localRotation = Quaternion.Slerp(_rectTransform.localRotation, targetRotation, rotationSpeed * Time.deltaTime);
 
