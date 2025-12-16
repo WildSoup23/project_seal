@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class Upgrade_Menu_Script : MonoBehaviour
 {
@@ -56,6 +57,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private Slider money_slider;
 
     [Header("Upgrade panel")]
+    [SerializeField] private List<Sprite> images;
+    [SerializeField] private Image imageToChange;
     [SerializeField] public GameObject upgrade_panel;
     [SerializeField] private Slider upgrade_slider;
     [SerializeField] private TextMeshProUGUI top_txt;
@@ -201,6 +204,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         top_txt.text = "Fastest Seal Alive";
         upgrade_cost_txt.text = $"${speed_upgrade_cost}";
         upgrade_value_txt.text = $"Top speed: {pc.maxVelocity_X * 4}skm/h";
+        imageToChange.sprite = images[0];
 
         if(speed_upgrade >= max_speed_upgrade)
         {
@@ -240,6 +244,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         top_txt.text = "Acceleration";
         upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
         upgrade_value_txt.text = $"Acceleration: {pc.speedMultiplier * 6}st/s^2";
+        imageToChange.sprite = images[1];
 
         if (acceleration_upgrade >= max_acceleration_upgrade)
         {
@@ -280,6 +285,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         top_txt.text = "Dive Speed";
         upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
         upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
+        imageToChange.sprite = images[2];
 
         if (dive_speed_upgrade >= max_dive_speed_upgrade)
         {
@@ -316,6 +322,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = defense_upgrade_txt;
         top_txt.text = "Money Gain";
         upgrade_cost_txt.text = $"${defense_upgrade_cost}";
+        imageToChange.sprite = images[3];
     }
 
     public void UpgradeMoneyGain()
