@@ -9,9 +9,10 @@ public class Win_Lose_Script : MonoBehaviour
     // Refrences 
     [SerializeField] public GameObject win_lose_panel;
     [SerializeField] private List<Sprite> images = new List<Sprite>();
+    [SerializeField] private List<Sprite> images2 = new List<Sprite>();
     [SerializeField] private List<string> texts = new List<string>();
     [SerializeField] private Image imageToChange;
-    [SerializeField] private TextMeshProUGUI textToChange;
+    [SerializeField] private Image imageToChange2;
     [SerializeField] public GameObject continue_btn;
     [SerializeField] private GameObject retrty_btn;
     [SerializeField] private GameObject upgrade_btn;
@@ -32,7 +33,7 @@ public class Win_Lose_Script : MonoBehaviour
         Debug.Log("bruh");
         win_lose_panel.SetActive(true);
         imageToChange.sprite = images[0];
-        textToChange.text = texts[0];
+        imageToChange2.sprite = images2[0];
         retrty_btn.SetActive(true);
         continue_btn.SetActive(false);
         menu_btn.SetActive(true);
@@ -48,7 +49,7 @@ public class Win_Lose_Script : MonoBehaviour
     {
         win_lose_panel.SetActive(true);
         imageToChange.sprite = images[1];
-        textToChange.text = texts[1];
+        imageToChange2.sprite = images2[1];
         continue_btn.SetActive(true);
         retrty_btn.SetActive(false);
         menu_btn.SetActive(false);
