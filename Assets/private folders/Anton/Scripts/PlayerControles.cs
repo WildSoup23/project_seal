@@ -31,6 +31,9 @@ public class PlayerControles : MonoBehaviour
     // Acceleration
     public float speedMultiplier;
 
+    // speed reduction upgrade
+    public float speedReductionReduction;
+
     [SerializeField] private bool UpgradesActive;
     
     private const string path = @"c:\temp\test.txt";
@@ -151,10 +154,11 @@ public class PlayerControles : MonoBehaviour
 
         if (other.gameObject.CompareTag("speedReducer"))
         {
-            float speedReduction = other.GetComponent<Enemy>().SPEED_DECREASE;
-
+            float StartSpeedReduction = other.GetComponent<Enemy>().SPEED_DECREASE;
+            float x = (1 - StartSpeedReduction) * (1-speedReductionReduction);
+            float y = 1 - x;
             GetComponent<Rigidbody2D>().linearVelocity =
-                GetComponent<Rigidbody2D>().linearVelocity * Mathf.Clamp01(speedReduction);
+                GetComponent<Rigidbody2D>().linearVelocity * Mathf.Clamp01(x);
         }
 
     }
@@ -205,8 +209,8 @@ public class PlayerControles : MonoBehaviour
                 
             else if (playerAttribute == 3)
             {
-                // coins.coinMultiplier *= float.Parse(parsed);
-                break;
+                float upgr = float.Parse(parsed);
+                speedReductionReduction += upgr / 10;
             }
                 
             playerAttribute++;

@@ -44,6 +44,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [SerializeField] private float defense_upgrade_cost;
     [SerializeField] private float defense_upgrade_cost_increase;
     [SerializeField] private string defense_upgrade_txt;
+    [SerializeField] private TextMeshProUGUI defence_upgrade_text;
 
     [Header("Money")]
     [SerializeField] private float money;
@@ -100,58 +101,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
             player.GetComponent<Rigidbody2D>().simulated = false;
         }
         
-        if (willSaveAndLoad)
-        {
-            if (File.Exists("c:/temp/test.txt"))
-            {
-                int playerAttribute = -1;
-                
-                money = float.Parse(File.ReadLines(path).First());
-                
-                foreach (string line in File.ReadLines(path, Encoding.UTF8))
-                {
-                    string parsed = line.Trim();
-                
-                    if (parsed == File.ReadLines(path).First())
-                    {
-                    
-                    }
 
-                    else if (playerAttribute == 0)
-                    {
-                        speed_upgrade = float.Parse(parsed);
-                        speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * Mathf.Pow(2, speed_upgrade));
-                        
-                    }
-                
-                    else if (playerAttribute == 1)
-                    {
-                        acceleration_upgrade = float.Parse(parsed);
-                        acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * Mathf.Pow(2, acceleration_upgrade));
-                    }
-                
-                    else if (playerAttribute == 2)
-                    {
-                        dive_speed_upgrade = float.Parse(parsed);
-                        dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * Mathf.Pow(2, dive_speed_upgrade));
-                        
-                    }
-                
-                    // TODO: Change into defense upgrade
-                    else if (playerAttribute == 3)
-                    {
-                        // problem
-                        defense_upgrade = float.Parse(parsed);
-                        defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * Mathf.Pow(2, defense_upgrade - 1));
-                        break;
-                    }
-                
-                    playerAttribute++;
-                }
-            }
-        }
-        
-        
+        LoadData();
         
         // player = GameObject.FindGameObjectWithTag("Player");
         // ui_elements = transform.Find("UI elements").gameObject;
@@ -193,10 +144,20 @@ public class Upgrade_Menu_Script : MonoBehaviour
             dive_speed_upgrade_text.text = $"{dive_speed_upgrade_cost}";
         }
 
+        if (defense_upgrade >= max_defense_upgrade)
+        {
+            defence_upgrade_text.text = "MAX";
+        }
+        else
+        {
+            defence_upgrade_text.text = $"{defense_upgrade_cost}";
+        }
+
     }
 
     public void OpenSpeedUpgrade()
     {
+        LoadData();
         upgrade_panel.SetActive(true);
         menu_identifier = 1;
         upgrade_slider.value = speed_upgrade / max_speed_upgrade;
@@ -221,6 +182,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 speed_upgrade++;
                 money -= speed_upgrade_cost;
                 speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * speed_upgrade_cost_increase);
+                SaveData();
+                pc.ApplyUpgrades();
+                LoadData();
                 speed_slider.value = speed_upgrade / max_speed_upgrade;
                 upgrade_slider.value = speed_upgrade / max_speed_upgrade;
                 upgrade_cost_txt.text = $"${speed_upgrade_cost}";
@@ -230,6 +194,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 {
                     upgrade_cost_txt.text = "MAX";
                 }
+
+                
             }
         }
         
@@ -237,6 +203,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     public void OpenAccelerationUpgrade()
     {
+        LoadData();
         upgrade_panel.SetActive(true);
         menu_identifier = 2;
         upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
@@ -261,6 +228,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 acceleration_upgrade++;
                 money -= acceleration_upgrade_cost;
                 acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * acceleration_upgrade_cost_increase);
+                SaveData();
+                pc.ApplyUpgrades();
+                LoadData();
                 acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
@@ -270,6 +240,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 {
                     upgrade_cost_txt.text = "MAX";
                 }
+                
             }
         }
 
@@ -278,11 +249,12 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     public void OpenDiveSpeedUpgrade()
     {
+        LoadData();
         upgrade_panel.SetActive(true);
         menu_identifier = 3;
         upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
         upgrade_txt.text = dive_speed_upgrade_txt;
-        top_txt.text = "Dive Speed";
+        top_txt.text = "Pinniped Plunge";
         upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
         upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
         imageToChange.sprite = images[2];
@@ -302,6 +274,9 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 dive_speed_upgrade++;
                 money -= dive_speed_upgrade_cost;
                 dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * dive_speed_upgrade_cost_increase);
+                SaveData();
+                pc.ApplyUpgrades();
+                LoadData();
                 dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
@@ -311,21 +286,29 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 {
                     upgrade_cost_txt.text = "MAX";
                 }
+               
             }
         }
     }
-    public void OpenMoneyGainUpgrade()
+    public void OpenDefenceUpgrade()
     {
+        LoadData();
         upgrade_panel.SetActive(true);
         menu_identifier = 4;
         upgrade_slider.value = defense_upgrade / max_defense_upgrade;
         upgrade_txt.text = defense_upgrade_txt;
-        top_txt.text = "Money Gain";
+        top_txt.text = "Blubber Body";
         upgrade_cost_txt.text = $"${defense_upgrade_cost}";
         imageToChange.sprite = images[3];
+        upgrade_value_txt.text = $"Speed reduction reduction: {pc.speedReductionReduction * 100}%";
+
+        if (defense_upgrade >= max_defense_upgrade)
+        {
+            upgrade_cost_txt.text = "MAX";
+        }
     }
 
-    public void UpgradeMoneyGain()
+    public void UpgradeDefence()
     {
         if (defense_upgrade < max_defense_upgrade)
         {
@@ -334,14 +317,19 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 defense_upgrade++;
                 money -= defense_upgrade_cost;
                 defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * defense_upgrade_cost_increase);
+                SaveData();
+                pc.ApplyUpgrades();
+                LoadData();
                 money_slider.value = defense_upgrade / max_defense_upgrade;
                 upgrade_slider.value = defense_upgrade / max_defense_upgrade;
                 upgrade_cost_txt.text = $"${defense_upgrade_cost}";
+                upgrade_value_txt.text = $"Speed reduction reduction: {pc.speedReductionReduction * 100}%";
 
-                if (player != null)
+                if (defense_upgrade >= max_defense_upgrade)
                 {
-
+                    upgrade_cost_txt.text = "MAX";
                 }
+                
             }
         }
     }
@@ -351,7 +339,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         if (menu_identifier == 1) UpgradeSpeed();
         else if (menu_identifier == 2) UpgradeAcceleration();
         else if (menu_identifier == 3) UpgradeDiveSpeed();
-        else if(menu_identifier == 4) UpgradeMoneyGain();
+        else if(menu_identifier == 4) UpgradeDefence();
     }
 
     public void ClosePanel()
@@ -361,12 +349,21 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     public void Run()
     {
+        SaveData();
+        player.GetComponent<Rigidbody2D>().simulated = true;
+        ui_elements.SetActive(false);
+        Cursor.visible = false;
+        
+    }
+
+    private void SaveData()
+    {
         const string path = @"c:\temp\test.txt";
 
         if (willSaveAndLoad)
         {
             File.Delete(path); // Ensures that we write to a blank file
-        
+
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(money);
@@ -375,12 +372,63 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 sw.WriteLine(dive_speed_upgrade);
                 sw.WriteLine(defense_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
-            }   
+            }
         }
-        player.GetComponent<Rigidbody2D>().simulated = true;
-        ui_elements.SetActive(false);
-        Cursor.visible = false;
-        
+    }
+
+    private void LoadData()
+    {
+        if (willSaveAndLoad)
+        {
+            if (File.Exists("c:/temp/test.txt"))
+            {
+                int playerAttribute = -1;
+
+                money = float.Parse(File.ReadLines(path).First());
+
+                foreach (string line in File.ReadLines(path, Encoding.UTF8))
+                {
+                    string parsed = line.Trim();
+
+                    if (parsed == File.ReadLines(path).First())
+                    {
+
+                    }
+
+                    else if (playerAttribute == 0)
+                    {
+                        speed_upgrade = float.Parse(parsed);
+                        speed_upgrade_cost = 150;
+                        speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * Mathf.Pow(2, speed_upgrade));
+
+                    }
+
+                    else if (playerAttribute == 1)
+                    {
+                        acceleration_upgrade = float.Parse(parsed);
+                        acceleration_upgrade_cost = 150;
+                        acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * Mathf.Pow(2, acceleration_upgrade));
+                    }
+
+                    else if (playerAttribute == 2)
+                    {
+                        dive_speed_upgrade = float.Parse(parsed);
+                        dive_speed_upgrade_cost = 200;
+                        dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * Mathf.Pow(2, dive_speed_upgrade));
+
+                    } 
+
+                    else if (playerAttribute == 3)
+                    {
+                        defense_upgrade = float.Parse(parsed);
+                        defense_upgrade_cost = 200;
+                        defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * Mathf.Pow(2, defense_upgrade));
+                    }
+
+                    playerAttribute++;
+                }
+            }
+        }
     }
 
     public void AddMoney(int amount)
