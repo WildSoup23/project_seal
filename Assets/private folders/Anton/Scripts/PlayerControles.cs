@@ -15,6 +15,7 @@ public class PlayerControles : MonoBehaviour
     [SerializeField] private List<AudioClip> clips;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource windAudioSource;
+    [SerializeField] private AudioSource slideSound;
     
     // Dive speed
     public float changedGravityScale;
@@ -45,6 +46,7 @@ public class PlayerControles : MonoBehaviour
 
     private GameObject pause;
     private GameObject winLose;
+    private bool isSliding = false;
 
     private void Awake()
     {
@@ -66,6 +68,17 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isSliding)
+        {
+            slideSound.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x +
+                                         player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
+        }
+        else
+        {
+            slideSound.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x -
+                                         player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
+        }
+
         if (!player.GetComponent<Rigidbody2D>().simulated ||
            winLose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy ||
            pause.GetComponent<SceneLoaderManagerScript>().pause_screen.activeInHierarchy)
@@ -172,6 +185,8 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
+            isSliding = true;
+            slideSound.Play();
             if (timer <= 0)
             {
                 PlayRandomSlap();
@@ -203,6 +218,8 @@ public class PlayerControles : MonoBehaviour
     {
         if (other.CompareTag("Slope"))
         {
+            isSliding = false;
+            slideSound.Stop();
             allowedToAccelerate = false;
         }
     }
