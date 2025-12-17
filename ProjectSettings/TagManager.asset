@@ -9,6 +9,7 @@ TagManager:
   - End
   - NextScene
   - speedReducer
+  - StartUpgr
   layers:
   - Default
   - TransparentFX
