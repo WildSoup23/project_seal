@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7343180451653165428}
   - component: {fileID: 2970559791762446903}
   m_Layer: 0
-  m_Name: Snowman_0 (1)
+  m_Name: Upperbody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,11 +151,11 @@ Transform:
   m_GameObject: {fileID: 1844452283033015400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11490386, y: -0.28116634, z: 0}
-  m_LocalScale: {x: 0.7394262, y: 0.7394262, z: 1}
+  m_LocalPosition: {x: -0.20700002, y: -0.027999982, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1883866248577984910}
+  m_Father: {fileID: 5375195948123500835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6241301643215529065
 SpriteRenderer:
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3909041007412922137, guid: 840ca86d8423cfd46a32ee2e46d0ec13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 7213917477159911812}
   - component: {fileID: 6591031038546301351}
   m_Layer: 0
-  m_Name: Sprite-0002 1_0
+  m_Name: Trim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,11 +325,11 @@ Transform:
   m_GameObject: {fileID: 2525066420081863415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04037567, y: -0.3358839, z: 0}
-  m_LocalScale: {x: 0.7394262, y: 0.7394262, z: 1}
+  m_LocalPosition: {x: -0.102, y: -0.06499998, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1883866248577984910}
+  m_Father: {fileID: 5375195948123500835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &740569963001934680
 SpriteRenderer:
@@ -374,7 +374,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3909041007412922137, guid: 840ca86d8423cfd46a32ee2e46d0ec13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 5542542774795465382}
   - component: {fileID: 2737479298070292208}
   m_Layer: 0
-  m_Name: Snowman_1
+  m_Name: Top Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,11 +500,11 @@ Transform:
   m_GameObject: {fileID: 4222329467864358168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19121861, y: -0.23975849, z: 0}
-  m_LocalScale: {x: 0.7394262, y: 0.7394262, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1883866248577984910}
+  m_Father: {fileID: 5375195948123500835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4183153241659609393
 SpriteRenderer:
@@ -549,7 +549,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3909041007412922137, guid: 840ca86d8423cfd46a32ee2e46d0ec13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 6272112033369789471}
   - component: {fileID: 334615786535363018}
   m_Layer: 0
-  m_Name: Snowman_6 (5)
+  m_Name: button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 7204989865055190416}
   - component: {fileID: 2736524485632573997}
   m_Layer: 0
-  m_Name: Snowman_8
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 5016414044350159725}
   - component: {fileID: 3433004216112720023}
   m_Layer: 0
-  m_Name: Snowman_4
+  m_Name: Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 6222303611046721638}
   - component: {fileID: 9039900207308535832}
   m_Layer: 0
-  m_Name: Snowman_3
+  m_Name: Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 2910381553553974208}
   - component: {fileID: 1557787469936960198}
   m_Layer: 0
-  m_Name: Snowman_6
+  m_Name: Eye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 5736775463942723919}
   - component: {fileID: 8530799625633435678}
   m_Layer: 0
-  m_Name: Snowman_0
+  m_Name: Lowerbody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,6 +1085,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7367595025999364978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5375195948123500835}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5375195948123500835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367595025999364978}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1912187, y: -0.23975854, z: 0}
+  m_LocalScale: {x: 1.4788527, y: 1.4788524, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2332897663355589641}
+  - {fileID: 9178606700814157821}
+  - {fileID: 7303697084651686855}
+  m_Father: {fileID: 1883866248577984910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7451666014927602609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1130,7 @@ GameObject:
   - component: {fileID: 66846270852720974}
   - component: {fileID: 7992108855595559694}
   m_Layer: 0
-  m_Name: Snowman_6 (2)
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,7 +1217,7 @@ GameObject:
   - component: {fileID: 8006462762336477952}
   - component: {fileID: 2497604985812752090}
   m_Layer: 0
-  m_Name: Snowman_6 (3)
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1270,7 +1304,7 @@ GameObject:
   - component: {fileID: 1883866248577984910}
   - component: {fileID: 3493314880390088212}
   m_Layer: 0
-  m_Name: Snowman_0 (2)
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,9 +1327,7 @@ Transform:
   - {fileID: 2910381553553974208}
   - {fileID: 79427699420532325}
   - {fileID: 7204989865055190416}
-  - {fileID: 2332897663355589641}
-  - {fileID: 9178606700814157821}
-  - {fileID: 7303697084651686855}
+  - {fileID: 5375195948123500835}
   m_Father: {fileID: 8307098974136828860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3493314880390088212
@@ -1364,7 +1396,7 @@ GameObject:
   - component: {fileID: 7042380164143545945}
   - component: {fileID: 73571314360401704}
   m_Layer: 0
-  m_Name: Snowman_6 (4)
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1483,7 @@ GameObject:
   - component: {fileID: 79427699420532325}
   - component: {fileID: 4325581239285588084}
   m_Layer: 0
-  m_Name: Snowman_6 (1)
+  m_Name: Eye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
