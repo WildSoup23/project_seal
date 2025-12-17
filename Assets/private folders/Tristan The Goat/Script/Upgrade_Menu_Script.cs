@@ -51,6 +51,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
     // Refrences
     [Header("Refrences")]
+    [SerializeField] private AudioSource money_audio;
+
     [Header("Sliders")]
     [SerializeField] private Slider speed_slider;
     [SerializeField] private Slider acceleration_slider;
@@ -179,6 +181,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if(money >= speed_upgrade_cost)
             {
+                money_audio.Play();
+
                 speed_upgrade++;
                 money -= speed_upgrade_cost;
                 speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * speed_upgrade_cost_increase);
@@ -225,6 +229,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (money >= acceleration_upgrade_cost)
             {
+                money_audio.Play();
+
                 acceleration_upgrade++;
                 money -= acceleration_upgrade_cost;
                 acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * acceleration_upgrade_cost_increase);
@@ -271,6 +277,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (money >= dive_speed_upgrade_cost)
             {
+                money_audio.Play();
+
                 dive_speed_upgrade++;
                 money -= dive_speed_upgrade_cost;
                 dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * dive_speed_upgrade_cost_increase);
@@ -314,6 +322,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
         {
             if (money >= defense_upgrade_cost)
             {
+                money_audio.Play();
+
                 defense_upgrade++;
                 money -= defense_upgrade_cost;
                 defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * defense_upgrade_cost_increase);

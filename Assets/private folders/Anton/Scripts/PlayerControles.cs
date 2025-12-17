@@ -5,11 +5,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine.Events;
+using Unity.Mathematics;
+using System.Collections.Generic;
 
 public class PlayerControles : MonoBehaviour
 {
     // Controles player dive, acceleration, max speed
 
+    [SerializeField] private List<AudioClip> clips;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource windAudioSource;
     
@@ -40,6 +43,9 @@ public class PlayerControles : MonoBehaviour
 
     [SerializeField] private CoinsCollected coins;
 
+    private GameObject pause;
+    private GameObject winLose;
+
     private void Awake()
     {
         allowedToSlam_ByKey = false;
@@ -48,6 +54,9 @@ public class PlayerControles : MonoBehaviour
 
     private void Start()
     {
+        winLose = GameObject.FindAnyObjectByType<Win_Lose_Script>().gameObject;
+        pause = GameObject.FindAnyObjectByType<SceneLoaderManagerScript>().gameObject;
+
         if (UpgradesActive)
         {
             ApplyUpgrades();
@@ -57,16 +66,27 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!player.GetComponent<Rigidbody2D>().simulated ||
+           winLose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy ||
+           pause.GetComponent<SceneLoaderManagerScript>().pause_screen.activeInHierarchy)
+        {
+            windAudioSource.volume = 0;
+        }
+        else
+        {
+            windAudioSource.volume = 1;
+        }
+
+
         if (player.GetComponent<Rigidbody2D>().linearVelocity.y < 0)
         {
-            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x - 
+            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x -
                                          player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
         }
 
         else
         {
-            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x + 
+            windAudioSource.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x +
                                          player.GetComponent<Rigidbody2D>().linearVelocity.y) / (maxVelocity_X * 2);
         }
         
@@ -140,13 +160,21 @@ public class PlayerControles : MonoBehaviour
         }
     }
 
+    private void PlayRandomSlap()
+    {
+        int rn = UnityEngine.Random.Range(0, 4);
+        audioSource.clip = clips[rn];
+        audioSource.Play();
+
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Slope"))
         {
             if (timer <= 0)
             {
-                audioSource.Play();
+                PlayRandomSlap();
                 timer = 1.16f;
             }
             allowedToAccelerate = true;
