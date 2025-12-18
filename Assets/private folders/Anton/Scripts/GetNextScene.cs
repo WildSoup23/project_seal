@@ -13,6 +13,7 @@ public class GetNextScene : MonoBehaviour
     private GameObject nextScene;
     public string sceneName;
     public GameObject button;
+    public GameObject restartButton;
 
     [SerializeField] private GameObject comic;
     
@@ -29,13 +30,6 @@ public class GetNextScene : MonoBehaviour
     {
         sceneName = "(test) Level 0";
 
-        if (GameObject.FindGameObjectWithTag("NextScene") == true)
-        {
-            nextScene = GameObject.FindGameObjectWithTag("NextScene");
-            sceneName = nextScene.GetComponent<NextLevel>().nextSceneName;
-            Destroy(nextScene);
-        }
-
         if (sceneName != "(test) Level 0")
         {
             comic.SetActive(false);
@@ -47,32 +41,43 @@ public class GetNextScene : MonoBehaviour
         {
             card.GetComponent<SpriteRenderer>().sprite = photocard_0;
             cardText.text =
-                "The Frightening Penguins weren’t afraid of anything. Not even Skeal III. That led them to their downfall.";
+                "Some Penguins weren’t afraid of anything. Not even their King, Skeal III. They had no respect for his rule.";
         }
         
         else if (sceneName == "(test) Level 2")
         {
             card.GetComponent<SpriteRenderer>().sprite = photocard_1;
-            cardText.text = "It was a mistake to challenge the King. The Fighting Penguins had no chance against him.";
+            cardText.text = "They continued to challenge him, breaking every rule. And every time, he put them in their place.";
         }
         
         else if (sceneName == "(test) Level 3")
         {
             card.GetComponent<SpriteRenderer>().sprite = photocard_2;
-            cardText.text = "Even the most obedient can turn traitor. That was the role The Fidgeting Penguins played, and it led to their demise.";
+            cardText.text = "New rules kept getting made, and the disobedience spread. Skeal III grew frustrated; it wasn’t that hard to not disrupt the snow!";
             
         }
         
         else if (sceneName == "(test) Level 4")
         {
             card.GetComponent<SpriteRenderer>().sprite = photocard_3;
-            cardText.text = "Knowledge is dangerous. If you’re worried about what they might know, it’d be better to get rid of them. That was what Skeal III did with The Failing Penguins.";
+            cardText.text = "More rules, more repercussions, but nothing changed. Skeal III understood it then; everyone was an enemy";
         }
         
         else if (sceneName == "The End")
         {
             card.GetComponent<SpriteRenderer>().sprite = photocard_4;
-            cardText.text = "Keep your friends close, but your enemies closer. That must have been what The Familiar Penguins thought when they went through Skeal III’s belongings.";
+            cardText.text = "King Skeal III was not going to back down. He would protect his land, even if it was against its own people.";
+        }
+        
+        if (GameObject.FindGameObjectWithTag("NextScene") == true)
+        {
+            nextScene = GameObject.FindGameObjectWithTag("NextScene");
+            sceneName = nextScene.GetComponent<NextLevel>().nextSceneName;
+            
+            if (comic.activeSelf)
+            {
+                Destroy(nextScene);
+            }
         }
     }
 
