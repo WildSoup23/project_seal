@@ -57151,6 +57151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 706095535}
     m_Modifications:
+    - target: {fileID: 1867419169165284348, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
+      propertyPath: speedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2041839989141683816, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 495.2
@@ -62340,6 +62344,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 706095535}
     m_Modifications:
+    - target: {fileID: 1867419169165284348, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
+      propertyPath: speedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2041839989141683816, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 255.1
@@ -77301,6 +77309,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 706095535}
     m_Modifications:
+    - target: {fileID: 1867419169165284348, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
+      propertyPath: speedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2041839989141683816, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -191.86
@@ -146408,6 +146420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 706095535}
     m_Modifications:
+    - target: {fileID: 1867419169165284348, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
+      propertyPath: speedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2041839989141683816, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 105.85016
@@ -151478,6 +151494,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 706095535}
     m_Modifications:
+    - target: {fileID: 1867419169165284348, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
+      propertyPath: speedDecrease
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2041839989141683816, guid: 8846b59719d1fbe4f808ccfdef56ce86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -86
