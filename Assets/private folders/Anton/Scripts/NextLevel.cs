@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public string nextSceneName;
+    public bool comicYes;
     public static NextLevel instance;
     
     
@@ -23,6 +24,8 @@ public class NextLevel : MonoBehaviour
         }
         
         DontDestroyOnLoad(this);
+
+        comicYes = false;
         
         if (SceneManager.GetActiveScene().name == "(test) Level 0")
         {
