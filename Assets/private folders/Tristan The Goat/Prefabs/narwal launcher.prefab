@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedDecrease: 0.7
+  hasHit: 0
   launchSpeed: 22
   launchAngle: 116.8
   resoultion: 80
@@ -370,7 +371,6 @@ GameObject:
   - component: {fileID: 2278510093852117594}
   - component: {fileID: 1594549837366225407}
   - component: {fileID: 1193016309546437138}
-  - component: {fileID: 2778100809224938864}
   - component: {fileID: 6650480946255294424}
   m_Layer: 0
   m_Name: narwal enemy
@@ -459,43 +459,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.92}
   m_Size: {x: 1, y: 3.5}
   m_Direction: 0
---- !u!70 &2778100809224938864
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7235431402934157578}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.96}
-  m_Size: {x: 0.3, y: 2}
-  m_Direction: 0
 --- !u!114 &6650480946255294424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedDecrease: 0.5
+  hasHit: 0
   flySpeed: 0
   activationRange: 0
   feather_burst_effect: {fileID: 0}
