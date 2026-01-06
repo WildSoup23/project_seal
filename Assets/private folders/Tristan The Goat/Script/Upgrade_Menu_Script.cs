@@ -214,7 +214,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = acceleration_upgrade_txt;
         top_txt.text = "Acceleration";
         upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
-        upgrade_value_txt.text = $"Acceleration: {pc.speedMultiplier * 6}st/s^2";
+        upgrade_value_txt.text = $"Acceleration: {(pc.speedMultiplier * 6).ToString("f2")}st/s^2";
         imageToChange.sprite = images[1];
 
         if (acceleration_upgrade >= max_acceleration_upgrade)
@@ -240,7 +240,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 acceleration_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_slider.value = acceleration_upgrade / max_acceleration_upgrade;
                 upgrade_cost_txt.text = $"${acceleration_upgrade_cost}";
-                upgrade_value_txt.text = $"Acceleration: {pc.speedMultiplier * 6}st/s^2";
+                upgrade_value_txt.text = $"Acceleration: {(pc.speedMultiplier * 6).ToString("f2")}st/s^2";
 
                 if (acceleration_upgrade >= max_acceleration_upgrade)
                 {
@@ -262,7 +262,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
         upgrade_txt.text = dive_speed_upgrade_txt;
         top_txt.text = "Pinniped Plunge";
         upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
-        upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
+        upgrade_value_txt.text = $"Dive speed: {(pc.speedMultiplier * 2).ToString("f2")}st/s^2";
         imageToChange.sprite = images[2];
 
         if (dive_speed_upgrade >= max_dive_speed_upgrade)
@@ -288,7 +288,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 dive_speed_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_slider.value = dive_speed_upgrade / max_dive_speed_upgrade;
                 upgrade_cost_txt.text = $"${dive_speed_upgrade_cost}";
-                upgrade_value_txt.text = $"Dive speed: {pc.speedMultiplier * 2}st/s^2";
+                upgrade_value_txt.text = $"Dive speed: {(pc.speedMultiplier * 2).ToString("f2")}st/s^2";
 
                 if (dive_speed_upgrade >= max_dive_speed_upgrade)
                 {

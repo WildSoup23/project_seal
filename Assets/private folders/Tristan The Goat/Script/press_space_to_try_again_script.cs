@@ -5,6 +5,7 @@ public class press_space_to_try_again_script : MonoBehaviour
     private GameObject win_lose;
     private GameObject upgrade_menu;
     private GameObject pause;
+    private GameObject tutorial;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,6 +14,7 @@ public class press_space_to_try_again_script : MonoBehaviour
         win_lose = GameObject.FindAnyObjectByType<Win_Lose_Script>().gameObject;
         upgrade_menu = GameObject.FindAnyObjectByType<Upgrade_Menu_Script>().gameObject;
         pause = GameObject.FindAnyObjectByType<SceneLoaderManagerScript>().gameObject;
+        tutorial = GameObject.FindAnyObjectByType<Turorial_Script>().gameObject;
     }
 
     // Update is called once per frame
@@ -41,32 +43,66 @@ public class press_space_to_try_again_script : MonoBehaviour
             Cursor.visible=false;
         }
 
-        if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+        if (tutorial == null)
+        {
+            if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
             && !win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
             {
-                pause.GetComponent<SceneLoaderManagerScript>().ReloadScene();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    pause.GetComponent<SceneLoaderManagerScript>().ReloadScene();
+                }
+            }
+
+            if (upgrade_menu.GetComponent<Upgrade_Menu_Script>().ui_elements.activeInHierarchy
+                && !upgrade_menu.GetComponent<Upgrade_Menu_Script>().upgrade_panel.activeInHierarchy)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    upgrade_menu.GetComponent<Upgrade_Menu_Script>().Run();
+                }
+            }
+
+            if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+                && win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    pause.GetComponent<SceneLoaderManagerScript>().LoadScene("(test) Cutscenes");
+                }
             }
         }
-
-        if (upgrade_menu.GetComponent<Upgrade_Menu_Script>().ui_elements.activeInHierarchy
-            && !upgrade_menu.GetComponent<Upgrade_Menu_Script>().upgrade_panel.activeInHierarchy)
+        else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (!tutorial.GetComponent<Turorial_Script>().panel2.activeInHierarchy)
             {
-                upgrade_menu.GetComponent<Upgrade_Menu_Script>().Run();
+                if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+            && !win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        pause.GetComponent<SceneLoaderManagerScript>().ReloadScene();
+                    }
+                }
+
+                if (upgrade_menu.GetComponent<Upgrade_Menu_Script>().ui_elements.activeInHierarchy
+                    && !upgrade_menu.GetComponent<Upgrade_Menu_Script>().upgrade_panel.activeInHierarchy)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        upgrade_menu.GetComponent<Upgrade_Menu_Script>().Run();
+                    }
+                }
+
+                if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
+                    && win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        pause.GetComponent<SceneLoaderManagerScript>().LoadScene("(test) Cutscenes");
+                    }
+                }
             }
         }
-
-        if(win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
-            && win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                pause.GetComponent<SceneLoaderManagerScript>().LoadScene("(test) Cutscenes");
-            }
-        }
-
     }
 }

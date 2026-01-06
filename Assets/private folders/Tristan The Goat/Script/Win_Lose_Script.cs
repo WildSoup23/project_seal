@@ -19,6 +19,7 @@ public class Win_Lose_Script : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI money_gained_txt;
     [SerializeField] private TextMeshProUGUI total_money_txt;
+    [SerializeField] private GameObject tut;
 
     public static Win_Lose_Script instance;
 
@@ -57,6 +58,12 @@ public class Win_Lose_Script : MonoBehaviour
 
             Cursor.visible = true;
             DisplayMoney();
+
+            if(tut != null)
+            {
+                tut.GetComponent<Turorial_Script>().ActiavteDeathTutorial();
+            }
+
         }
     }
 

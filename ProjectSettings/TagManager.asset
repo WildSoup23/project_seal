@@ -47,7 +47,13 @@ TagManager:
   - name: sun
     uniqueID: 255495163
     locked: 0
-  - name: background
+  - name: background3
+    uniqueID: 2858306711
+    locked: 0
+  - name: background2
+    uniqueID: 921506137
+    locked: 0
+  - name: background1
     uniqueID: 4144715769
     locked: 0
   - name: icebergs

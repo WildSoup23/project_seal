@@ -197,14 +197,11 @@ public class PlayerControles : MonoBehaviour
 
         if (other.gameObject.CompareTag("speedReducer") && !other.GetComponent<Enemy>().hasHit)
         {
-            Debug.Log(GetComponent<Rigidbody2D>().linearVelocity);
             other.GetComponent<Collider2D>().enabled = false;
             float StartSpeedReduction = other.GetComponent<Enemy>().SPEED_DECREASE;
             float x = StartSpeedReduction * (1-speedReductionReduction);
             float y = 1 - x;
-            Debug.Log(y);
             GetComponent<Rigidbody2D>().linearVelocity = GetComponent<Rigidbody2D>().linearVelocity * Mathf.Clamp01(y);
-            Debug.Log(GetComponent<Rigidbody2D>().linearVelocity);
             other.GetComponent<Enemy>().hasHit = true;
         }
 

@@ -291,7 +291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b6f97d05784083b45a9d3948a9c70881, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf4dcc7091db6d54bb7da32f802f5d63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3215630481471621872, guid: 5a389830e5639064eb20041b4fd2261f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7eea85179d218df49bf271f4b20060db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continue (space)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6cde86eeb12d04e4b8c10fdb34ceda02, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2058,7 +2058,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &3951675579276889336
 MonoBehaviour:
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ff0b012ebccb34ea2bf1368f0784c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow_min_max_size: {x: 0.5, y: 2}
+  arrow_min_max_size: {x: 0.5, y: 1.5}
   minArrowShowHight: 25
   arrowGrowSpeed: 0.05
 --- !u!1 &8218335472068365807
@@ -3271,6 +3271,10 @@ PrefabInstance:
       value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 8371365362620143296, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
+      propertyPath: m_text
+      value: Try Again (space)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371365362620143296, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 6cde86eeb12d04e4b8c10fdb34ceda02, type: 2}
@@ -3383,6 +3387,7 @@ MonoBehaviour:
   menu_btn: {fileID: 8197135294213366356}
   money_gained_txt: {fileID: 3279512926466868874}
   total_money_txt: {fileID: 3472807228911571828}
+  tut: {fileID: 0}
 --- !u!1 &8197135294213366356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5935436236021083319, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
@@ -4443,6 +4448,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 3494165914153448934, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 101
+      objectReference: {fileID: 0}
     - target: {fileID: 3746078932669293971, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4458,6 +4467,10 @@ PrefabInstance:
     - target: {fileID: 3769728382195148468, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837866189109988005, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
+      propertyPath: m_text
+      value: Run (space)
       objectReference: {fileID: 0}
     - target: {fileID: 3837866189109988005, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_fontAsset
@@ -4744,7 +4757,7 @@ PrefabInstance:
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: 'images.Array.data[1]'
       value: 
-      objectReference: {fileID: 21300000, guid: b6f97d05784083b45a9d3948a9c70881, type: 3}
+      objectReference: {fileID: 21300000, guid: cf4dcc7091db6d54bb7da32f802f5d63, type: 3}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: 'images.Array.data[2]'
       value: 
@@ -5202,6 +5215,10 @@ PrefabInstance:
     - target: {fileID: 4061092374270212657, guid: b8e46727ff12a574aa4eda2d10ffe84e, type: 3}
       propertyPath: m_UpdateMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421510014451674230, guid: b8e46727ff12a574aa4eda2d10ffe84e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

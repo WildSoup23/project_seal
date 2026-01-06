@@ -55,6 +55,7 @@ public class BirdScript : Enemy
             if(feather_burst_effect != null)
             {
                 feather_burst_effect.Play();
+                transform.Find("Bird").gameObject.SetActive(false);
             }
             if(anim != null)
             {

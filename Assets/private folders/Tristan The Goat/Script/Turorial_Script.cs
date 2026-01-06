@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,9 @@ using UnityEngine.SceneManagement;
 public class Turorial_Script : MonoBehaviour
 {
     private bool hasPlayed = false;
+    private bool hasDied = false;
     private GameObject panel;
+    public GameObject panel2;
     private const string path = @"c:\temp\tutorial_test.txt";
     private Rigidbody2D rb;
 
@@ -17,9 +20,11 @@ public class Turorial_Script : MonoBehaviour
         if (File.Exists(path))
         {
             hasPlayed = bool.Parse(File.ReadLines(path).First());
+            hasDied = bool.Parse(File.ReadLines(path).Last());
         }
         
         panel = transform.Find("the panel").gameObject;
+        panel2 = transform.Find("the panel2").gameObject;
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         if (hasPlayed)
         {
@@ -29,12 +34,12 @@ public class Turorial_Script : MonoBehaviour
         {
             rb.simulated = false;
         }
-            
+        DontDestroyOnLoad(this);
     }
 
     void Update()
     {
-        if (!hasPlayed)
+        if (!hasPlayed && panel.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -44,6 +49,27 @@ public class Turorial_Script : MonoBehaviour
                 Time.timeScale = 1f;
                 rb.simulated = true;
             }
+        }
+
+        if(!hasDied && panel2.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hasDied = true;
+                panel2.SetActive(false);
+                SaveData(); 
+                Time.timeScale = 1f;
+            }
+        }
+        
+    }
+
+    public void ActiavteDeathTutorial()
+    {
+        if (!hasDied)
+        {
+            panel2.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -56,6 +82,7 @@ public class Turorial_Script : MonoBehaviour
         using (StreamWriter sw = File.AppendText(path))
         {
             sw.WriteLine(hasPlayed);
+            sw.WriteLine(hasDied);
         }
     }
 }
