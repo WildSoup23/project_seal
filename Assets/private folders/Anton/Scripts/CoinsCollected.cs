@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CoinsCollected : MonoBehaviour
 {
@@ -23,7 +24,32 @@ public class CoinsCollected : MonoBehaviour
     void Update()
     {
         newPosition_X = (int)player.transform.position.x - startPosition_X;
-        coins = newPosition_X * 0.3333f;
+
+        if (SceneManager.GetActiveScene().name == "(test) Level 0")
+        { 
+            coins = newPosition_X * 0.3333f;
+        }
+
+        else if  (SceneManager.GetActiveScene().name == "(test) Level 1")
+        {
+            coins = newPosition_X * 0.3333f * 1.05f;
+        }
+        
+        else if  (SceneManager.GetActiveScene().name == "(test) Level 2")
+        {
+            coins = newPosition_X * 0.3333f * 1.1f;
+        }
+        
+        else if  (SceneManager.GetActiveScene().name == "(test) Level 3")
+        {
+            coins = newPosition_X * 0.3333f * 1.15f;
+        }
+        
+        else if  (SceneManager.GetActiveScene().name == "(test) Level 4")
+        {
+            coins = newPosition_X * 0.3333f * 1.2f;
+        }
+        
         coins = (int)coins;
     }
 }

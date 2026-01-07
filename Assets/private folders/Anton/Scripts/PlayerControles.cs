@@ -239,24 +239,24 @@ public class PlayerControles : MonoBehaviour
 
             else if (playerAttribute == 0)
             {
-                maxVelocity_X += float.Parse(parsed);
+                maxVelocity_X = 15 + float.Parse(parsed);
             }
                 
             else if (playerAttribute == 1)
             {
                 float upgr = float.Parse(parsed);
-                speedMultiplier += upgr / 10;
+                speedMultiplier = 1.2f + upgr / 10;
             }
                 
             else if (playerAttribute == 2)
             {
-                changedGravityScale += float.Parse(parsed);
+                changedGravityScale = 8 + float.Parse(parsed);
             }
                 
             else if (playerAttribute == 3)
             {
                 float upgr = float.Parse(parsed);
-                speedReductionReduction += upgr / 10;
+                speedReductionReduction = upgr / 10;
             }
                 
             playerAttribute++;
