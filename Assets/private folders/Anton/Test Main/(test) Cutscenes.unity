@@ -2033,7 +2033,7 @@ MonoBehaviour:
   comic_2: {fileID: 2231919021176806345, guid: dff6ed05d478ad742a399a5ce40a1655, type: 3}
   comic_3: {fileID: -7047120220914255044, guid: a899db308cf1ccb4ba67b8accfc3ddd3, type: 3}
   comic_4: {fileID: 4200642653038532874, guid: 52670dac92821aa48b5a30932f41ff08, type: 3}
-  comic_5: {fileID: -90226655199345669, guid: deea4d4729ab43e4bbf8c85a8b8ab3ff, type: 3}
+  comic_5: {fileID: 5257088150863464263, guid: 657b2935a1b998246bf72ee6de3607ab, type: 3}
   first1: {fileID: 9100000, guid: 31ad6a6aa6182674daa2a63d09631c31, type: 2}
   middle1: {fileID: 9100000, guid: 69927f5cb61d06b41b46a8bbdab5f6ab, type: 2}
   finale1: {fileID: 9100000, guid: 10099b75febdb2e4398d0f56cebecf52, type: 2}
@@ -2041,6 +2041,7 @@ MonoBehaviour:
   middle2: {fileID: 9100000, guid: 855b6b5568e43484eba78e655f17dc89, type: 2}
   finale2: {fileID: 9100000, guid: f163239a02317ab488a43b61fba53613, type: 2}
   animThatKeepsPlaying: {fileID: 315880459}
+  otherAnimThatKeepsPlaying: {fileID: 658054584}
 --- !u!4 &1671918236
 Transform:
   m_ObjectHideFlags: 0
@@ -2194,6 +2195,7 @@ MonoBehaviour:
   allowedToFlipAgain: 0
   flipFirst: 1
   nextButton: {fileID: 1189123292}
+  timer: 3
 --- !u!1 &1980316983
 GameObject:
   m_ObjectHideFlags: 0

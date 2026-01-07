@@ -44,6 +44,8 @@ public class GetNextScene : MonoBehaviour
 
     private bool GiveMeButton;
     [SerializeField] private GameObject animThatKeepsPlaying;
+    [SerializeField] private GameObject otherAnimThatKeepsPlaying;
+    
     
     void Start()
     {
@@ -104,6 +106,17 @@ public class GetNextScene : MonoBehaviour
             comic.SetActive(true);
             card.SetActive(false);
             FlipText.SetActive(false);
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Time.timeScale = 2f;
+                Debug.Log(Time.timeScale);
+            }
+
+            else
+            {
+                Time.timeScale = 1f;
+            }
         
             if (sceneName == "(test) Level 1")
             {
@@ -152,14 +165,26 @@ public class GetNextScene : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Space) && !button.activeSelf)
+        { 
+            Time.timeScale = 3.5f; 
+        }
+
+        else 
+        { 
+            Time.timeScale = 1f;
+        }
+        
         if (comic.activeSelf && !GiveMeButton &&
             comic.GetComponentInChildren<Animator>().
                 GetCurrentAnimatorStateInfo(0).IsName("New State"))
         {
             button.SetActive(true);
-            animThatKeepsPlaying.SetActive(false);
+                animThatKeepsPlaying.SetActive(false);   
             GiveMeButton = true;
         }
+        
+        
     }
 
     public void LoadNextScene()

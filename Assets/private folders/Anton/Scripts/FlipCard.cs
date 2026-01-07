@@ -10,9 +10,10 @@ public class FlipCard : MonoBehaviour
     public bool allowedToFlipAgain = false;
     public bool flipFirst = true;
     [SerializeField] private GameObject nextButton;
-    private float timer = 3f;
+    [SerializeField] private float timer = 3f;
 
     private Quaternion startRotaion;
+    bool timerStart;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -23,7 +24,13 @@ public class FlipCard : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((card.gameObject.activeSelf && card.rotation.y >= 1))
+
+        if (card.rotation.y >= 0.99)
+        {
+            timerStart = true;
+        }
+        
+        if ((card.gameObject.activeSelf && timerStart))
         {
             if (timer > 0)
             {
