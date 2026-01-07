@@ -68,6 +68,8 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(maxVelocity_X);
+        
         if(isSliding)
         {
             slideSound.pitch = 1 * (player.GetComponent<Rigidbody2D>().linearVelocity.x +
