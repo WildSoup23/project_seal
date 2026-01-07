@@ -4470,7 +4470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3837866189109988005, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_text
-      value: Run (space)
+      value: Run
       objectReference: {fileID: 0}
     - target: {fileID: 3837866189109988005, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: m_fontAsset

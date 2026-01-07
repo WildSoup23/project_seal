@@ -6,7 +6,7 @@ public class press_space_to_try_again_script : MonoBehaviour
     private GameObject win_lose;
     private GameObject upgrade_menu;
     private GameObject pause;
-    private GameObject tutorial;
+    public GameObject tutorial;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,10 +15,6 @@ public class press_space_to_try_again_script : MonoBehaviour
         win_lose = GameObject.FindAnyObjectByType<Win_Lose_Script>().gameObject;
         upgrade_menu = GameObject.FindAnyObjectByType<Upgrade_Menu_Script>().gameObject;
         pause = GameObject.FindAnyObjectByType<SceneLoaderManagerScript>().gameObject;
-        if(SceneManager.GetActiveScene().name == "(test) StartMenu")
-        {
-            tutorial = GameObject.FindAnyObjectByType<Turorial_Script>().gameObject;
-        }
     }
 
     // Update is called once per frame
@@ -78,8 +74,9 @@ public class press_space_to_try_again_script : MonoBehaviour
         }
         else
         {
-            if (!tutorial.GetComponent<Turorial_Script>().panel2.activeInHierarchy)
+            if (tutorial.GetComponent<Turorial_Script>().hasDied)
             {
+                //
                 if (win_lose.GetComponent<Win_Lose_Script>().win_lose_panel.activeInHierarchy
             && !win_lose.GetComponent<Win_Lose_Script>().continue_btn.activeInHierarchy)
                 {

@@ -9,9 +9,10 @@ using UnityEngine.SceneManagement;
 public class Turorial_Script : MonoBehaviour
 {
     private bool hasPlayed = false;
-    private bool hasDied = false;
+    public bool hasDied = false;
     private GameObject panel;
-    public GameObject panel2;
+    private GameObject panel2;
+    private GameObject panel3;
     private const string path = @"c:\temp\tutorial_test.txt";
     private Rigidbody2D rb;
 
@@ -25,6 +26,7 @@ public class Turorial_Script : MonoBehaviour
         
         panel = transform.Find("the panel").gameObject;
         panel2 = transform.Find("the panel2").gameObject;
+        panel3 = transform.Find("the panel3").gameObject;
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         if (hasPlayed)
         {
@@ -55,13 +57,20 @@ public class Turorial_Script : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                hasDied = true;
                 panel2.SetActive(false);
-                SaveData(); 
-                Time.timeScale = 1f;
+                panel3.SetActive(true);
             }
         }
-        
+        else if (!hasDied && panel3.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hasDied = true;
+                panel3.SetActive(false);
+                SaveData();
+            }
+        }
+
     }
 
     public void ActiavteDeathTutorial()
@@ -69,7 +78,6 @@ public class Turorial_Script : MonoBehaviour
         if (!hasDied)
         {
             panel2.SetActive(true);
-            Time.timeScale = 0f;
         }
     }
 
