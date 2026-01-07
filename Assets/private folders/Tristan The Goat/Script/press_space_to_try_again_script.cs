@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class press_space_to_try_again_script : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class press_space_to_try_again_script : MonoBehaviour
         win_lose = GameObject.FindAnyObjectByType<Win_Lose_Script>().gameObject;
         upgrade_menu = GameObject.FindAnyObjectByType<Upgrade_Menu_Script>().gameObject;
         pause = GameObject.FindAnyObjectByType<SceneLoaderManagerScript>().gameObject;
-        tutorial = GameObject.FindAnyObjectByType<Turorial_Script>().gameObject;
+        if(SceneManager.GetActiveScene().name == "(test) StartMenu")
+        {
+            tutorial = GameObject.FindAnyObjectByType<Turorial_Script>().gameObject;
+        }
     }
 
     // Update is called once per frame
