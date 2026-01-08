@@ -766,7 +766,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7761833137416321037, guid: 1bb51b6cf4a787b46816338bbfd5491d, type: 3}
+  m_Sprite: {fileID: -8123564496053109619, guid: dcadafbf09415b4419e6e142e4716197, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1238,7 +1238,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7761833137416321037, guid: 1bb51b6cf4a787b46816338bbfd5491d, type: 3}
+  m_Sprite: {fileID: -8123564496053109619, guid: dcadafbf09415b4419e6e142e4716197, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -2029,11 +2029,11 @@ MonoBehaviour:
   photocard_4: {fileID: -8982238523440487106, guid: 48309fb98ab024c45a0d27a916faba0e, type: 3}
   comic1: {fileID: 315880459}
   comic2: {fileID: 658054584}
-  comic_1: {fileID: 2684080827103847049, guid: 52de7602880225f4697458186e647768, type: 3}
-  comic_2: {fileID: 2231919021176806345, guid: dff6ed05d478ad742a399a5ce40a1655, type: 3}
-  comic_3: {fileID: -7047120220914255044, guid: a899db308cf1ccb4ba67b8accfc3ddd3, type: 3}
-  comic_4: {fileID: 4200642653038532874, guid: 52670dac92821aa48b5a30932f41ff08, type: 3}
-  comic_5: {fileID: 5257088150863464263, guid: 657b2935a1b998246bf72ee6de3607ab, type: 3}
+  comic_1: {fileID: -5568022818751261320, guid: 28a8e9ca04f4a4f458cd7ff7371cf938, type: 3}
+  comic_2: {fileID: -782849177005702647, guid: 90f186477efa2984f8b92708c415ae72, type: 3}
+  comic_3: {fileID: 1897900046678550725, guid: a616be4312b470c4689f2b621346275e, type: 3}
+  comic_4: {fileID: 8987160591902998649, guid: 98b34852543bdef4196b7f4688db9916, type: 3}
+  comic_5: {fileID: -2244022806963514398, guid: 2c462f5ab50daa84e8de8510990e7aea, type: 3}
   first1: {fileID: 9100000, guid: 31ad6a6aa6182674daa2a63d09631c31, type: 2}
   middle1: {fileID: 9100000, guid: 69927f5cb61d06b41b46a8bbdab5f6ab, type: 2}
   finale1: {fileID: 9100000, guid: 10099b75febdb2e4398d0f56cebecf52, type: 2}

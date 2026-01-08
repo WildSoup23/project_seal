@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 657b2935a1b998246bf72ee6de3607ab
+guid: a616be4312b470c4689f2b621346275e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5257088150863464263
-    second: Comic_6 (1)_0
+      213: 1897900046678550725
+    second: Comic_4 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Comic_6 (1)_0
+      name: Comic_4 (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 747c129e1dde4f840800000000000000
-      internalID: 5257088150863464263
+      spriteID: 5c8e8757902b65a10800000000000000
+      internalID: 1897900046678550725
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Comic_6 (1)_0: 5257088150863464263
+      Comic_4 (1)_0: 1897900046678550725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
