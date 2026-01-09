@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea8ca5f9a599244788c639afb82c8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDecrease: 0.9
+  speedDecrease: 0
   hasHit: 0
   hitSound: {fileID: 3742584701431478305}
 --- !u!82 &3742584701431478305
@@ -448,7 +448,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
