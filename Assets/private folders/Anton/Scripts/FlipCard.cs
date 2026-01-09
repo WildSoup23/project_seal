@@ -11,6 +11,9 @@ public class FlipCard : MonoBehaviour
     public bool flipFirst = true;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private float timer = 3f;
+    
+    [SerializeField] private AudioSource flipSound;
+    
 
     private Quaternion startRotaion;
     bool timerStart;
@@ -58,7 +61,7 @@ public class FlipCard : MonoBehaviour
     {
             if (card.rotation.y < 1)
             {
-                card.Rotate(0, 2, 0);
+                card.Rotate(0, 4, 0);
 
                 if (card.rotation.y > 0.75f)
                 {
@@ -82,7 +85,7 @@ public class FlipCard : MonoBehaviour
     {
         if (card.rotation.y > 0)
         {
-            card.Rotate(0, 2, 0);
+            card.Rotate(0, 4, 0);
 
             if (card.rotation.y < 0.75f)
             {
@@ -101,6 +104,11 @@ public class FlipCard : MonoBehaviour
             card.rotation = startRotaion;
             allowedToFlipAgain = false;
         }
+    }
+
+    public void FlipNoise()
+    {
+        flipSound.Play();
     }
 
     public void Allowed()

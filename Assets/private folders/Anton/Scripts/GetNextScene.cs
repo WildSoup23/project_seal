@@ -45,8 +45,6 @@ public class GetNextScene : MonoBehaviour
     private bool GiveMeButton;
     [SerializeField] private GameObject animThatKeepsPlaying;
     [SerializeField] private GameObject otherAnimThatKeepsPlaying;
-    
-    
     void Start()
     {
         sceneName = "(test) Level 0";
