@@ -2133,9 +2133,9 @@ MonoBehaviour:
   button: {fileID: 1640746189}
   comic: {fileID: 194942750}
   photocard_0: {fileID: 2902320139363310276, guid: ff4da3369f8b2d242a91a4ff47892b12, type: 3}
-  photocard_1: {fileID: -8233033981745231016, guid: b8242a9442a5a674989b25337541b45f, type: 3}
-  photocard_2: {fileID: -8290402826401100626, guid: 33cd75078940bdf49b7b92c32bfc7fea, type: 3}
-  photocard_3: {fileID: 4438967130366105315, guid: 2e6eeac51d2fe4a42acfafd75155d177, type: 3}
+  photocard_1: {fileID: 3158973492909066026, guid: fa3a1aaa8ea93b54ea918dc1aa635740, type: 3}
+  photocard_2: {fileID: -3197408735634339253, guid: 32bbb47fef6e86e4e839a83d24f43767, type: 3}
+  photocard_3: {fileID: -6590135171948595326, guid: ad67ede53b9d2644a8b84cb388c1ac56, type: 3}
   photocard_4: {fileID: -8982238523440487106, guid: 48309fb98ab024c45a0d27a916faba0e, type: 3}
   comic1: {fileID: 315880459}
   comic2: {fileID: 658054584}
