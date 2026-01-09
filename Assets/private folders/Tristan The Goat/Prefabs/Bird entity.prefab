@@ -4976,7 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10c333ce7519324db508f9ab242fcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDecrease: 0.5
+  speedDecrease: 0.8
   hasHit: 0
   hitSound: {fileID: 7157930851085794678}
   flySpeed: 30
