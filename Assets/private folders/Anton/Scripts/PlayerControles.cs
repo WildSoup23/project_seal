@@ -203,6 +203,7 @@ public class PlayerControles : MonoBehaviour
             float y = 1 - x;
             GetComponent<Rigidbody2D>().linearVelocity = GetComponent<Rigidbody2D>().linearVelocity * Mathf.Clamp01(y);
             other.GetComponent<Enemy>().hasHit = true;
+            other.GetComponent<Enemy>().hitSound.Play();
         }
 
     }

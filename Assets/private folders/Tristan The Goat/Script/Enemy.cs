@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     [Range(0,1)]
     [SerializeField] private float speedDecrease;
     public bool hasHit = false;
+    [SerializeField] public AudioSource hitSound;
     public float SPEED_DECREASE
     {
         get { return speedDecrease; }
