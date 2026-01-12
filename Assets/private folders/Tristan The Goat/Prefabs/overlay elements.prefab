@@ -4791,8 +4791,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_txt
-      value: A <b>higher acceleration</b> than 7.2 sketer(st)/s^2 is unprecedented.
-        But Skeal III has shown time after time that he is capable of wonders
+      value: The <b>ever-increasing acceleration<b> of King Skeal III is unmatched
+        throughout the entire land. Everything and everyone pales in comparison.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_cost
