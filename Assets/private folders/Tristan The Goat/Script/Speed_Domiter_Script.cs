@@ -23,6 +23,6 @@ public class Speed_Domiter_Script : MonoBehaviour
 
         _rectTransform.localRotation = Quaternion.Slerp(_rectTransform.localRotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        speed_text.text = $"{Mathf.Round(player_rb.linearVelocity.magnitude * 3)}Skm/h";
+        speed_text.text = $"{Mathf.Round(player_rb.linearVelocity.magnitude * 3)} Skm/h";
     }
 }
