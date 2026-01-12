@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue (space)
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6cde86eeb12d04e4b8c10fdb34ceda02, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3482,7 +3482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8371365362620143296, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
       propertyPath: m_text
-      value: Try Again (space)
+      value: Try Again
       objectReference: {fileID: 0}
     - target: {fileID: 8371365362620143296, guid: 07d655c76f770d748b0f82842b8f9992, type: 3}
       propertyPath: m_fontAsset
@@ -5141,8 +5141,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_txt
-      value: A <b>higher acceleration</b> than 7.2 sketer(st)/s^2 is unprecedented.
-        But Skeal III has shown time after time that he is capable of wonders
+      value: The <b>ever-increasing acceleration<b> of King Skeal III is unmatched
+        throughout the entire land. Everything and everyone pales in comparison.
       objectReference: {fileID: 0}
     - target: {fileID: 7432201340881202092, guid: c996bcff9ca8f7640b69ed69b3c5fd0f, type: 3}
       propertyPath: acceleration_upgrade_cost
