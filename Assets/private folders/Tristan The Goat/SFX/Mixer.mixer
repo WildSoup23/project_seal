@@ -28,6 +28,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-7847201990320754219
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 878b8a3e9a372384fa2d4af06663fb7c
+  m_EffectName: Attenuation
+  m_MixLevel: 44b178180d035e04789cd2159a4714cc
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-7390040309829803679
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -194,6 +208,7 @@ AudioMixerController:
     - afc971fe0c9ab0141aa0d4ebd851b2a6
     - e7bcea454569ef844b10241531a83e74
     - c2bd3d3ba3441174393b74a292c648ac
+    - f66f8b4e99841cb4d870d582c7a0a69b
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -280,11 +295,31 @@ AudioMixerGroupController:
   - {fileID: 6419652197961429322}
   - {fileID: -354706485351748447}
   - {fileID: 7285822508384340532}
+  - {fileID: 4287381049879312947}
   m_Volume: 3148873cc4af5484a80f981d7ebd41de
   m_Pitch: 098824f1997fbf84e836509ae74ee7db
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 8983995929040585293}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &4287381049879312947
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: whale_bounce
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f66f8b4e99841cb4d870d582c7a0a69b
+  m_Children: []
+  m_Volume: 747c1c5b8e08614428e82f7dd67a1b91
+  m_Pitch: 4d619089f91d1ac45a9427a4b8073dd8
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7847201990320754219}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
