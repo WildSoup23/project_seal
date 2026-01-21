@@ -38,8 +38,15 @@ public class SceneLoaderManagerScript : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        File.Delete(@"c:\temp\test.txt"); // Ensures that we write to a blank file
-        File.Delete(@"c:\temp\tutorial_test.txt");
+        var folder = Directory.CreateDirectory(@"c:\temp"); // returns a DirectoryInfo object
+        
+        if (File.Exists(@"c:\temp\test.txt"))
+        {
+            File.Delete(@"c:\temp\test.txt"); // Ensures that we write to a blank file
+            File.Delete(@"c:\temp\tutorial_test.txt");
+        }
+        
+        
         using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
         {
             sw.WriteLine("0"); // Samlade Pengar

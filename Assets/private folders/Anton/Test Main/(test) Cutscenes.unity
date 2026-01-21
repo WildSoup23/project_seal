@@ -2026,7 +2026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1647464768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2305,6 +2305,7 @@ MonoBehaviour:
   finale2: {fileID: 9100000, guid: f163239a02317ab488a43b61fba53613, type: 2}
   animThatKeepsPlaying: {fileID: 315880459}
   otherAnimThatKeepsPlaying: {fileID: 658054584}
+  flipButton: {fileID: 1647464767}
 --- !u!4 &1671918236
 Transform:
   m_ObjectHideFlags: 0

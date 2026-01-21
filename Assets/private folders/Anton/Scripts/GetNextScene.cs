@@ -45,6 +45,9 @@ public class GetNextScene : MonoBehaviour
     private bool GiveMeButton;
     [SerializeField] private GameObject animThatKeepsPlaying;
     [SerializeField] private GameObject otherAnimThatKeepsPlaying;
+    
+    [SerializeField] private GameObject flipButton;
+    
     void Start()
     {
         sceneName = "(test) Level 0";
@@ -58,6 +61,7 @@ public class GetNextScene : MonoBehaviour
 
         if (!comicYes)
         {
+            flipButton.SetActive(true);
             comic.SetActive(false);
             card.SetActive(true);
             FlipText.SetActive(true);
