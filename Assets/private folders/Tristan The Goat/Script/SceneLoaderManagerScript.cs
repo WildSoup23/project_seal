@@ -14,6 +14,8 @@ public class SceneLoaderManagerScript : MonoBehaviour
     [Tooltip("The animtor that controlls fade in and out")]
     [SerializeField] private Animator anim;
 
+    private TheKeeper keeper;
+
     // Returns the name of the current loaded scene via a string.
     public string GetCurrentScene()
     {
@@ -38,15 +40,28 @@ public class SceneLoaderManagerScript : MonoBehaviour
     {
         Time.timeScale = 1f;
 
+        /*
         var folder = Directory.CreateDirectory(@"c:\temp"); // returns a DirectoryInfo object
-        
+
         if (File.Exists(@"c:\temp\test.txt"))
         {
             File.Delete(@"c:\temp\test.txt"); // Ensures that we write to a blank file
             File.Delete(@"c:\temp\tutorial_test.txt");
         }
+        */
+
+        keeper = GameObject.FindGameObjectWithTag("TheKeeper").GetComponent<TheKeeper>();
+        keeper.money = 0;
+        keeper.speed = 0;
+        keeper.accel = 0;
+        keeper.dive = 0;
+        keeper.def = 0;
+        keeper.level = "(test) Level 0)";
+        keeper.hasPlayed = false;
+        keeper.hasDied = false;
         
         
+        /*
         using (StreamWriter sw = File.AppendText(@"c:\temp\test.txt"))
         {
             sw.WriteLine("0"); // Samlade Pengar
@@ -60,12 +75,16 @@ public class SceneLoaderManagerScript : MonoBehaviour
         {
             sw.WriteLine(false); // har gjort tutorial
         }
+        */
+
 
         
         // TODO: ta bort (test) sen
         // Tillägg av Anton ---------------------------------------------- :)
         LoadScene("(test) Cutscenes");
     }
+    
+    /*
     // Loads a scene based on how far the player has progress in the game.
     public void ContinueGameOnLoad()
     {
@@ -74,6 +93,8 @@ public class SceneLoaderManagerScript : MonoBehaviour
         // Tillägg av Anton ---------------------------------------------- :)
         LoadScene(File.ReadLines(@"c:\temp\test.txt").Last());
     }
+    */
+    
     // Quits the game and closes the application
     public void Quit()
     {

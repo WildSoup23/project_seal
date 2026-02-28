@@ -9,6 +9,8 @@ public class SaveManager : MonoBehaviour
 {
     public float addedAmount;
     public float newAmount;
+
+    private TheKeeper keeper;
     
     private const string path = @"c:\temp\test.txt";
 
@@ -25,12 +27,15 @@ public class SaveManager : MonoBehaviour
 
     public void SaveCoins(CoinsCollected coins)
     {
+        keeper = GameObject.FindGameObjectWithTag("TheKeeper").GetComponent<TheKeeper>();
+        
         if (willSave)
         {
             int oldAmount = 0;
             newAmount = coins.coins;
-        
-            
+
+            oldAmount = (int)keeper.money;
+            /*
             // Gets the old money amount
             if (File.Exists("c:/temp/test.txt"))
             {
@@ -42,13 +47,22 @@ public class SaveManager : MonoBehaviour
                 }
             
             }
+            */
 
             addedAmount = newAmount;
             newAmount += oldAmount;
             
 
-            File.Delete(path); // Ensures that we write to a blank file
+            // File.Delete(path); // Ensures that we write to a blank file
             
+            keeper.money = newAmount;
+            keeper.speed = upgrades.speed_upgrade;
+            keeper.accel = upgrades.acceleration_upgrade;
+            keeper.dive = upgrades.dive_speed_upgrade;
+            keeper.def = upgrades.defense_upgrade;
+            keeper.level = SceneManager.GetActiveScene().name;
+            
+            /*
             using (StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(newAmount);
@@ -57,7 +71,8 @@ public class SaveManager : MonoBehaviour
                 sw.WriteLine(upgrades.dive_speed_upgrade);
                 sw.WriteLine(upgrades.defense_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
-            }  
+            } 
+            */ 
         }
     }
 }

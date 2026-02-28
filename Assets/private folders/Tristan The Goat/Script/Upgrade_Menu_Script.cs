@@ -49,6 +49,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
     [Header("Money")]
     [SerializeField] private float money;
 
+    private TheKeeper keeper;
+    
     // Refrences
     [Header("Refrences")]
     [SerializeField] private AudioSource money_audio;
@@ -89,6 +91,8 @@ public class Upgrade_Menu_Script : MonoBehaviour
     void Start()
     {
         pc = player.GetComponent<PlayerControles>();
+
+        keeper = GameObject.FindGameObjectWithTag("TheKeeper").GetComponent<TheKeeper>();
         
         willStart = StartUpgradeMenu.instance;
         
@@ -370,8 +374,19 @@ public class Upgrade_Menu_Script : MonoBehaviour
     {
         const string path = @"c:\temp\test.txt";
 
+        
+        
         if (willSaveAndLoad)
         {
+
+            keeper.money = money;
+            keeper.speed = speed_upgrade;
+            keeper.accel = acceleration_upgrade;
+            keeper.dive = dive_speed_upgrade;
+            keeper.def = defense_upgrade;
+            keeper.level = SceneManager.GetActiveScene().name;
+            
+            /*
             File.Delete(path); // Ensures that we write to a blank file
 
             using (StreamWriter sw = File.AppendText(path))
@@ -383,6 +398,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
                 sw.WriteLine(defense_upgrade);
                 sw.WriteLine(SceneManager.GetActiveScene().name);
             }
+            */
         }
     }
 
@@ -390,12 +406,28 @@ public class Upgrade_Menu_Script : MonoBehaviour
     {
         if (willSaveAndLoad)
         {
-            if (File.Exists("c:/temp/test.txt"))
-            {
                 int playerAttribute = -1;
 
-                money = float.Parse(File.ReadLines(path).First());
+                money = keeper.money;
+                // money = float.Parse(File.ReadLines(path).First());
+                
+                speed_upgrade = keeper.speed;
+                speed_upgrade_cost = 150;
+                speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * Mathf.Pow(2, speed_upgrade));
+                
+                acceleration_upgrade = keeper.accel;
+                acceleration_upgrade_cost = 150;
+                acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * Mathf.Pow(2, acceleration_upgrade));
+                
+                dive_speed_upgrade = keeper.dive;
+                dive_speed_upgrade_cost = 200;
+                dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * Mathf.Pow(2, dive_speed_upgrade));
+                
+                defense_upgrade = keeper.def;
+                defense_upgrade_cost = 200;
+                defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * Mathf.Pow(2, defense_upgrade));
 
+                /*
                 foreach (string line in File.ReadLines(path, Encoding.UTF8))
                 {
                     string parsed = line.Trim();
@@ -407,7 +439,7 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
                     else if (playerAttribute == 0)
                     {
-                        speed_upgrade = float.Parse(parsed);
+                        speed_upgrade = keeper.speed;
                         speed_upgrade_cost = 150;
                         speed_upgrade_cost = Mathf.Round(speed_upgrade_cost * Mathf.Pow(2, speed_upgrade));
 
@@ -415,14 +447,14 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
                     else if (playerAttribute == 1)
                     {
-                        acceleration_upgrade = float.Parse(parsed);
+                        acceleration_upgrade = keeper.accel;
                         acceleration_upgrade_cost = 150;
                         acceleration_upgrade_cost = Mathf.Round(acceleration_upgrade_cost * Mathf.Pow(2, acceleration_upgrade));
                     }
 
                     else if (playerAttribute == 2)
                     {
-                        dive_speed_upgrade = float.Parse(parsed);
+                        dive_speed_upgrade = keeper.dive;
                         dive_speed_upgrade_cost = 200;
                         dive_speed_upgrade_cost = Mathf.Round(dive_speed_upgrade_cost * Mathf.Pow(2, dive_speed_upgrade));
 
@@ -430,14 +462,14 @@ public class Upgrade_Menu_Script : MonoBehaviour
 
                     else if (playerAttribute == 3)
                     {
-                        defense_upgrade = float.Parse(parsed);
+                        defense_upgrade = keeper.def;
                         defense_upgrade_cost = 200;
                         defense_upgrade_cost = Mathf.Round(defense_upgrade_cost * Mathf.Pow(2, defense_upgrade));
                     }
 
                     playerAttribute++;
                 }
-            }
+                */
         }
     }
 

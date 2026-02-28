@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using System.IO;
 using System.Linq;
@@ -13,16 +14,42 @@ public class Turorial_Script : MonoBehaviour
     private GameObject panel;
     private GameObject panel2;
     private GameObject panel3;
-    private const string path = @"c:\temp\tutorial_test.txt";
     private Rigidbody2D rb;
+
+    private TheKeeper keeper;
+
+    private Turorial_Script instance;
+
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
+        
+        keeper = GameObject.FindGameObjectWithTag("TheKeeper").GetComponent<TheKeeper>();
+        
+        /*/
         if (File.Exists(path))
         {
             hasPlayed = bool.Parse(File.ReadLines(path).First());
             hasDied = bool.Parse(File.ReadLines(path).Last());
         }
+        /*/
+
+        hasPlayed = keeper.hasPlayed;
+        hasDied = keeper.hasDied;
         
         panel = transform.Find("the panel").gameObject;
         panel2 = transform.Find("the panel2").gameObject;
@@ -81,8 +108,13 @@ public class Turorial_Script : MonoBehaviour
         }
     }
 
+    
     private void SaveData()
     {
+        keeper.hasPlayed = hasPlayed;
+        keeper.hasDied = hasDied;
+        
+        /*
         const string path = @"c:\temp\tutorial_test.txt";
 
         File.Delete(path); // Ensures that we write to a blank file
@@ -92,5 +124,7 @@ public class Turorial_Script : MonoBehaviour
             sw.WriteLine(hasPlayed);
             sw.WriteLine(hasDied);
         }
+        */
     }
+    
 }

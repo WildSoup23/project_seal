@@ -16,6 +16,8 @@ public class PlayerControles : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource windAudioSource;
     [SerializeField] private AudioSource slideSound;
+
+    private TheKeeper keeper;
     
     // Dive speed
     public float changedGravityScale;
@@ -228,40 +230,50 @@ public class PlayerControles : MonoBehaviour
 
     public void ApplyUpgrades()
     {
+        keeper = GameObject.FindGameObjectWithTag("TheKeeper").GetComponent<TheKeeper>();
+        
         int playerAttribute = -1;
+
+        maxVelocity_X = 15 + keeper.speed;
+        speedMultiplier = 1.2f + keeper.accel / 10;
+        changedGravityScale = 8 + keeper.dive;
+        speedReductionReduction = keeper.def / 10;
+
+        /*
         foreach (string line in File.ReadLines(path, Encoding.UTF8))
         {
             string parsed = line.Trim();
-                
+
             if (parsed == File.ReadLines(path).First())
             {
-                    
+
             }
 
             else if (playerAttribute == 0)
             {
                 maxVelocity_X = 15 + float.Parse(parsed);
             }
-                
+
             else if (playerAttribute == 1)
             {
                 float upgr = float.Parse(parsed);
                 speedMultiplier = 1.2f + upgr / 10;
             }
-                
+
             else if (playerAttribute == 2)
             {
                 changedGravityScale = 8 + float.Parse(parsed);
             }
-                
+
             else if (playerAttribute == 3)
             {
                 float upgr = float.Parse(parsed);
                 speedReductionReduction = upgr / 10;
             }
-                
+
             playerAttribute++;
         }
+        */
     }
 
        
